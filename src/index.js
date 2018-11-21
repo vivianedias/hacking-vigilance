@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import './index.css';
+import Home from './paginas/Home/Home'
 import Teste from './paginas/Teste/Teste';
 import * as serviceWorker from './serviceWorker';
+import './CSSReset.css'
+import './index.css'
 
-function App() {
+function Page() {
   return (
     <div>
       {/* <Navbar />
@@ -17,9 +19,11 @@ function App() {
         <Route component={NaoEncontrada} /> */}
         <Switch>
 
+        <Route path="/" exact component={Home} />
         <Route path="/teste" component={Teste} />
 
       </Switch>
+      { console.log({Teste}) }
     </div>
   )
 }
@@ -27,7 +31,7 @@ function App() {
 ReactDOM.render(
   //<Provider store={store}>
     <BrowserRouter>
-      <App />
+      <Page />
     </BrowserRouter>,
   //</Provider>, 
   document.getElementById('root')

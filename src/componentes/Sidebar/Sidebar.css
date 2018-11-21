@@ -1,0 +1,5 @@
+.container__sidebar {
+    width: 20%; 
+    background-color: yellow;
+    flex-shrink: 0;
+}
