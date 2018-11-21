@@ -1,20 +1,18 @@
 .container{
     width: 50%;
     height:100%;
-    background-color: blue;
+    border: 2px solid blue;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
 }
 
-.column {
+.teste__column {
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
-
-.bottom {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 20px;
+    background-color: pink;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
 }

@@ -2,4 +2,9 @@
     width: 20%; 
     background-color: yellow;
     flex-shrink: 0;
+    padding: 2em;
+}
+
+li{
+    text-align: right;
 }
