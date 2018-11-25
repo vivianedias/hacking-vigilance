@@ -1,7 +1,6 @@
 .container{
     width: 50%;
     height:100%;
-    border: 2px solid blue;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
@@ -11,7 +10,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: pink;
     flex-grow: 1;
     overflow-y: auto;
     padding: 20px;

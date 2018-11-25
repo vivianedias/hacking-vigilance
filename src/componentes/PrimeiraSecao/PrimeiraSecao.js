@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import Pergunta from '../Pergunta/Pergunta'
+import './PrimeiraSecao.css'
 
 class PrimeiraSecao extends Component {
 
   render() {
     return (
-      <div>
+      <div className="primeira-secao__container">
         <form>
           <h1 id="primeiraSecao">Conectada na Internet</h1>
             <Pergunta 

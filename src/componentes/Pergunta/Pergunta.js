@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Radio from '@material-ui/core/Radio';
 import Legenda from '../Legenda/Legenda'
+import './Pergunta.css'
 
 class Pergunta extends Component  {
     constructor(props){

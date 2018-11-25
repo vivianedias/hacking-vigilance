@@ -39,24 +39,26 @@ class Menu extends Component {
         </button>
 
         <ul className={classesDasOpcoes}>
-          <li>
-            <NavLink to="/sobre" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
-              Quem somos
+        <li>
+            <NavLink to="/" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
+              Home
             </NavLink>
           </li>
-          {this.props.usuario ? (
+          <li>
+            <NavLink to="/teste" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
+              Teste
+            </NavLink>
+          </li>
             <li>
-              <NavLink to="/login" activeClassName="navbar-menu__opcoes--ativo" onClick={this.sair}>
-                Sair
+              <NavLink to="/sobre" activeClassName="navbar-menu__opcoes--ativo" onClick={this.sair}>
+                Sobre
               </NavLink>
             </li>
-          ) : (
             <li>
-              <NavLink to="/login" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
-                Login
+              <NavLink to="/docs" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
+                Docs
               </NavLink>
             </li>
-          )}
         </ul>
       </nav>
     )

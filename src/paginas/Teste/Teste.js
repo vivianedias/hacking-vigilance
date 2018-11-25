@@ -13,14 +13,9 @@ class Teste extends Component {
 
     return (
       <main>
-        <Navbar />
         <div className="container">
           <Sidebar className="teste__column" />
           <div className="teste__column">
-            <PrimeiraSecao />
-            <SegundaSecao />
-            <TerceiraSecao />
-            <QuartaSecao />
           </div>
         </div>
       </main>

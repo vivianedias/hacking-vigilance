@@ -1,10 +1,13 @@
 .container__sidebar {
     width: 20%; 
-    background-color: yellow;
     flex-shrink: 0;
     padding: 2em;
 }
 
 .container__sidebar-style{
     text-align: right;
+}
+
+li{
+    color: #B2A7B8;
 }

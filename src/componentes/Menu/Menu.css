@@ -1,7 +1,6 @@
 .navbar-menu__botao {
     cursor: pointer;
     font-size: 16px;
-    text-transform: uppercase;
     padding: 0.5rem;
     border: 1px solid #9351b4;
     border-radius: 5px;
@@ -21,7 +20,6 @@
     list-style: none;
     color: white;
     font-weight: bold;
-    text-transform: uppercase;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,9 +27,12 @@
     width: 80vw;
     padding: 2rem 1rem 0;
     margin: 0;
-    background: #9351b4;
+    background-color: rgba(33, 28, 90, 0.7);
+    background-image: linear-gradient(119deg, rgba(33, 28, 90, 0.7), rgba(66, 28, 80, 0.7));
     transform: translateX(-100%);
     transition: transform 1s ease-in-out;
+    font-family: 'Exo', sans-serif;
+
   }
   
   .navbar-menu__opcoes--aberto {
@@ -49,16 +50,18 @@
   .navbar-menu__opcoes li a {
     cursor: pointer;
     color: white;
-    text-transform: uppercase;
     text-decoration: none;
   }
-  
-  @media (min-width: 992px) {
+
+  /* css para desktop */
+
+  @media (min-width: 992px) { 
     .navbar-menu__botao {
       display: none;
     }
   
     .navbar-menu__opcoes {
+      justify-content: center;
       display: flex;
       align-items: center;
       position: initial;
@@ -68,6 +71,7 @@
       background: initial;
       transform: initial;
       transition: initial;
+      font-family: 'Exo', sans-serif;
     }
   
     .navbar-menu__opcoes--aberto {
@@ -75,7 +79,7 @@
     }
   
     .navbar-menu__opcoes--ativo {
-      border-color: #9351b4;
+      border-bottom: 2px solid #fff;
     }
   
     .navbar-menu__opcoes li + li {
@@ -84,7 +88,8 @@
     }
   
     .navbar-menu__opcoes li a {
-      color: #9351b4;
-      padding: 0.3rem 0;
+      color: #fff;
+      padding: 18px 25px;
+      padding-bottom: 1.2em;
     }
   }
