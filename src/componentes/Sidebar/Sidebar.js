@@ -8,19 +8,16 @@ class Sidebar extends Component{
         <section className="container__sidebar container__sidebar-style">
             <ul>
                 <li>
-                <AnchorLink href='#item1'>Conectada na Web</AnchorLink>
+                <AnchorLink href='#primeiraSecao'>Conectada na Web</AnchorLink>
                 </li>
                 <li>
-                  <AnchorLink href='#item2'>Mobile</AnchorLink>
+                  <AnchorLink href='#segundaSecao'>Contas Online</AnchorLink>
                 </li>
                 <li>
-                <AnchorLink href='#item3'>Desktop</AnchorLink>
+                <AnchorLink href='#terceiraSecao'>Mobile</AnchorLink>
                 </li>
                 <li>
-                <AnchorLink href='#item4'>Referências Utilizadas</AnchorLink>
-                </li>
-                <li>
-                <AnchorLink href='#item5'>Sugestão de Conteúdos</AnchorLink>
+                <AnchorLink href='#quartaSecao'>Desktop</AnchorLink>
                 </li>
             </ul>
         </section>    

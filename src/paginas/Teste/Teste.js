@@ -1,19 +1,27 @@
 import React, { Component } from 'react'
 import Sidebar from '../../componentes/Sidebar/Sidebar'
 import Navbar from '../../componentes/Navbar/Navbar'
-import FirstSec from '../../componentes/Perguntas/FirstSec/FirstSec'
+import PrimeiraSecao from '../../componentes/PrimeiraSecao/PrimeiraSecao'
+import SegundaSecao from '../../componentes/SegundaSecao/SegundaSecao'
+import TerceiraSecao from '../../componentes/TerceiraSecao/TerceiraSecao'
+import QuartaSecao from '../../componentes/QuartaSecao/QuartaSecao'
 import './Teste.css'
 
 class Teste extends Component {
-  
-  render(){
 
-    return(
+  render() {
+
+    return (
       <main>
         <Navbar />
         <div className="container">
-          <Sidebar className="teste__column"/>
-            <FirstSec />                  
+          <Sidebar className="teste__column" />
+          <div className="teste__column">
+            <PrimeiraSecao />
+            <SegundaSecao />
+            <TerceiraSecao />
+            <QuartaSecao />
+          </div>
         </div>
       </main>
     )
