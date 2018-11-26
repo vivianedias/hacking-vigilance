@@ -1,28 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './Sidebar.css'
 
-class Sidebar extends Component {
-    render() {
-        return (
-            <section className="fixed">
-                <ul>
-                    <li>
-                        <AnchorLink href='#primeiraSecao' className="links_sidebar">Conectada na Web</AnchorLink>
-                    </li>
-                    <li>
-                        <AnchorLink href='#segundaSecao' className="links_sidebar">Contas Online</AnchorLink>
-                    </li>
-                    <li>
-                        <AnchorLink href='#terceiraSecao' className="links_sidebar">Mobile</AnchorLink>
-                    </li>
-                    <li>
-                        <AnchorLink href='#quartaSecao' className="links_sidebar">Desktop</AnchorLink>
-                    </li>
-                </ul>
+const Sidebar = () => {
+    return (
+        <div className="fixed">
+            <p>Tabela de Conteúdo</p>
+            <section className="spacing_sidebar">
+                <AnchorLink href='#primeiraSecao' className="links_sidebar">Conectada na Web</AnchorLink>
             </section>
-        )
-    }
-}
+            <section className="spacing_sidebar">
+                <AnchorLink href='#segundaSecao' className="links_sidebar">Contas Online</AnchorLink>
+            </section>
+            <section className="spacing_sidebar">
+                <AnchorLink href='#terceiraSecao' className="links_sidebar">Mobile</AnchorLink>
+            </section>
+            <section className="spacing_sidebar">
+                <AnchorLink href='#quartaSecao' className="links_sidebar">Desktop</AnchorLink>
+            </section>
+        </div>
+    )
+}    
 
 export default Sidebar 

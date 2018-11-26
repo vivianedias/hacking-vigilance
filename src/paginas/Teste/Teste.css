@@ -1,9 +1,16 @@
 .cols{
-    display: flex;
-    height: 100vh;
+  display: flex;
+  min-height: calc(100vh - 150px);
+  flex: 1;
+}
+
+@media (min-width: 992px) { 
+  .cols{
+      display: flex;
+      min-height: calc(100vh - 150px);
+    }
+
+    .fluid{
+      flex: 1;
+    }
   }
-  
-  .fluid{
-    flex: 1;
-  }
-  

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Sidebar from '../../componentes/Sidebar/Sidebar'
 import Navbar from '../../componentes/Navbar/Navbar'
+import Footer from '../../componentes/Footer/Footer'
 import PrimeiraSecao from '../../componentes/PrimeiraSecao/PrimeiraSecao'
 import SegundaSecao from '../../componentes/SegundaSecao/SegundaSecao'
 import TerceiraSecao from '../../componentes/TerceiraSecao/TerceiraSecao'
@@ -31,6 +32,7 @@ class Teste extends Component {
             <QuartaSecao />
           </form>
         </div>
+        <Footer />
       </main >
     )
   }
