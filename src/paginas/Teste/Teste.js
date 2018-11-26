@@ -21,11 +21,11 @@ class Teste extends Component {
   render() {
 
     return (
-      <main>
+      <main className="teste-display">
         <Navbar />
-        <div class="cols">
+        <div className="teste-display_body">
           <Sidebar />
-          <form onSubmit={this.enviaDados} className="fluid">
+          <form onSubmit={this.enviaDados} className="teste-display_content">
             <PrimeiraSecao />
             <SegundaSecao />
             <TerceiraSecao />

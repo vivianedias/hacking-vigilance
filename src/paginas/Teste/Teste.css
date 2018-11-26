@@ -1,16 +1,30 @@
-.cols{
+.teste-display {
+  min-height: 100vh;
+}
+
+.teste-display_body {
+  flex: 1;
+  margin: 2em
+}
+
+.teste-display,
+.teste-display_body {
   display: flex;
-  min-height: calc(100vh - 150px);
+  flex-direction: column;
+}
+
+.teste-display_content {
   flex: 1;
 }
 
-@media (min-width: 992px) { 
-  .cols{
-      display: flex;
-      min-height: calc(100vh - 150px);
-    }
 
-    .fluid{
-      flex: 1;
-    }
+@media (min-width: 768px) {
+  .teste-display_body {
+    flex-direction: row;
+    flex: 1;
+  }
+  .teste-display_content {
+    flex: 1;
+    max-width: 55%;
+  }
   }

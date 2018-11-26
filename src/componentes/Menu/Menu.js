@@ -28,9 +28,9 @@ class Menu extends Component {
     }
 
     return (
-      <nav className="navbar-menu">
+      <nav className="">
         <button className={classesDoBotao} onClick={this.abreOuFechaMenu}>
-          Menu
+          <i class="material-icons md-48 md-light">notes</i>
         </button>
 
         <ul className={classesDasOpcoes}>

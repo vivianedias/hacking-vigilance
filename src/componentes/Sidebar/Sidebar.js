@@ -4,19 +4,19 @@ import './Sidebar.css'
 
 const Sidebar = () => {
     return (
-        <div className="fixed">
+        <div className="teste-display_sidebar sidebar_styling">
             <p>Tabela de Conteúdo</p>
-            <section className="spacing_sidebar">
-                <AnchorLink href='#primeiraSecao' className="links_sidebar">Conectada na Web</AnchorLink>
+            <section className="links_spacing">
+                <AnchorLink href='#primeiraSecao' className="sidebar_links">Conectada na Web</AnchorLink>
             </section>
-            <section className="spacing_sidebar">
-                <AnchorLink href='#segundaSecao' className="links_sidebar">Contas Online</AnchorLink>
+            <section className="links_spacing">
+                <AnchorLink href='#segundaSecao' className="sidebar_links">Contas Online</AnchorLink>
             </section>
-            <section className="spacing_sidebar">
-                <AnchorLink href='#terceiraSecao' className="links_sidebar">Mobile</AnchorLink>
+            <section className="links_spacing">
+                <AnchorLink href='#terceiraSecao' className="sidebar_links">Mobile</AnchorLink>
             </section>
-            <section className="spacing_sidebar">
-                <AnchorLink href='#quartaSecao' className="links_sidebar">Desktop</AnchorLink>
+            <section className="links_spacing">
+                <AnchorLink href='#quartaSecao' className="sidebar_links">Desktop</AnchorLink>
             </section>
         </div>
     )

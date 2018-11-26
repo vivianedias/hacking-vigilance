@@ -1,9 +1,23 @@
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+}
+.material-icons.md-light { 
+  color: rgba(255, 255, 255, 1); 
+}
+.material-icons.md-light.md-inactive { 
+  color: rgba(255, 255, 255, 0.3); 
+}
+
 .navbar-menu__botao {
     cursor: pointer;
     font-size: 16px;
-    padding: 0.5rem;
-    border: 1px solid #9351b4;
-    border-radius: 5px;
+    padding: 0rem;
   }
   
   .navbar-menu__botao--aberto:after {
