@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Pergunta from '../Pergunta/Pergunta'
-
+import './TerceiraSecao.css'
 class TerceiraSecao extends Component {
 
   render() {

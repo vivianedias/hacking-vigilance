@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Pergunta from '../Pergunta/Pergunta'
+import './QuartaSecao.css'
 
 class QuartaSecao extends Component {
 

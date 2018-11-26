@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import Link from '../Link/Link'
 import './Sidebar.css'
 
 class Sidebar extends Component {
@@ -9,24 +8,16 @@ class Sidebar extends Component {
             <section className="container__sidebar container__sidebar-style">
                 <ul>
                     <li>
-                        <Link>
-                            <AnchorLink href='#primeiraSecao'>Conectada na Web</AnchorLink>
-                        </Link>
+                        <AnchorLink href='#primeiraSecao'>Conectada na Web</AnchorLink>
                     </li>
                     <li>
-                        <Link>
-                            <AnchorLink href='#segundaSecao'>Contas Online</AnchorLink>
-                        </Link>
+                        <AnchorLink href='#segundaSecao'>Contas Online</AnchorLink>
                     </li>
                     <li>
-                        <Link>
-                            <AnchorLink href='#terceiraSecao'>Mobile</AnchorLink>
-                        </Link>
+                        <AnchorLink href='#terceiraSecao'>Mobile</AnchorLink>
                     </li>
                     <li>
-                        <Link>
-                            <AnchorLink href='#quartaSecao'>Desktop</AnchorLink>
-                        </Link>
+                        <AnchorLink href='#quartaSecao'>Desktop</AnchorLink>
                     </li>
                 </ul>
             </section>

@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './paginas/Home/Home'
 import Teste from './paginas/Teste/Teste';
-import Resultados from './paginas/Resultados/Resultados'
-import Sobre from './paginas/Sobre/Sobre'
-import Docs from './paginas/Documentation/Docs'
 import * as serviceWorker from './serviceWorker';
 import './CSSReset.css'
 import './index.css'
@@ -13,32 +10,18 @@ import './index.css'
 function Page() {
   return (
     <div>
-      {/* <Navbar />
-
-        <Route path="/" exact component={Home} />
-        <Route path="/login" component={Login}/>
-        <Route path="/conta" component={Conta}/>
-        <Route path="/sobre" component={Sobre} />
-        <Route component={NaoEncontrada} /> */}
-        <Switch>
-
+      <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/teste" component={Teste} />
-        <Route path="/resultados" component={Resultados} />
-        <Route path="/sobre" component={Sobre} />
-        <Route path="/docs" component={Docs} />
-
       </Switch>
     </div>
   )
 }
 
 ReactDOM.render(
-  //<Provider store={store}>
-    <BrowserRouter>
-      <Page />
-    </BrowserRouter>,
-  //</Provider>, 
+  <BrowserRouter>
+    <Page />
+  </BrowserRouter>,
   document.getElementById('root')
 )
 

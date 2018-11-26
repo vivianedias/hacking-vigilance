@@ -80,6 +80,7 @@
   
     .navbar-menu__opcoes--ativo {
       border-bottom: 2px solid #fff;
+      padding-bottom: 1.2em;
     }
   
     .navbar-menu__opcoes li + li {
@@ -90,6 +91,5 @@
     .navbar-menu__opcoes li a {
       color: #fff;
       padding: 18px 25px;
-      padding-bottom: 1.2em;
     }
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Pergunta from '../Pergunta/Pergunta'
+import './SegundaSecao.css'
 
 class SegundaSecao extends Component {
 
