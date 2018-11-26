@@ -1,5 +1,9 @@
 section > p{
-    font-size: 1em;
+    font-size: 1.25em;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
+}
+
+.spacing{
+    padding-bottom: 1.5em;
 }

@@ -1,4 +1,9 @@
 .primeira-secao__container{
-    height:100%;
-    background-color:white;
+}
+
+.header_secoes{
+    color: #EA7D59;
+    font-size: 2em;
+    font-family: 'Exo', sans-serif;
+    padding: 0 1em 1em 0;
 }

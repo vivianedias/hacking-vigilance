@@ -61,7 +61,6 @@
     }
   
     .navbar-menu__opcoes {
-      justify-content: center;
       display: flex;
       align-items: center;
       position: initial;
@@ -79,7 +78,6 @@
     }
   
     .navbar-menu__opcoes--ativo {
-      border-bottom: 2px solid #fff;
       padding-bottom: 1.2em;
     }
   

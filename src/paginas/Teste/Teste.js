@@ -9,21 +9,29 @@ import './Teste.css'
 
 class Teste extends Component {
 
+  enviaDados = (evento) => {
+    evento.preventDefault()
+
+    this.props.mandaRespostas()
+
+    this.props.history.push('/')
+  }
+
   render() {
 
     return (
       <main>
         <Navbar />
-        <div className="container">
-          <Sidebar className="teste__column" />
-          <div className="teste__column">
+        <div class="cols">
+          <Sidebar />
+          <form onSubmit={this.enviaDados} className="fluid">
             <PrimeiraSecao />
             <SegundaSecao />
             <TerceiraSecao />
             <QuartaSecao />
-          </div>
+          </form>
         </div>
-      </main>
+      </main >
     )
   }
 }

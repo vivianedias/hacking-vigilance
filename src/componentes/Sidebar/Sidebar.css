@@ -1,13 +1,12 @@
-.container__sidebar {
-    width: 20%; 
-    flex-shrink: 0;
-    padding: 2em;
-}
-
-.container__sidebar-style{
-    text-align: right;
-}
-
-li{
+.links_sidebar{
+    text-decoration: none; 
     color: #B2A7B8;
+    font-family: 'Exo', sans-serif;
+    font-size: 1.2em;
 }
+
+.fixed{
+    width: 15%;
+    text-align: right;
+    padding: 2em;
+  }

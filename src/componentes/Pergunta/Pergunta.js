@@ -21,7 +21,7 @@ class Pergunta extends Component  {
     render(){
 
         return (
-            <section>
+            <section className="spacing">
                 <p>{this.props.title}</p>
                 <Legenda htmlFor="sim">Sim</Legenda>
                     <Radio value="sim" name={this.props.name} checked={this.state.selectedOption === 'sim'} onChange={this.handleChange} color="primary" />
