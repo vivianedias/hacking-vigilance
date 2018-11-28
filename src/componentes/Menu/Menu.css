@@ -1,35 +1,5 @@
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-  outline: inherit;
-}
-.material-icons.md-light { 
-  color: rgba(255, 255, 255, 1); 
-}
-.material-icons.md-light.md-inactive { 
-  color: rgba(255, 255, 255, 0.3); 
-}
+/****OPÇÕES MENU****/
 
-.navbar-menu__botao {
-    cursor: pointer;
-    font-size: 16px;
-    padding: 0rem;
-  }
-  
-  .navbar-menu__botao--aberto:after {
-    content: "";
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
   .navbar-menu__opcoes {
     list-style: none;
     color: white;
@@ -67,9 +37,45 @@ button, input[type="submit"], input[type="reset"] {
     text-decoration: none;
   }
 
-  /* css para desktop */
+/****BUTTONS****/
 
-  @media (min-width: 992px) { 
+/* clear button default styling*/
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+  outline: inherit;
+}
+.material-icons.md-light { 
+  color: rgba(255, 255, 255, 1); 
+}
+.material-icons.md-light.md-inactive { 
+  color: rgba(255, 255, 255, 0.3); 
+}
+
+.navbar-menu__botao {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0rem;
+  }
+  
+  .navbar-menu__botao--aberto:after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+
+  /****STYLING E DISPLAY PARA DESKTOP****/
+
+  @media (min-width: 768px) { 
     .navbar-menu__botao {
       display: none;
     }

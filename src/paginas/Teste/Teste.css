@@ -4,7 +4,8 @@
 
 .teste-display_body {
   flex: 1;
-  margin: 2em
+  margin: 2em;
+  
 }
 
 .teste-display,
@@ -23,8 +24,23 @@
     flex-direction: row;
     flex: 1;
   }
+
+  .container{
+    width: 50%;
+    height:100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+  }
+
   .teste-display_content {
     flex: 1;
-    max-width: 55%;
+    max-width: 100%;
   }
   }
+
+
+
+
+
+        

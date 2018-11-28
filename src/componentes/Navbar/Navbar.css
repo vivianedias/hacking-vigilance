@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     flex: 0 60px;
-    min-height: 60px;
+    min-height: 80px;
     padding: 0 1rem;
     border-bottom: 1px solid hsla(0,0%, 100%,0.15);
     background: transparent;
@@ -11,10 +11,11 @@
   
   .navbar__logo {
     display: block;
-    height: 60px;
+    height: 100px;
+    padding: 1em 0;
   }
   
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .navbar {
       padding: 0 10%;
     }

@@ -21,4 +21,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: rgb(33, 28, 90);
     background-image: linear-gradient(119deg, rgb(33, 28, 90), rgb(66, 28, 80));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

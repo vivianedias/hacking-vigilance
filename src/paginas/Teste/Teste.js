@@ -6,6 +6,7 @@ import PrimeiraSecao from '../../componentes/PrimeiraSecao/PrimeiraSecao'
 import SegundaSecao from '../../componentes/SegundaSecao/SegundaSecao'
 import TerceiraSecao from '../../componentes/TerceiraSecao/TerceiraSecao'
 import QuartaSecao from '../../componentes/QuartaSecao/QuartaSecao'
+import Botao from '../../componentes/Botao/Botao'
 import './Teste.css'
 
 class Teste extends Component {
@@ -23,14 +24,17 @@ class Teste extends Component {
     return (
       <main className="teste-display">
         <Navbar />
-        <div className="teste-display_body">
-          <Sidebar />
-          <form onSubmit={this.enviaDados} className="teste-display_content">
-            <PrimeiraSecao />
-            <SegundaSecao />
-            <TerceiraSecao />
-            <QuartaSecao />
-          </form>
+        <div className="container">
+          <div className="teste-display_body">
+            <Sidebar />
+            <form onSubmit={this.enviaDados} className="teste-display_content">
+              <PrimeiraSecao />
+              <SegundaSecao />
+              <TerceiraSecao />
+              <QuartaSecao />
+              <Botao>Enviar</Botao>
+            </form>
+          </div>
         </div>
         <Footer />
       </main >
