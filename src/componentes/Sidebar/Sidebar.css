@@ -31,6 +31,11 @@
   padding-left: 1em;
 }
 
+.sidebar_links:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
 .links_spacing{
     padding-bottom: 1.5em;
 }
