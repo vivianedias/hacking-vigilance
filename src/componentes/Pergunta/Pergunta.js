@@ -6,8 +6,8 @@ import './Pergunta.css'
 
 const theme = createMuiTheme({
     palette: {
-        secondary: { main: '#fff' }, // This is just green.A700 as hex.
-    },
+        secondary: { main: '#fff' }
+    }
 });
 
 class Pergunta extends Component {

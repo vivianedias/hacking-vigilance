@@ -3,7 +3,7 @@ import './Legenda.css'
 
 function Legenda(props) {
   return (
-    <label className="legenda" htmlFor={props.htmlFor}>
+    <label className="componente_legenda" htmlFor={props.htmlFor}>
       {props.children}
     </label>
   )

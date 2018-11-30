@@ -9,7 +9,7 @@ function Botao(props) {
   }
   
   return (
-    <button className={classes} disabled={props.desabilitado}>
+    <button onClick={props.url} className={classes} disabled={props.desabilitado}>
       {props.children}
     </button>
   )

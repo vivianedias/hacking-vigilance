@@ -19,7 +19,7 @@
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 770px) {
   .teste-display_body {
     flex-direction: row;
     flex: 1;

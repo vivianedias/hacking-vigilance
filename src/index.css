@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Exo|Open+Sans'); 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@font-face {
+    font-family: CarosBold;
+    src: local('CarolBold.otf'), url('./font/CarosBold.otf');
+}
 
 *,
 *:before,
