@@ -49,6 +49,7 @@ button, input[type="submit"], input[type="reset"] {
 	cursor: pointer;
   outline: inherit;
 }
+
 .material-icons.md-light { 
   color: rgba(255, 255, 255, 1); 
 }
@@ -98,7 +99,7 @@ button, input[type="submit"], input[type="reset"] {
     }
   
     .navbar-menu__opcoes--ativo {
-      padding-bottom: 1.2em;
+
     }
   
     .navbar-menu__opcoes li + li {

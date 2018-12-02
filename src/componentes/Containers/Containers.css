@@ -1,0 +1,15 @@
+.floating-containers{
+    max-width: 400px;
+    min-width: 350px;
+    height: 500px;
+    background-color: #B2A7B8;
+    border: 2px solid #fff;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.text-content__second_part{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    text-align: center;
+}

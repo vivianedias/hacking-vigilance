@@ -13,7 +13,7 @@ function Navbar(props) {
         <img className="navbar__logo" src={logo} alt="Logo" />
       </Link>
 
-      <Menu usuario={props.usuario} deslogaUsuario={props.deslogaUsuario} />
+      <Menu/>
     </header>
   )
 }
