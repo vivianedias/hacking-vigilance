@@ -2,7 +2,7 @@ import React from 'react'
 import './Botao.css'
 
 function Botao(props) {
-  let classes = "myButton hvr-grow-shadow"
+  let classes = "btn btn-outline-secondary myButton"
 
   if (props.desabilitado) {
     classes += " botao--desabilitado"

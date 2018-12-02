@@ -92,6 +92,7 @@ button, input[type="submit"], input[type="reset"] {
       transform: initial;
       transition: initial;
       font-family: 'Exo', sans-serif;
+      font-size: 1.2em;
     }
   
     .navbar-menu__opcoes--aberto {

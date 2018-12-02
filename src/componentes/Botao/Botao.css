@@ -1,9 +1,5 @@
 
 .myButton {
-	background-color:transparent;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius:8px;
   border:2px solid #fff;
   height: 50px;
 	display:inline-block;
@@ -13,18 +9,11 @@
 	font-size: 1.2em;
 	padding: 0 30px;
 	text-decoration:none;
-  text-shadow:0px 1px 0px #ffffff;
-}
-
-.myButton:active {
-	position:relative;
-	top:1px;
 }
 
 .myButton:hover, .myButton:focus, .myButton:active {
   background-color: #ea7d59;
-  border:2px solid #ea7d59;;
-  font-weight: bold;
+  border:1px solid #ea7d59;;
 }
 
 .botao--desabilitado {
