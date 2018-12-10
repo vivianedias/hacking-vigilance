@@ -10,7 +10,7 @@ class ResultadosPS extends Component {
         this.somaPrimeiraSecao = this.somaPrimeiraSecao.bind(this);
         this.state = {
             data: [
-                this.somaPrimeiraSecao
+                ""
             ]
         }
     }
@@ -32,16 +32,15 @@ class ResultadosPS extends Component {
         } return soma
     }
 
-    handleChange = () => {
-        this.setState({  })
+    mudandoValor = () => {
+        this.setState({ data: [ this.somaPrimeiraSecao ] })
     }
 
     render() {
-        console.log(this.somaPrimeiraSecao.value)
         return (
             <div>
-                <p>
-                    Olá resultados primeira secao
+                <p onChange={this.mudandoValor}>
+                    {this.state.data}
                 </p>
             </div>
         )
