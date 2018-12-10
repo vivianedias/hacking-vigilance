@@ -7,40 +7,45 @@ class ResultadosPS extends Component {
 
     constructor(props){
         super(props)
-        this.somaPrimeiraSecao = this.somaPrimeiraSecao.bind(this);
+
         this.state = {
-            data: [
-                ""
-            ]
+            dados: ''
         }
     }
 
-    somaPrimeiraSecao = () => {
+    componentDidMount(){
         let soma = 0;
         if (localStorage.getItem("primeiraSecaoPrimeiraPergunta") === "sim") {
-            soma += 1;
-        } else if (localStorage.getItem("primeiraSecaoSegundaPergunta") === "sim") {
-            soma += 1;
-        } else if (localStorage.getItem("primeiraSecaoTerceiraPergunta") === "nao") {
-            soma += 1;
-        } else if (localStorage.getItem("primeiraSecaoQuartaPergunta") === "sim") {
-            soma += 1;
-        } else if (localStorage.getItem("primeiraSecaoQuintaPergunta") === "sim") {
-            soma += 1;
-        } else if (localStorage.getItem("primeiraSecaoSextaPergunta") === "nao") {
-            soma += 1;
-        } return soma
+            soma += 16.666666667;
+        } 
+        if (localStorage.getItem("primeiraSecaoSegundaPergunta") === "sim") {
+            soma += 16.666666667;
+        } 
+        if (localStorage.getItem("primeiraSecaoTerceiraPergunta") === "nao") {
+            soma += 16.666666667;
+        } 
+        if (localStorage.getItem("primeiraSecaoQuartaPergunta") === "sim") {
+            soma += 16.666666667;
+        } 
+        if (localStorage.getItem("primeiraSecaoQuintaPergunta") === "sim") {
+            soma += 16.666666667;
+        }
+        if (localStorage.getItem("primeiraSecaoSextaPergunta") === "nao") {
+            soma += 16.666666667;
+        } soma = Math.floor(soma)
+        this.somar(soma)
+
     }
 
-    mudandoValor = () => {
-        this.setState({ data: [ this.somaPrimeiraSecao ] })
+    somar = (soma) => {
+        this.setState({ dados: soma })
     }
-
+    
     render() {
         return (
             <div>
-                <p onChange={this.mudandoValor}>
-                    {this.state.data}
+                <p>
+                    {this.state.dados}
                 </p>
             </div>
         )
