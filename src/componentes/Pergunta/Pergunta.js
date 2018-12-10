@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Radio from '@material-ui/core/Radio';
-import Legenda from '../Legenda/Legenda'
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import './Pergunta.css'
 
 const theme = createMuiTheme({
@@ -14,15 +15,16 @@ class Pergunta extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            selectedOption: '',
+            value: '',
         }
 
         this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange = (changeEvent) => {
-        this.setState({ selectedOption: changeEvent.target.value })
-    }
+    handleChange = event => {
+        localStorage.setItem(event.target.name, event.target.value) //para salvar nome da pergunta + resposta 
+        this.setState({ value: event.target.value });
+      };
 
 
     render() {
@@ -31,33 +33,35 @@ class Pergunta extends Component {
             <section className="spacing">
                 <p>{this.props.title}</p>
                 <MuiThemeProvider theme={theme}>
-                    <Legenda htmlFor="sim">Sim</Legenda>
-                    <Radio
-                        value="sim"
-                        name={this.props.name}
-                        checked={this.state.selectedOption === 'sim'}
-                        onChange={this.handleChange}
-                        color="secondary"
-                    />
-                    <Legenda htmlFor="nao">Não</Legenda>
-                    <Radio
-                        value="nao"
-                        name={this.props.name}
-                        checked={this.state.selectedOption === 'nao'}
-                        onChange={this.handleChange}
-                        color="secondary"
+                    <RadioGroup
+                    aria-label="Opções"
+                    name={this.props.name}
+                    value={this.state.value}
+                    onChange={this.handleChange}>
+                    >
+                        <FormControlLabel 
+                        value="sim" 
+                        control={<Radio />} 
+                        label="Sim" 
+                        color="secondary" 
                         />
+                        <FormControlLabel 
+                        value="nao" 
+                        control={<Radio />} 
+                        label="Não" 
+                        color="secondary" 
+                        />
+                    </RadioGroup>
                         { /* preciso de uma terceira opção variável
                     if this.props.name === "android"
                     > tal resposta
                 */}
                 </MuiThemeProvider>
             </section>
-
                 )
             }
         }
         
         
         
-        export default Pergunta;
+export default Pergunta;

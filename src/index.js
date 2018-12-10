@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './paginas/Home/Home'
 import Teste from './paginas/Teste/Teste';
+import Resultados from './paginas/Resultados/Resultados'
 import Sobre from './paginas/Sobre/Sobre';
-import Docs from './paginas/Documentation/Docs';
+import Docs from './paginas/Docs/Docs';
 import * as serviceWorker from './serviceWorker';
 import './CSSReset.css'
 import './index.css'
@@ -15,6 +16,7 @@ function Page() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/teste" component={Teste} />
+        <Route path="/resultados" component={Resultados} />
         <Route path="/sobre" component={Sobre} />
         <Route path="/docs" component={Docs} />
       </Switch>

@@ -13,21 +13,16 @@ class Teste extends Component {
 
   enviaDados = (evento) => {
     evento.preventDefault()
-
-    this.props.mandaRespostas()
-
-    this.props.history.push('/')
   }
 
   render() {
-
     return (
       <main className="teste-display">
         <Navbar />
         <div className="container">
           <div className="teste-display_body">
             <Sidebar />
-            <form onSubmit={this.enviaDados} className="teste-display_content">
+            <form onSubmit={this.onSubmit} className="teste-display_content">
               <PrimeiraSecao />
               <SegundaSecao />
               <TerceiraSecao />
