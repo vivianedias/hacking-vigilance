@@ -10,33 +10,23 @@ class SegundaSecao extends Component {
         <h1 id="segundaSecao" className="header_secoes">Contas Online</h1>
         <Pergunta
           title="Você utiliza autenticação de dois passos em suas redes sociais e/ou e-mail?"
-          handleChange={this.handleChange}
-          name="primeiraPergunta"
-          required
+          name="segundaSecaoPrimeiraPergunta"
         />
         <Pergunta
           title="Você posta sua localização nas redes sociais?"
-          handleChange={this.handleChange}
-          name="segundaPergunta"
-          required
+          name="segundaSecaoSegundaPergunta"
         />
         <Pergunta
           title="Você utiliza provedores de e-mail como ProtonMail ou Riseup"
-          handleChange={this.handleChange}
-          name="terceiraPergunta"
-          required
+          name="segundaSecaoTerceiraPergunta"
         />
         <Pergunta
           title="Você utiliza mais de um e-mail para diferentes serviços?"
-          handleChange={this.handleChange}
-          name="quartaPergunta"
-          required
+          name="segundaSecaoQuartaPergunta"
         />
         <Pergunta
           title="Você utiliza mais de uma senha para diferentes serviços?"
-          name="quintaPergunta"
-          handleChange={this.handleChange}
-          required
+          name="segundaSecaoQuintaPergunta"
         />
       </div>
     )

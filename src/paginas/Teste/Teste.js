@@ -22,12 +22,12 @@ class Teste extends Component {
         <div className="container">
           <div className="teste-display_body">
             <Sidebar />
-            <form onSubmit={this.onSubmit} className="teste-display_content">
+            <form className="teste-display_content">
               <PrimeiraSecao />
               <SegundaSecao />
               <TerceiraSecao />
               <QuartaSecao />
-              <Botao>Enviar</Botao>
+              <Botao onClick="/resultados">Enviar</Botao>
             </form>
           </div>
         </div>

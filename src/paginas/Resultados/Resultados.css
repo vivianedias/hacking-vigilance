@@ -1,0 +1,40 @@
+/**DISPLAY RESULTADOS**/
+
+.resultados-container{
+}
+
+.resultados-content{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 5em;
+
+}
+
+.resultados-title {
+    font-family: 'Exo', sans-serif;
+    font-size: 4em;
+    color: #fff;
+    padding-bottom: 0.5em;
+}
+
+.resultados-section_titles{
+    font-family: 'Open sans', sans-serif;
+    font-size: 2em;
+    color: #fff;
+    padding-bottom: 1em;
+}
+
+span > p{
+    color: #fff;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+
+}
+
+@media (min-width: 768px) {
+    .resultados-title{
+        font-size: 7em;
+    }
+}

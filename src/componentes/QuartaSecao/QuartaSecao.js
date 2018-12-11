@@ -10,15 +10,11 @@ class QuartaSecao extends Component {
         <h1 id="quartaSecao" className="header_secoes">Desktop</h1>
         <Pergunta
           title="Você utiliza algum distro Linux?"
-          handleChange={this.handleChange}
-          name="primeiraPergunta"
-          required
+          name="quartaSecaoPrimeiraPergunta"
         />
         <Pergunta
           title="Você se preocupa em tampar sua Webcam e checar se seu microfone do computador está desligado?"
-          handleChange={this.handleChange}
-          name="segundaPergunta"
-          required
+          name="quartaSecaoSegundaPergunta"
         />
       </div>
     )
