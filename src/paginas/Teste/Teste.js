@@ -10,10 +10,16 @@ import Botao from '../../componentes/Botao/Botao'
 import './Teste.css'
 
 class Teste extends Component {
+  constructor(props){
+    super(props)
 
-  enviaDados = (evento) => {
-    evento.preventDefault()
+    this.routeChange = this.routeChange.bind(this);
   }
+
+   routeChange(){
+    let path = '/resultados';
+    this.props.history.push(path);
+    }
 
   render() {
     return (
@@ -22,12 +28,12 @@ class Teste extends Component {
         <div className="container">
           <div className="teste-display_body">
             <Sidebar />
-            <form className="teste-display_content">
+            <form onSubmit={this.routeChange} className="teste-display_content">
               <PrimeiraSecao />
               <SegundaSecao />
               <TerceiraSecao />
               <QuartaSecao />
-              <Botao onClick="/resultados">Enviar</Botao>
+              <Botao>Enviar</Botao>
             </form>
           </div>
         </div>

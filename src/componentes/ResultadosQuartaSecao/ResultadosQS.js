@@ -30,6 +30,29 @@ class ResultadosQS extends Component {
     }
     
     render() {
+        let primeiraPergunta;
+            if (localStorage.getItem("quartaSecaoPrimeiraPergunta") === "nao") {
+                primeiraPergunta =
+                    <div>
+                        <h3 className="secaoTitle"></h3>
+                            <ul className="secaoContent">
+                                <li>
+                                </li>
+                            </ul>
+                    </div>
+            } 
+    
+            let segundaPergunta;
+            if (localStorage.getItem("quartaSecaoSegundaPergunta") === "nao"){
+                segundaPergunta = 
+                    <div>
+                        <h3 className="secaoTitle"></h3>
+                        <ul className="secaoContent">
+                            <li>
+                            </li>
+                        </ul>
+                    </div>
+            } 
         return (
             <section>
                 <p>

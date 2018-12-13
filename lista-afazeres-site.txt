@@ -4,11 +4,12 @@ Home
 
 Teste
 - redirecionar a pessoa para a pagina de resultados on submit 
-- arrumar a fonte das opções sim/não
+- arrumar a fonte das opções sim/não - DONE
+- opção variavel (outro nas perguntas, quando necessário)
 
 Resultados
-- fazer aparecer a pontuação de acordo com as respostas para as perguntas
-- aparecer as dicas para as questões que a pessoa não respondeu certo 
+- fazer aparecer a pontuação de acordo com as respostas para as perguntas - DONE
+- aparecer as dicas para as questões que a pessoa não respondeu certo - DONE
     (não precisa replicar a questão, só coloca as "seções - pontuação" > dicas com as respostas incorretas)
 
 Sobre 
@@ -17,6 +18,7 @@ Sobre
 Docs
 - replicar o conteúdo que eu mesma produzi
 - revisar esse conteudo
+- fazer um glossário
 
 Footer
 - fazer o footer

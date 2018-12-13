@@ -7,3 +7,7 @@ section > p{
 .spacing{
     padding-bottom: 1.5em;
 }
+
+.label{
+    color: #fff;
+}

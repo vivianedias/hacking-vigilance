@@ -1,14 +1,11 @@
 /**DISPLAY RESULTADOS**/
 
-.resultados-container{
-}
-
 .resultados-content{
     width: 80%;
     height: 100vh;
     margin: 0 auto;
     padding: 5em;
-
+    color: #fff;
 }
 
 .resultados-title {
@@ -19,8 +16,9 @@
 }
 
 .resultados-section_titles{
-    font-family: 'Open sans', sans-serif;
+    font-family: 'Exo', sans-serif;
     font-size: 2em;
+    font-weight: 700;
     color: #fff;
     padding-bottom: 1em;
 }
@@ -37,4 +35,19 @@ span > p{
     .resultados-title{
         font-size: 7em;
     }
+}
+
+/**STYLING**/
+.secaoContent{
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.secaoTitle{
+    font-family: 'Open sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.5em;
+    padding: 1em 1em;
 }

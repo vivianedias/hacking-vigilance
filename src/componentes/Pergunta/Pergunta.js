@@ -42,13 +42,13 @@ class Pergunta extends Component {
                         <FormControlLabel 
                         value="sim" 
                         control={<Radio />} 
-                        label="Sim" 
+                        label={<span style={{ color: 'white', fontFamily: 'Open sans', fontSize: '1.2em' }}>Sim</span>}
                         color="secondary" 
                         />
                         <FormControlLabel 
                         value="nao" 
                         control={<Radio />} 
-                        label="Não" 
+                        label={<span style={{ color: 'white', fontFamily: 'Open sans', fontSize: '1.2em' }}>Não</span>}
                         color="secondary" 
                         />
                     </RadioGroup>
