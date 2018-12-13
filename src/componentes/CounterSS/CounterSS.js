@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import CountUp from 'react-countup';
 
 class CounterSS extends Component {
 
@@ -42,9 +42,16 @@ class CounterSS extends Component {
     render() {
         return (
             <div>
-                <p>
-                    {this.state.dados} pontos
-                </p>
+                <CountUp
+                className="counter"
+                start={0}
+                end={this.state.dados}
+                duration={5}
+                separator=" "
+                suffix=" pontos"
+                onEnd={() => console.log('Ended! 👏')}
+                onStart={() => console.log('Started! 💨')}
+                />
             </div>
         )
     }

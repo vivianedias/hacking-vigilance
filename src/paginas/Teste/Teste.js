@@ -25,7 +25,7 @@ class Teste extends Component {
     return (
       <main className="teste-display">
         <Navbar />
-        <div className="container">
+        <div className="teste-container">
           <div className="teste-display_body">
             <Sidebar />
             <form onSubmit={this.routeChange} className="teste-display_content">

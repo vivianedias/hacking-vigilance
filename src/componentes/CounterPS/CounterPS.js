@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import '../../paginas/Resultados/Resultados.css'
-
+import CountUp from 'react-countup';
 
 class CounterPS extends Component {
 
@@ -46,9 +45,16 @@ class CounterPS extends Component {
     render() {
         return (
             <div>
-                    <p className="counter">
-                        {this.state.dados} pontos
-                    </p>
+                <CountUp
+                className="counter"
+                start={0}
+                end={this.state.dados}
+                duration={5}
+                separator=" "
+                suffix=" pontos"
+                onEnd={() => console.log('Ended! 👏')}
+                onStart={() => console.log('Started! 💨')}
+                />
             </div>
         )
     }

@@ -1,9 +1,10 @@
 /**DISPLAY RESULTADOS**/
 
+.container{
+    min-width: 100%;
+}
+
 .resultados-content{
-    width: 80%;
-    height: 100vh;
-    margin: 0 auto;
     padding: 5em;
     color: #fff;
 }
@@ -12,6 +13,7 @@
     display: flex;
     flex-direction: row;
     border-bottom: 1.2px solid hsla(0,0%, 100%,0.15);
+    padding-top: 5em;
 }
 
 @media (min-width: 768px) {
@@ -25,32 +27,30 @@
 .resultados-title_main {
     font-family: 'Exo', sans-serif;
     font-size: 4em;
-    color: #fff;
-    padding-bottom: 0.2em;
+    text-align: center;
 }
 
-.resultados-section_titles, div > p {
+.resultados-section_titles, .counter {
     font-family: 'Exo', sans-serif;
-    font-size: 2em;
-    color: #fff;
-    padding-top: 1em;
+    font-size: 2.5em;
+    padding-bottom: 0.5em;
 }
 
 .resultados-section_titles{
     font-weight: 700;
     padding-right: 0.5em;
+    color: #ea7d59;
 }
 
-div > p {
-    font-weight: 200;
-    padding-bottom: 0.5em;
+.counter {
+    font-weight: 700;
 }
 
 
 .answerTitle{
     font-family: 'Open sans', sans-serif;
     font-size: 1.5em;
-    font-weight: 800;
+    font-weight: 600;
     padding-bottom: 0.5em;
     padding-top: 1em;
 }

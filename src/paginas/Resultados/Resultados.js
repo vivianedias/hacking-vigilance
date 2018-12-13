@@ -15,32 +15,36 @@ class Resultados extends Component {
 
     render() {
         return (
-            <section className="restultados-container">
+            <section>
                 <Navbar />
-                <div className="resultados-content">
-                    <h1 className="resultados-title_main">Resultados</h1>
-                        <div className="counter-title">
-                            <h2 className="resultados-section_titles">Primeira Seção,</h2>
-                            <CounterPS />
+                <div className="container">
+                    <div className="row resultados-content">
+                        <div className="col-md-2 col-sm-1"></div>
+                        <div className="col-md-8 col-sm-10">
+                            <h1 className="resultados-title_main">Resultados</h1>
+                                <div className="counter-title">
+                                    <h2 className="resultados-section_titles">Primeira Seção,</h2>
+                                    <CounterPS />
+                                </div>
+                                <ResultadosPS />
+                                <div className="counter-title">
+                                    <h2 className="resultados-section_titles">Segunda Seção,</h2>
+                                    <CounterSS />
+                                </div>
+                                    <ResultadosSS />
+                                <div className="counter-title">
+                                    <h2 className="resultados-section_titles">Terceira Seção,</h2>
+                                    <CounterTS />
+                                </div>
+                                    <ResultadosTS />
+                                <div className="counter-title">
+                                    <h2 className="resultados-section_titles">Quarta Seção,</h2>
+                                    <CounterQS />
+                                </div>
+                                    <ResultadosQS />
                         </div>
-                        <ResultadosPS />
-                        <div className="counter-title">
-                            <h2 className="resultados-section_titles">Segunda Seção,</h2>
-                            <CounterSS />
-                        </div>
-                            <ResultadosSS />
-                        
-                        <div className="counter-title">
-                            <h2 className="resultados-section_titles">Terceira Seção,</h2>
-                            <CounterTS />
-                        </div>
-                            <ResultadosTS />
-                        
-                        <div className="counter-title">
-                            <h2 className="resultados-section_titles">Quarta Seção,</h2>
-                            <CounterQS />
-                        </div>
-                            <ResultadosQS />
+                        <div className="col-md-2 col-sm-1"></div>
+                    </div>
                 </div>
                 <Footer />
             </section>
