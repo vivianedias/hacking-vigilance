@@ -29,7 +29,7 @@ class PrimeiraSecao extends Component {
           name="primeiraSecaoQuintaPergunta"
         />
         <Pergunta
-          title="Você utiliza Wi-Fi's públicos?"
+          title="Você utiliza Wi-Fi's públicos sem nenhuma proteção extra?"
           name="primeiraSecaoSextaPergunta"
         />
       </div>

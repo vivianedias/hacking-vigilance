@@ -17,7 +17,7 @@ class SegundaSecao extends Component {
           name="segundaSecaoSegundaPergunta"
         />
         <Pergunta
-          title="Você utiliza provedores de e-mail como ProtonMail ou Riseup"
+          title="Você utiliza algum provedor de e-mail com criptografia ponta-a-ponta? "
           name="segundaSecaoTerceiraPergunta"
         />
         <Pergunta
@@ -25,7 +25,7 @@ class SegundaSecao extends Component {
           name="segundaSecaoQuartaPergunta"
         />
         <Pergunta
-          title="Você utiliza mais de uma senha para diferentes serviços?"
+          title="Você utiliza diferentes senhas em diferentes contas?"
           name="segundaSecaoQuintaPergunta"
         />
       </div>

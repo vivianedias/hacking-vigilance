@@ -3,52 +3,13 @@ import React, { Component } from 'react'
 
 class ResultadosPS extends Component {
 
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            dados: ''
-        }
-
-        this.somar = this.somar.bind(this)
-    }
-
-    componentDidMount() {
-        let soma = 0;
-        if (localStorage.getItem("primeiraSecaoPrimeiraPergunta") === "sim") {
-            soma += 16.666666667;
-        }
-        if (localStorage.getItem("primeiraSecaoSegundaPergunta") === "sim") {
-            soma += 16.666666667;
-        }
-        if (localStorage.getItem("primeiraSecaoTerceiraPergunta") === "nao") {
-            soma += 16.666666667;
-        }
-        if (localStorage.getItem("primeiraSecaoQuartaPergunta") === "sim") {
-            soma += 16.666666667;
-        }
-        if (localStorage.getItem("primeiraSecaoQuintaPergunta") === "sim") {
-            soma += 16.666666667;
-        }
-        if (localStorage.getItem("primeiraSecaoSextaPergunta") === "nao") {
-            soma += 16.666666667;
-        } 
-        
-        soma = Math.floor(soma)
-        this.somar(soma)
-    }
-
-    somar = (soma) => {
-        this.setState({ dados: soma })
-    }
-
     render() {
         let primeiraPergunta;
         if (localStorage.getItem("primeiraSecaoPrimeiraPergunta") === "nao") {
             primeiraPergunta =
                 <div>
-                    <h3 className="secaoTitle">Porque você deveria mudar para Mozilla Firefox ou Opera?</h3>
-                        <ul className="secaoContent">
+                    <h3 className="answerTitle">Porque você deveria mudar para Mozilla Firefox ou Opera?</h3>
+                        <ul className="answerContent">
                             <li>Além deles terem todas as mesmas características do Chrome, são navegadores que saem do monopólio do Google
                                 e tem uma preocupação forte no que diz respeito à segurança digital e te dão mais opções sobre o 
                                 compartilhamento de dados na navegação.
@@ -75,8 +36,8 @@ class ResultadosPS extends Component {
         if (localStorage.getItem("primeiraSecaoSegundaPergunta") === "nao"){
             segundaPergunta = 
                 <div>
-                    <h3 className="secaoTitle">Qual o papel dos add-ons (extensões)</h3>
-                    <ul className="secaoContent">
+                    <h3 className="answerTitle">Qual o papel dos add-ons (extensões)</h3>
+                    <ul className="answerContent">
                         <li>
                             Pense na extensão como um potencializador para seu navegador. Com elas é possível bloquear ads, verificar 
                             quantos trackers aquele site utiliza, qual o nível de segurança daquele portal, entre muitas outras coisas.
@@ -102,8 +63,8 @@ class ResultadosPS extends Component {
 
             terceiraPergunta = 
             <div>
-                <h3 className="secaoTitle">O que o Google faz com meus dados?</h3>
-                    <ul className="secaoContent">
+                <h3 className="answerTitle">O que o Google faz com meus dados?</h3>
+                    <ul className="answerContent">
                         <li>
                             Na era do big data (e seu potêncial altamente poderoso) é importante entendermos para onde vai nossas informações 
                             e o que é feita com elas. 3.5 bilhões de questões são logadas no Google todos os dias. Adicionando essas informações
@@ -125,8 +86,8 @@ class ResultadosPS extends Component {
         if (localStorage.getItem("primeiraSecaoQuartaPergunta") === "nao"){
             quartaPergunta = 
             <div>
-                <h3 className="secaoTitle">Eu preciso utilziar VPN?</h3>
-                <ul className="secaoContent">
+                <h3 className="answerTitle">Eu preciso utilziar VPN?</h3>
+                <ul className="answerContent">
                     <li>Depende. O VPN instaura uma outra camada de seguraça à sua navegação ao redirecionar seu seu tráfego.
                     VPN, do inglês «virtual private network», significa «rede privada virtual» – um serviço que encripta o seu 
                     tráfego na Internet e protege a sua identidade online.
@@ -151,8 +112,8 @@ class ResultadosPS extends Component {
         if (localStorage.getItem("primeiraSecaoQuintaPergunta") === "nao"){
             quintaPergunta = 
             <div>
-                <h3 className="secaoTitle">É importante saber onde estamos deixando nossos arquivos.</h3>
-                <ul className="secaoContent">
+                <h3 className="answerTitle">É importante saber onde estamos deixando nossos arquivos.</h3>
+                <ul className="answerContent">
                     <li>
                         Serviços como Google ou Dropbox são atrativos pela sua facilidade, design atrativo e gratuidade, no entanto ambos já estiveram 
                         envolvidos em diversos casos de vazamento de dados.Há dois anos atrás foi descoberto que um vazamento de dados no qual o Dropbox anunciou em 
@@ -175,8 +136,8 @@ class ResultadosPS extends Component {
         if (localStorage.getItem("primeiraSecaoSextaPergunta") === "sim"){
             sextaPergunta = 
                 <div>
-                    <h3 className="secaoTitle">Cuidado ao utilizar Wi-fi's Públicos!</h3>
-                        <ul className="secaoContent">
+                    <h3 className="answerTitle">Cuidado ao utilizar Wi-fi's Públicos!</h3>
+                        <ul className="answerContent">
                             <li>
                                 Os Wi-fi's públicos são uma grande rede de vulnerabilidade e, caso você se conecte a ela se dispositivo também
                                 está vulnerável a possíveis ataques proferidos aquela rede. Isso porque qualquer um pode acessar aquela conexão,
@@ -194,10 +155,7 @@ class ResultadosPS extends Component {
         } 
 
         return (
-            <section className="primeiraSecaoPP">
-                    <p>
-                        {this.state.dados}
-                    </p>
+            <section>
                     {primeiraPergunta}
                     {segundaPergunta}
                     {terceiraPergunta}

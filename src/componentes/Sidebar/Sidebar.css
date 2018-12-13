@@ -40,7 +40,7 @@
     padding-bottom: 1.5em;
 }
 
-div > p {
+.sidebar-title {
     color: #fff;
     font-size: 1.25em;
     padding-bottom: 1em;

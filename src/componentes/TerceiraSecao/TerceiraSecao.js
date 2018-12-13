@@ -8,7 +8,7 @@ class TerceiraSecao extends Component {
       <div className="terceira-secao__container">
         <h1 id="terceiraSecao" className="header_secoes">Mobile</h1>
         <Pergunta
-          title="Você utiliza alguns desses dois aplicativos: Signal ou Wire? "
+          title="Você utiliza alguns desses dois aplicativos de mensagem instantânea: Signal ou Wire? "
           name="terceiraSecaoPrimeiraPergunta"
         />
         <Pergunta

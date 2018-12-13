@@ -1,49 +1,14 @@
 import React, { Component } from 'react'
-//import Counter from '../Counter/Counter'
-
 
 class ResultadosTS extends Component {
-
-    constructor(props){
-        super(props)
-
-        this.state = {
-            dados: ''
-        }
-
-        this.somar = this.somar.bind(this)
-    }
-
-    componentDidMount(){
-        let soma = 0;
-        if (localStorage.getItem("terceiraSecaoPrimeiraPergunta") === "sim") {
-            soma += 25;
-        } 
-        if (localStorage.getItem("terceiraSecaoSegundaPergunta") === "sim") {
-            soma += 25;
-        } 
-        if (localStorage.getItem("terceiraSecaoTerceiraPergunta") === "nao") {
-            soma += 25;
-        } 
-        if (localStorage.getItem("terceiraSecaoQuartaPergunta") === "sim") {
-            soma += 25;
-        } 
-        soma = Math.floor(soma)
-        this.somar(soma)
-
-    }
-
-    somar = (soma) => {
-        this.setState({ dados: soma })
-    }
     
     render() {
         let primeiraPergunta;
         if (localStorage.getItem("terceiraSecaoPrimeiraPergunta") === "nao") {
             primeiraPergunta =
                 <div>
-                    <h3 className="secaoTitle">Não me chama no zap zap</h3>
-                        <ul className="secaoContent">
+                    <h3 className="answerTitle">Não me chama no zap zap</h3>
+                        <ul className="answerContent">
                             <li>
                                 Todo mundo usa Whatsapp, mas será que ele realmente é confiável para guardar todas as nossas conversas? 
                                 Para quem não sabem, a empresa foi comprada pelo Facebook há quatro anos e hoje faz parte do outro maior monopólio de 
@@ -69,8 +34,8 @@ class ResultadosTS extends Component {
                                 Depois dessa enxurrada de informações chocantes, está na hora de apresentar as alternativas:
                                 Queremos evitar duas coisas no caso de mensagens instantâneas, armazenamento das mensagens nos servidores do aplicativo, porque podem ser 
                                 recuperadas através de falhas de segurança ou de funcionários mal intencionados, criptografia ponto-a-ponto, para evitar que alguém possa 
-                                ler as mensagens sem permissão e uma política de privacidade que de fato proteja o usuário e não use-o. Para isso, utilize <a className="link" href="https://app.wire.com/">Wire</a> ou 
-                                <a className="link" href="https://signal.org/">Signal</a>. 
+                                ler as mensagens sem permissão e uma política de privacidade que de fato proteja o usuário e não use-o. Para isso, utilize 
+                                <a className="link" href="https://app.wire.com/">Wire</a> ou <a className="link" href="https://signal.org/">Signal</a>. 
                             </li>
                             <li>
                                 Para uma avaliação mais detalhada acesse esse <a className="link" href="https://www.securemessagingapps.com/">link</a> que contém uma uma tabela comparando as opções disponíveis. 
@@ -83,8 +48,8 @@ class ResultadosTS extends Component {
         if (localStorage.getItem("terceiraSecaoSegundaPergunta") === "nao"){
             segundaPergunta = 
                 <div>
-                    <h3 className="secaoTitle">Criptografia é amor</h3>
-                    <ul className="secaoContent">
+                    <h3 className="answerTitle">Criptografia é amor</h3>
+                    <ul className="answerContent">
                         <li>
                             A encriptação do celular é um dos passos mais fáceis a serem realizados e também mais importantes. Isso porque
                             ao encriptar o aparelho se torna muito mais difícil (se não impossível) terceiros conseguirem extrair dados 
@@ -96,7 +61,8 @@ class ResultadosTS extends Component {
                         </li>
                         <li>
                             Mas o que é a criptografia? Essencialmente, a criptografia mistura seus dados de modo que quando alguém tenta lê-los, eles não são legíveis
-                            a não ser que você possua a chave para ler essa criptografia. Para saber mais sobre o que é criptografia e como efetuá-la em seu dispositivo, visite os <a href="/docs">Docs</a>.  
+                            a não ser que você possua a chave para ler essa criptografia. Para saber mais sobre o que é criptografia e como efetuá-la em seu dispositivo, 
+                            visite os <a className="link" href="/docs">Docs</a>.  
                         </li>
                     </ul>
                 </div>
@@ -106,9 +72,24 @@ class ResultadosTS extends Component {
         if (localStorage.getItem("terceiraSecaoTerceiraPergunta") === "sim"){
             terceiraPergunta = 
             <div>
-                <h3 className="secaoTitle"></h3>
-                    <ul className="secaoContent">
+                <h3 className="answerTitle">Precisamos prestar mais atenção as permissões que damos aos aplicativos</h3>
+                    <ul className="answerContent">
                         <li>
+                            Quais dados os aplicativos podem ou não acessar? Em abril de 2018, foi descoberto que o Facebook teria <a className="link" href="https://arstechnica.com/information-technology/2018/03/facebook-scraped-call-text-message-data-for-years-from-android-phones/">guardado os registros de chamadas</a> dos usuários 
+                            que optaram por compartilhar a lista de contatos com a plataforma, na época anterior ao Android 4.1 Jelly Bean. Depois dessa descoberta, fica a dúvida sobre o que cada aplicativo que utilizamos no dia a dia guardam
+                            captam de dados dos nossos celulares. 
+                        </li>
+                        <li>
+                            Devido a violação de privacidade que muitas vezes ocorre no caso das empresas resolverem coletar informações sensíveis sobre seus usuários sem eles mesmos saberem, para
+                            um uso que não estamos cientes para qual fim serve, é importante dar acesso à funcionalidades que realmente sejam necessárias para o funcionamento do aplicativo.
+                        </li>
+                        <li>
+                            Muitos apps vão dizer que os dados fornecidos pelos usuários são utilizados simplesmente para melhoria do produto final, como um feedback sobre 
+                            o produto que a empresa coloca no mercado. No entanto, ficou evidente depois dos recentes escandalos envolvendo o <a className="link" href="https://www.tecmundo.com.br/video-game-e-jogos/107132-privacidade-acesso-completo-conta-google-pokemon-go-erro.htm">Pokemon Go</a>, 
+                            em que em uma de suas atualizações, o app conseguiria mudar as configurações e editar o perfil do Google de seus usuários. 
+                        </li>
+                        <li>
+                            Portanto, fica a dica sobre rever os acessos dados a camera, localização, microfone, contatos, etc, para os aplicativos instalados em seu aparelho!
                         </li>
                     </ul>
             </div>
@@ -118,9 +99,19 @@ class ResultadosTS extends Component {
         if (localStorage.getItem("terceiraSecaoQuartaPergunta") === "nao"){
             quartaPergunta = 
             <div>
-                <h3 className="secaoTitle"></h3>
-                <ul className="secaoContent">
+                <h3 className="answerTitle">As marcas deixadas em seu Android deixam as portas abertas para terceiros entrarem</h3>
+                <ul className="answerContent">
                     <li>
+                        Utilizar o padrão de deslizar como método de bloqueio de segurança para seu Android não dificulta a entrada de terceiros em seu aparelho. 
+                        Faça um teste: debloqueie seu aparelho e bloqueie-o novamente. Depois, mova seu celular levemente para baixo, de modo que você não consiga mais ver 
+                        o que está aparecendo na tela, só seu reflexo.
+                    </li>
+                    <li>
+                        Já enxergou? Essas são as marcas de gordura do seu dedo após você desbloquea-lo. Se você enxergou, outros também vão pensar em utilizar essa técnica para
+                        descobrir o padrão. Além disso, também existe a possibilidade de alguém espiar por cima do ombro qual o seu padrão de desbloqueio.
+                    </li>
+                    <li>
+                        Para deixar a vulnerabilidade do aparelho de lado, mude seu padrão de desbloqueio para uma senha comum, com caracteres. 
                     </li>
                 </ul>
             </div>
@@ -128,9 +119,6 @@ class ResultadosTS extends Component {
 
         return (
             <section>
-                <p>
-                    {this.state.dados}
-                </p>
                 {primeiraPergunta}
                 {segundaPergunta}
                 {terceiraPergunta}

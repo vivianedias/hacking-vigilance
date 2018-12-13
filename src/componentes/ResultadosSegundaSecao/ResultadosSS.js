@@ -2,51 +2,14 @@ import React, { Component } from 'react'
 
 
 class ResultadosSS extends Component {
-
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            dados: ''
-        }
-
-        this.somar = this.somar.bind(this)
-    }
-
-    componentDidMount() {
-        let soma = 0;
-        if (localStorage.getItem("segundaSecaoPrimeiraPergunta") === "sim") {
-            soma += 20;
-        }
-        if (localStorage.getItem("segundaSecaoSegundaPergunta") === "nao") {
-            soma += 20;
-        }
-        if (localStorage.getItem("segundaSecaoTerceiraPergunta") === "sim") {
-            soma += 20;
-        }
-        if (localStorage.getItem("segundaSecaoQuartaPergunta") === "sim") {
-            soma += 20;
-        }
-        if (localStorage.getItem("segundaSecaoQuintaPergunta") === "sim") {
-            soma += 20;
-        }
-        soma = Math.floor(soma)
-        this.somar(soma)
-
-    }
-
-    somar = (soma) => {
-        this.setState({ dados: soma })
-    }
-
     
     render() {
         let primeiraPergunta;
             if (localStorage.getItem("segundaSecaoPrimeiraPergunta") === "nao") {
                 primeiraPergunta =
                     <div>
-                        <h3 className="secaoTitle">A importância da autenticação em dois fatores</h3>
-                            <ul className="secaoContent">
+                        <h3 className="answerTitle">A importância da autenticação em dois fatores</h3>
+                            <ul className="answerContent">
                                 <li>
                                     A autenticação em dois passos (conhecida como 2FA, do inglês two-factor authentication) deve ser ligada para todos os serviços possíveis. 
                                     Com a autenticação em dois passos ativada, para alguém ter acesso à uma das suas contas, além de ter acesso a sua senha, o hacker 
@@ -71,8 +34,8 @@ class ResultadosSS extends Component {
             if (localStorage.getItem("segundaSecaoSegundaPergunta") === "sim"){
                 segundaPergunta = 
                     <div>
-                        <h3 className="secaoTitle">Você tem certeza que compartilhar sua localização a todo momento é seguro?</h3>
-                        <ul className="secaoContent">
+                        <h3 className="answerTitle">Você tem certeza que compartilhar sua localização a todo momento é seguro?</h3>
+                        <ul className="answerContent">
                             <li>
                                 Além de potencialmente colocar sua vida em risco ao expor ao extremo sua vida pessoal e geolocalização na internet à terceiros 
                                 que podem estar mal intencionados, reflita: o quão fácil é traçar um padrão de sua rotina, hábitos e estilo de vida através dessas informações?
@@ -95,8 +58,8 @@ class ResultadosSS extends Component {
             if (localStorage.getItem("segundaSecaoTerceiraPergunta") === "nao"){
                 terceiraPergunta = 
                 <div>
-                    <h3 className="secaoTitle">Talvez seja a hora de melhorar sua segurança ao trocar e-mails</h3>
-                        <ul className="secaoContent">
+                    <h3 className="answerTitle">Talvez seja a hora de melhorar sua segurança ao trocar e-mails</h3>
+                        <ul className="answerContent">
                             <li>
                                 Com os frequentes vazamentos de dados da Google e Yahoo, fica difícil ainda acreditar nos procolos de segurança dessas empresas, além do monopólio milionário
                                 que possuem sobre o mundo da tecnologia. Porém, sobreposto à esses motivos está o fato de que se algum serviço é gratuito no mundo das interwebs, o produto 
@@ -119,8 +82,8 @@ class ResultadosSS extends Component {
             if (localStorage.getItem("segundaSecaoQuartaPergunta") === "nao"){
                 quartaPergunta = 
                 <div>
-                    <h3 className="secaoTitle">Descentralizar sempre é a melhor solução</h3>
-                    <ul className="secaoContent">
+                    <h3 className="answerTitle">Descentralizar sempre é a melhor solução</h3>
+                    <ul className="answerContent">
                         <li>
                             Há algum tempo a descentralização vem se tornando a prática mais utilizada no que se diz respeito a um mundo virtual seguro. O mercado dos Bitcoins
                             é totalmente descentralizado, aliás, essa é uma de suas características que trazem mais segurança para essa nova moeda, e o que a torna (quase) impossível
@@ -140,8 +103,8 @@ class ResultadosSS extends Component {
             if (localStorage.getItem("segundaSecaoQuintaPergunta") === "nao"){
                 quintaPergunta = 
                 <div>
-                    <h3 className="secaoTitle">Por favor parem de utilizar "1234" como sua senha!</h3>
-                    <ul className="secaoContent">
+                    <h3 className="answerTitle">Por favor parem de utilizar "1234" como sua senha!</h3>
+                    <ul className="answerContent">
                         <li>
                             Em junho de 2016 depois de um vazamento de dados do Linkedin o mundo soube que a senha do idealizador da rede social Facebook
                             era "dadada". Eu sei, "se Mark Zuckenburg tem uma senha fraca para uma rede social, por que eu deveria me importar com isso?",
@@ -160,9 +123,6 @@ class ResultadosSS extends Component {
 
         return (
             <section>
-                <p>
-                    {this.state.dados}
-                </p>
                 {primeiraPergunta}
                 {segundaPergunta}
                 {terceiraPergunta}

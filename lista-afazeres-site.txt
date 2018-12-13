@@ -11,6 +11,7 @@ Resultados
 - fazer aparecer a pontuação de acordo com as respostas para as perguntas - DONE
 - aparecer as dicas para as questões que a pessoa não respondeu certo - DONE
     (não precisa replicar a questão, só coloca as "seções - pontuação" > dicas com as respostas incorretas)
+- nos resultadosQS explicar melhor os motivos do linux e colocar tutorial sobre como cobrir cameras 
 
 Sobre 
 - escrever um texto que fale mais sobre o projeto em si

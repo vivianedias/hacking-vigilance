@@ -5,7 +5,7 @@ import './Sidebar.css'
 const Sidebar = () => {
     return (
         <div className="teste-display_sidebar sidebar_styling">
-            <p>Tabela de Conteúdo</p>
+            <p className="sidebar-title">Tabela de Conteúdo</p>
             <section className="links_spacing">
                 <AnchorLink href='#primeiraSecao' className="sidebar_links">Conectada na Web</AnchorLink>
             </section>
