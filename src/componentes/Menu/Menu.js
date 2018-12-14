@@ -22,7 +22,9 @@ class Menu extends Component {
     let classesDoBotao = 'navbar-menu__botao'
     let classesDasOpcoes = 'navbar-menu__opcoes'
 
-    if (this.state.aberto) {
+    const menuAberto = this.state.aberto;
+
+    if (menuAberto) {
       classesDoBotao += ' navbar-menu__botao--aberto'
       classesDasOpcoes += ' navbar-menu__opcoes--aberto'
     }
@@ -34,6 +36,15 @@ class Menu extends Component {
         </button>
 
         <ul className={classesDasOpcoes}>
+          {menuAberto ? (
+          <li>
+            <NavLink to="/">
+              Home
+            </NavLink>
+          </li>            
+          ) : (
+            null
+          )}
           <li>
             <NavLink to="/teste" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
               Teste
@@ -42,12 +53,12 @@ class Menu extends Component {
           <li>
             <NavLink to="/docs" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
               Docs
-              </NavLink>
+            </NavLink>
           </li>
           <li>
             <NavLink to="/sobre" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
               Sobre
-              </NavLink>
+            </NavLink>
           </li>
         </ul>
       </nav>

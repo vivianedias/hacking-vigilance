@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Navbar from '../../componentes/Navbar/Navbar'
 import Botao from '../../componentes/Botao/Botao'
 import Footer from '../../componentes/Footer/Footer'
@@ -15,26 +16,28 @@ class Home extends Component {
         return (
             <main>
                 <Navbar />
-                <section className="row home-container__first-part">
-                    <div className="col-md align-self-center">
-                        <h1 className="first-part__home_title">Você tem direito à privacidade</h1>
+                <section className="container">
+                    <div className="row align-items-center home-container__first-part">
+                        <div className="col-md-6 first-part">
+                            <h1 className="first-part__home_title">Você tem direito à privacidade</h1>
 
-                        <div className="home-subtitle_button">
-                            <p className="legenda"><a className="link" href="/blank">Entenda porque</a></p>
-                            <a href="/teste">
-                                <Botao className="botao_first_part">Descubra se você está segura(o)</Botao>
-                            </a>
+                            <div className="home-subtitle_button">
+                                <p className="legenda">
+                                    <AnchorLink className="link" href="#containers">Entenda porque</AnchorLink>
+                                </p>
+                                <a href="/teste">
+                                    <Botao>Descubra se você está segura(o)</Botao>
+                                </a>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="col-md align-self-center">
-                        <img className="img-styling" src={home} alt="Logo" />
-                    </div>
+                        <div className="col-md-6">
+                            <img className="img-styling" src={home} alt="Logo" />
+                        </div>
+                    </div>  
 
-                </section>
-                <section className="home-container__second-part ">
-                    <h2 className="second-part__home_title">Você está sendo vigiada </h2>
-                    <div className="row justify-content-around card-deck">
+                    <h2 className="second-part__home_title" id="containers">Você está sendo vigiada </h2>
+                    <div className="row justify-content-around card-deck  home-container__second-part">
                         <Containers  
                         className="col-12 
                         col-md-4" 
@@ -43,6 +46,12 @@ class Home extends Component {
                         texto="Depois do fenômeno da internet e das redes sociais perdemos o senso do que é, de fato, privacidade.
                         Na era da ultravigilância com câmeras por toda cidade e com mídias que incentivam o compartilhamento em
                         tempo real de nossas vidas, ninguém está verdadeiramente anônimo."
+                        />
+                        <Containers  
+                        className="col-12 col-md-4" 
+                        image={eye} 
+                        titulo="Porque nos importamos com a vigilância governamental, mas não a feita por grandes corporações?"
+                        texto="Quando pensamos em vigilancia, espionagem, o sentimento nunca é positivo. Proponho um exercício, você já"
                         />
                         <Containers  
                         className="col-12 col-md-4" 
@@ -56,14 +65,8 @@ class Home extends Component {
                         das redes têm um custo: precisam nos manter online, conectados e sempre compartilhando mais e mais informações sensíveis
                         sobre nós mesmos nesse modelo de negócio pautados por propaganda"
                         />
-                        <Containers  
-                        className="col-12 col-md-4" 
-                        image={eye} 
-                        titulo="Porque nos importamos com a vigilância governamental, mas não a feita por grandes corporações?"
-                        texto="Quando pensamos em vigilancia, espionagem, o sentimento nunca é positivo. Proponho um exercício, você já"
-                        />
                     </div>
-                </section>
+            </section>
                 <Footer />
             </main >
         )
