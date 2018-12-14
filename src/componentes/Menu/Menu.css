@@ -11,7 +11,7 @@
     width: 80vw;
     padding: 2rem 1rem 0;
     margin: 0;
-    background-color: rgba(33, 28, 90, 0.7);
+    background-color: #ea7d59;
     background-image: linear-gradient(119deg, rgba(33, 28, 90, 0.7), rgba(66, 28, 80, 0.7));
     font-family: 'Exo', sans-serif;
     transform: translateX(-100%);

@@ -169,7 +169,7 @@ class Docs extends Component {
                             <h1 className="main-title">Tutorial Básico de Segurança Digital</h1>
                             <h3 className="main-subtitle">“Privacidade é um direito humano”</h3>
     
-                            <p className="docs-title">Connectada na Web</p>
+                            <p className="docs-title">Conectada na Web</p>
                                 <ul>
                                     <p id="1" className="docs-pointers">Navegador (Browser)</p>
                                         <p>Escolha preferencialmente entre esses três navegadores:</p>
@@ -217,8 +217,6 @@ class Docs extends Component {
                                             <li>• Para que ele serve?</li>
                                             <ul>
                                                 <li>◦ Ele pode te tornar anônimo ao navegar pela web utilizando as boas práticas. No entanto, há uma maior probabilidade de haver uma vazamento do que usando Tor. </li>
-                                                <li>◦ Virtual because you’re not creating a new physical connection with your destination — your data is just traveling through existing wires between you and your destination</li>
-                                                <li>◦ Private because it encrypts your activity before sending it, then decrypts it at the destination.</li>
                                             </ul>
                                             <li>• Qual devo escolher?</li>
                                             <ul>
@@ -253,7 +251,7 @@ class Docs extends Component {
                             <ul>
                                 <li id="7" className="docs-pointers">E-mail</li>
                                 <ul>
-                                    <li>• Use uma segurança de dois fatores (two-factor auth)</li>
+                                    <li>• Use e abuse da política de segurança de dois fatores (two-factor auth)</li>
                                     <ul>
                                         <li>◦ Com seu número de celular ou outra conta de e-mail</li>
                                         <li>◦ Nunca deixe seu e-mail sem essa dupla verificação, isso facilita a recuperação de senhas e aumenta a segurança de acesso a sua conta</li>
@@ -275,9 +273,8 @@ class Docs extends Component {
                                         </p>
     
                                         <p>
-                                            A autenticação por SMS sofre do problema de estar vulnerável a clonagem de chip, o que é extremamente comum. A vice escreveu um artigo, em inglês,
-                                            sobre a técnica. De maneira curta: os atacantes fazem engenharia social para conseguir clonar os chips de dentro das operadoras. Com isso, conseguem
-                                            os códigos de confirmação necessários para fazer login. Essa técnica foi usada para derrubar o grupo de facebook “Mulheres contra Bolsonaro”, por exemplo.
+                                            A autenticação por SMS sofre do problema de estar vulnerável a clonagem de chip, o que é extremamente comum. Uma explicação breve é a de que os atacantes fazem "engenharia social" para conseguir clonar os chips de dentro das operadoras. Com isso, conseguem
+                                            os códigos de confirmação necessários para quaisquer credenciais que dependam de uma confirmação por número de telefone. Essa técnica foi usada para derrubar o grupo de facebook “Mulheres contra Bolsonaro”, por exemplo.
                                         </p>
                                     </li>
                                 </ul>
@@ -286,11 +283,12 @@ class Docs extends Component {
                             <ul>
                                 <li id="9" className="docs-pointers">Senhas</li>
                                 <ul>
+                                    <li>• Não use a mesma senha para diferentes serviços/contas, isso cria uma vulnerabilidade imensa. Se descobrirem uma senha sua, o que terão acesso?</li>
                                     <li>
-                                        • Não use a mesma senha para diferentes serviços/contas, isso cria uma vulnerabilidade imensa. Se descobrirem uma senha sua, o que terão acesso?
-                                        Esses são processos que demandam um pouco de trabalho (comparando com a facilidade de salvar as senhas no navegador ou usar somente uma para tudo),
-                                        mas qualquer coisa nova requer um certo tempo para que se acostume, e você também vai chegar lá no diz respeito a suas senhas!
+                                        • Essee é um processo que demandam um pouco de trabalho (comparando com a facilidade de salvar as senhas no navegador ou usar somente uma para tudo),
+                                        mas qualquer coisa nova requer um certo tempo para se acostumar, e essa pequena prática não deixa de ser possível se acostumar, até que virem rotina!
                                     </li>
+
                                     <li>• Como saber se minha senha é boa o suficiente?</li>
                                     <ul>
                                         <li>◦ <a href="http://testedesenha.com.br/" className="link" rel="noopener noreferrer" target="_blank">Teste de Senha</a></li>
@@ -306,16 +304,16 @@ class Docs extends Component {
                             
                             <p id="10" className="docs-title">Mobile</p>
                                 <p className="text-indent">
-                                    Nossa maior vulnerabilidade talvez esteja em nossos smartphones. Com milhares de mensagens, e-mails, fotos, arquivos, entre outros, armazenados em um só
-                                    dispositivo, qualquer um que obtenha acesso a ele terá acesso à, provavelmente, toda nossa vida digital. E é por isso que a segurança desse dispositivo é tão
-                                    essencial. A seguir estão alguns passos para uma proteção básica que você pode seguir:
+                                    Nossa maior vulnerabilidade talvez esteja em nossos smartphones. Com milhares de mensagens, e-mails, fotos, arquivos, etc, armazenados em um só
+                                    dispositivo, qualquer um que obtenha acesso a ele terá acesso a provavelmente toda nossa vida digital. Por isso que a segurança desse dispositivo é tão
+                                    essencial. A seguir está um guia com alguns passos para uma proteção básica do aparelho:
                                 </p>
                                 <ul>
                                     <li id="11" className="docs-pointers">Não use o desbloqueio padrão do celular (estilo ligue os pontos)</li>
                                     <ul>
-                                        <li>• Sempre utilize o modo PIN, em que para desbloquear a tela seja preciso inserir uma senha com caracteres</li>
+                                        <li>• Sempre utilize o modo PIN, no qual para desbloquear a tela seja preciso inserir uma senha com caracteres</li>
                                         <li>
-                                            • O método padrão já foi provado ineficiente pois ao ser utilizado frequentemente, as marcas de dedo na tela ficam evidentes, e dependendo do
+                                            • Isso porque o método padrão já foi provado ineficiente pois ao ser utilizado frequentemente, as marcas de dedo na tela ficam evidentes, e dependendo do
                                             modo que o dispositivo é segurado, é possível identificá-las e desbloquear o celular com facilidade.
                                         </li>
                                     </ul>
@@ -334,9 +332,11 @@ class Docs extends Component {
                                             <li>• <a href="http://www.androidlost.com" className="link" rel="noopener noreferrer" target="_blank">AndroidLost</a></li>
                                             <ul>
                                                 <li>◦ Controle Completamente as atividades do seu Celular</li>
-                                                <li>◦ Veja a localização</li>
-                                                <li>◦ Tire fotos</li>
-                                                <li>◦ Grave Audio</li>
+                                                <ul>
+                                                    <li>▪ Veja a localização</li>
+                                                    <li>▪ Tire fotos</li>
+                                                    <li>▪ Grave Audio</li>
+                                                </ul>
                                             </ul>
                                             <li>• <a href="http://www.icloud.com/find" className="link" rel="noopener noreferrer" target="_blank">iCloud:</a> Localizar seu dispositivo</li>
                                             <li>• <a href="https://www.google.com/android/devicemanager" className="link" rel="noopener noreferrer" target="_blank">GooglePlay:</a> Device Manager</li>
@@ -344,10 +344,16 @@ class Docs extends Component {
                                         </ul>
                                     <li id="16" className="docs-pointers">Aplicativos de mensagem instantânea</li>
                                         <ul>
-                                            <li>
-                                                • Queremos evitar duas coisas no caso de mensagens instantâneas: armazenamento das mensagens nos servidores do aplicativo, porque podem ser recuperadas através de falhas de segurança ou de funcionários mal intencionados; criptografia ponto-a-ponto, para evitar que alguém possa ler as mensagens sem permissão. Para isso, utilize Wire ou Signal.
-                                                Para uma avaliação mais detalhada acesse: <a href="https://www.securemessagingapps.com/" className="link" rel="noopener noreferrer" target="_blank">Secure Messaging Apps</a>
-                                            </li>
+                                            <li>• Queremos evitar duas coisas no caso de aplicativos de mensagens instantâneas:</li>
+                                                <ul>
+                                                    <li>
+                                                        ◦ Que os dados gerados por você ao utilizar o aplicativo fiquem armazendos nos servidores da empresa, 
+                                                        isso porque elas podem ser recuperadas através de falhas de segurança ou repassadas por funcionários mal intencionados
+                                                    </li>
+                                                    <li>◦ Que as suas mensagens sejam lidas sem sua permissão, para isso, procure um aplicativo que utilize criptografia de ponta-a-ponta,</li> 
+                                                </ul>
+                                                <li>• Duas sugestões de aplicativos que possuem ambas as características aqui ressaltadas são Wire e Signal.</li>
+                                                <li>• Para uma avaliação mais detalhada acesse: <a href="https://www.securemessagingapps.com/" className="link" rel="noopener noreferrer" target="_blank">Secure Messaging Apps</a></li>                                                                                                
                                         </ul>                        
                                 </ul> 
     
@@ -359,15 +365,15 @@ class Docs extends Component {
                                 </ul>
                                 <li id="18" className="docs-pointers">Webcam e microfone</li>
                                 <ul>
-                                    <li>• Esconda a câmera com algum adesivo (opção mais barata) – também existem outras opções mais propicias para esse fim e que durem por mais tempo</li>
+                                    <li>• Esconda a câmera com algum adesivo (opção mais barata), ou com dispositivos específicos para essa tarefa que cobrem e descobrem a camera do aparelho, com um movimento de deslize.</li>
                                     <li>• No caso do microfone, a melhor opção é sempre deixá-lo desligado.</li>
                                 </ul>
                                 <li id="19" className="docs-pointers">Compartilhamento de dados na nuvem</li>
                                 <ul>
                                     <li>• É assim que o MEGA, sucessor do Megaupload se apresenta. Exatamente um ano depois de ser preso por pirataria e ter os serviços retirados do ar por
                                         ordens judiciais, Kim Dotcom traz o MEGA com a intenção de ser o serviço definitivo de armazenamento nas nuvens. O grande diferencial do MEGA é o
-                                        sistema de criptografia avançada. Esse recurso bloqueia o conteúdo, fazendo com que os dados permaneçam privados. Desta forma, somente o dono dos
-                                        arquivos consegue abri-los e, se quiser, compartilhar seus diretórios.
+                                        sistema de criptografia avançada. Esse recurso bloqueia o conteúdo de terceiros (caso você escolha isso), fazendo com que os dados permaneçam verdadeiramente privados. 
+                                        Desta forma, somente os proprietários dos arquivos conseguem compartilhar e utilizar normalmente seus arquivos nesse sistema. 
                                     </li>
                                 </ul>
                                 <li id="20" className="docs-pointers">Wi-Fi</li>

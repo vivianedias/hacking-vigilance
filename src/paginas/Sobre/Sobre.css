@@ -1,0 +1,24 @@
+.sobre{
+    color: #fff;
+    line-height: 1.6;
+}
+
+.sobre-title{
+    font-family: 'Exo', sans-serif;
+    font-size: 4em;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.sobre-content {
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-indent: 50px;
+}
+
+.sobre-bold {
+    font-weight: 600;
+    font-size: 2em;
+    margin-top: 1em;
+}
