@@ -18,7 +18,11 @@
 }
 
 .sobre-bold {
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.2em;
     font-weight: 600;
     font-size: 2em;
     margin-top: 1em;
+    text-align: center;
+    padding-bottom: 2em;
 }

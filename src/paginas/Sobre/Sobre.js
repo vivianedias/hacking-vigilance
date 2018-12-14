@@ -46,8 +46,8 @@ function Sobre(){
                                 é privacidade, e se não podemos ter ao menos isso, em que estado democrático estamos inseridos? 
                             </p>
 
-                            <p className="sobre-bold">Viva o Software Livre e a Internet Democrática!</p>
                         </div>
+                            <p className="sobre-bold">Viva o Software Livre e a Internet Democrática!</p>
                     </div>
                 </div>
             </div>
