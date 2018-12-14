@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './Botao.css'
 
-function Botao(props) {
-  let classes = "btn btn-outline-secondary myButton"
+class Botao extends Component {
 
-  if (props.desabilitado) {
-    classes += " botao--desabilitado"
-  }
   
-  return (
-    <button className={classes} disabled={props.desabilitado}>
-      {props.children}
-    </button>
-  )
+  
+  render(){
+
+    let classes = "btn btn-outline-secondary myButton"
+
+    if (this.props.desabilitado) {
+      classes += " botao--desabilitado"
+    }
+
+    return (
+      <button onClick={this.props.onClick} className={classes} disabled={this.props.desabilitado}>
+        {this.props.children}
+      </button>
+    )
+  }
 }
 
 export default Botao

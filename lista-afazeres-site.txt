@@ -20,6 +20,9 @@ Docs
 - replicar o conteúdo que eu mesma produzi - DONE
 - revisar esse conteudo
 - fazer um glossário
+- arrumar anchorlink no mobile
+    -https://www.npmjs.com/package/react-scroll-to-component
+    -https://www.npmjs.com/package/react-scroll
 
 Footer
 - fazer o footer

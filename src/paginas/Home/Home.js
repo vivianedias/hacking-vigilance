@@ -12,6 +12,16 @@ import '../../index.css'
 import './Home.css'
 class Home extends Component {
 
+    constructor(props){
+      super(props)
+
+      this.handleClick = this.handleClick.bind(this);
+    }
+    
+    handleClick(){
+        this.props.history.push("/teste");
+    }
+
     render() {
         return (
             <main>
@@ -25,9 +35,7 @@ class Home extends Component {
                                 <p className="legenda">
                                     <AnchorLink className="link" href="#containers">Entenda porque</AnchorLink>
                                 </p>
-                                <a href="/teste">
-                                    <Botao>Descubra se você está segura(o)</Botao>
-                                </a>
+                                    <Botao onClick={this.handleClick}>Descubra se você está segura(o)</Botao>
                             </div>
                         </div>
 
