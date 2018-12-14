@@ -10,7 +10,7 @@ function Sobre(){
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-md-6 sobre">
-                        <h1 className="sobre-title">Porque privacidade importa?</h1>
+                        <h1 className="sobre-title">Por que privacidade importa?</h1>
                         <div className="sobre-content">
                             <p>
                             Depois de ler “1984” do George Orwell, lá com meus quinze anos, percebi a importância da privacidade na vida das pessoas. 

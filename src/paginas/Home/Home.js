@@ -33,7 +33,7 @@ class Home extends Component {
 
                             <div className="home-subtitle_button">
                                 <p className="legenda">
-                                    <AnchorLink className="link" href="#containers">Entenda porque</AnchorLink>
+                                    <AnchorLink className="link" href="#containers">Entenda por quê</AnchorLink>
                                 </p>
                                     <Botao onClick={this.handleClick}>Descubra se você está segura(o)</Botao>
                             </div>

@@ -7,7 +7,7 @@ class ResultadosQS extends Component {
             if (localStorage.getItem("quartaSecaoPrimeiraPergunta") === "nao"){
                 primeiraPergunta =
                     <div>
-                        <h3 className="answerTitle">15. Linux é amor</h3>
+                        <h3 className="answerTitle">16. Linux é amor</h3>
                             <div className="answerContent">
                                 <p>
                                     Para longe foram os dias em que Linux e Software Livre eram termos associados a programas difíceis de mexer,
@@ -61,7 +61,7 @@ class ResultadosQS extends Component {
             if (localStorage.getItem("quartaSecaoSegundaPergunta") === "nao"){
                 segundaPergunta = 
                     <div>
-                        <h3 className="answerTitle">16. Você pode estar sendo espionado</h3>
+                        <h3 className="answerTitle">17. Você pode estar sendo espionado</h3>
                         <div className="answerContent">
                             <p>
                                 Há um anos atrás, espionagem através dos nossos aparelhos com câmeras e microfones pareciam apenas paranóia. No entanto, recentemente 

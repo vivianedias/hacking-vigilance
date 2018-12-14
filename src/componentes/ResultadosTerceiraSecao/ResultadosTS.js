@@ -96,7 +96,7 @@ class ResultadosTS extends Component {
         } 
 
         let quartaPergunta;
-        if (localStorage.getItem("terceiraSecaoQuartaPergunta") === "nao"){
+        if (localStorage.getItem("terceiraSecaoQuartaPergunta") === "sim"){
             quartaPergunta = 
             <div>
                 <h3 className="answerTitle">15. As marcas deixadas em seu Android deixam as portas abertas para terceiros entrarem</h3>
