@@ -18,9 +18,8 @@ class Resultados extends Component {
             <section>
                 <Navbar />
                 <div className="container">
-                    <div className="row resultados-content">
-                        <div className="col-md-2 col-sm-1"></div>
-                        <div className="col-md-8 col-sm-10">
+                    <div className="row justify-content-center resultados-content">
+                        <div className="col-md-6">
                             <h1 className="resultados-title_main">Resultados</h1>
                                 <div className="counter-title">
                                     <h2 className="resultados-section_titles">Primeira Seção,</h2>
@@ -43,7 +42,6 @@ class Resultados extends Component {
                                 </div>
                                     <ResultadosQS />
                         </div>
-                        <div className="col-md-2 col-sm-1"></div>
                     </div>
                 </div>
                 <Footer />

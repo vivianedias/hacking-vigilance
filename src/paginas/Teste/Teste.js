@@ -41,6 +41,7 @@ class Teste extends Component {
     let sidebar = 
       <div>
         <h1 className="sidebar-title">Tabela de Conteúdo</h1>
+          <ul>
             <Sidebar 
             linkid="#primeiraSecao"
             link="Conectada na Web"
@@ -57,6 +58,7 @@ class Teste extends Component {
             linkid="#quartaSecao" 
             link="Desktop"
             />
+          </ul>
       </div>
     
     const isDesktop = this.state.isDesktop;

@@ -12,12 +12,12 @@ class ResultadosPS extends Component {
                         <div className="answerContent">
                             <p>
                             Além deles terem todas as mesmas características do Chrome, são navegadores que saem do monopólio do Google
-                            e tem uma preocupação forte no que diz respeito à segurança digital e te dão mais opções sobre o compartilhamento de dados na navegação.
+                            e tem uma preocupação forte no que diz respeito à segurança digital, ao te fornecer mais opções sobre o compartilhamento de dados na navegação.
                             </p>
                             <p>Motivos para utilizar Mozilla Firefox:</p>
                                 <ul>
-                                    <li>- No Firefox é possível bloquear <em>trackers</em> com bastante facilidade. Ou seja, a plataforma não tenta
-                                    ganhar dinheiro as suas custas.
+                                    <li>- No Firefox é possível bloquear trackers com bastante facilidade. Ou seja, a plataforma não te deixa vulnerável à possíveis sites que tenta
+                                    minar seus metadados enquanto você navega neles.
                                     </li>
                                     <li>- A empresa se importa <a className="link" target="_blank" rel="noopener noreferrer" href="https://www.mozilla.org/pt-BR/internet-health/privacy-security/">de verdade </a>
                                          com segurança digital.
@@ -26,7 +26,7 @@ class ResultadosPS extends Component {
                             <p>Motivos para utilizar Opera:</p>
                                 <ul>
                                     <li>- O navegador oferece boas configurações de segurança, mas não é diferente de outros sem elas, portanto, se for usá-lo 
-                                        ative VPN e Bloqueador de Ads</li>
+                                        ative o VPN e o Bloqueador de Ads</li>
                                 </ul> 
                         </div>
                 </div>
@@ -36,12 +36,12 @@ class ResultadosPS extends Component {
         if (localStorage.getItem("primeiraSecaoSegundaPergunta") === "nao"){
             segundaPergunta = 
                 <div>
-                    <h3 className="answerTitle">2. Qual o papel dos add-ons (extensões)</h3>
+                    <h3 className="answerTitle">2. Qual o papel dos Add-Ons (Extensões)</h3>
                     <div className="answerContent">
                         <p>
                             Pense na extensão como um potencializador para seu navegador. Com elas é possível bloquear ads, verificar 
-                            quantos trackers aquele site utiliza, qual o nível de segurança daquele portal, entre muitas outras coisas.
-                            No que se refere a segurança, sugiro alguns clássicos:
+                            quantos trackers aquele site utiliza, qual o nível de segurança daquele portal, entre outras coisas.
+                            No que se refere a segurança, sugiro estes que são os mais usados:
                         </p>
                         <ul>
                             <li>- HTTPS Everywhere - Sites confiáveis são sites criptografados (protocolo https)</li>
@@ -51,7 +51,7 @@ class ResultadosPS extends Component {
                                 - Disable WebRTC - Uma brecha de segurança foi descoberta recentemente na qual permite sites remotos tirarem 
                                 vantagem de um traço imbuído a alguns navegadores (como Chrome ou Firefox) chamado WebRTC (Web Real Time Communication). 
                                 Ele revela o real endereço IP do usuário, mesmo que eles estejam conectados em uma VPN. A extensão funciona ao desabilitar 
-                                essa função nata dos navegadores. 
+                                essa função nativa dos navegadores. 
                             </li>
                         </ul>
                     </div>
@@ -64,13 +64,14 @@ class ResultadosPS extends Component {
             <div>
                 <h3 className="answerTitle">3. O que o Google faz com meus dados?</h3>
                     <div className="answerContent">
-                        <p>
+                        <p className="text-indent">
                             Na era do big data (e seu potêncial altamente poderoso) é importante entendermos para onde vai nossas informações 
-                            e o que é feita com elas. 3.5 bilhões de questões são logadas no Google todos os dias. Adicionando essas informações
+                            e o que é feita delas. 3.5 bilhões de questões são logadas no Google todos os dias. Adicionando essas informações
                             com sua conta de e-mail, YouTube, Google Maps, entre as outras dezenas de aplicativos que o Google tem lançado,
                             o que a empresa NÃO sabe sobre nós? Em vista disso, o potencial de marketing da empresa é gigante, e o produto?
                             Nós, que fornecemos sem nenhum escrúpulo nossas informações, ideias, gostos e pensamentos para essa corporação.
-
+                        </p>
+                        <p className="text-indent">
                             Deixar de usar produtos Google, dando preferência a outras plataformas que verdadeiramente se importam com seus 
                             usuários não é impossível. Você pode começar agora, por exemplo, dando o primeiro passo ao trocar
                             seu mecanismo de pesquisa padrão para o <a className="link" target="_blank" rel="noreferrer noopener" href="https://duckduckgo.com/">DuckDuckGo</a>. A plataforma ainda não é tão precisa como o Google,

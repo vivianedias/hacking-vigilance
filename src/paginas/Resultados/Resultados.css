@@ -24,6 +24,10 @@
 
 /**STYLING**/
 
+.text-indent {
+    text-indent: 50px;
+}
+
 .resultados-title_main {
     font-family: 'Exo', sans-serif;
     font-size: 4em;
