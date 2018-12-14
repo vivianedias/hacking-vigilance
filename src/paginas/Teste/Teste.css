@@ -1,17 +1,38 @@
+/**DISPLAY**/
+@media (min-width: 768px){
+  .sidebar {
+    padding-right: 3em;
+  }
+
+  .form-display {
+    padding-left: 4em;
+    border-left: 1.2px solid hsla(0,0%, 100%,0.15);
+  }
+}
+
 .form-display {
     padding-top: 1em;
 }
 
-.sidebar-title {
-    font-family: 'Exo', sans-serif;
-    color: #fff;
-    font-size: 1.25em;
-    padding-bottom: 1em;
-    padding-top: 2.5em;
-  }  
-
+/**STYLING**/
 @media (min-width: 768px){
     .sidebar-title {
       text-align: right;
     }
   }
+
+.header_secoes {
+  color: #EA7D59;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: 'Exo', sans-serif;
+  padding: 1em 1em 1em 0;
+}
+
+.sidebar-title {
+    font-family: 'Exo', sans-serif;
+    color: #fff;
+    font-size: 2em;
+    padding-bottom: 1em;
+    padding-top: 1.5em;
+  }  

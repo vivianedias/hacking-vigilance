@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import Pergunta from '../Pergunta/Pergunta'
-import './PrimeiraSecao.css'
 
 class PrimeiraSecao extends Component {
 
   render() {
     return (
-      <div className="primeira-secao__container">
+      <div>
         <h1 id="primeiraSecao" className="header_secoes">Conectada na Web</h1>
         <Pergunta
           title="Você utiliza como navegador padrão, Mozilla ou Opera?"

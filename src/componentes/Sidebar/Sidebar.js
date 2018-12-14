@@ -6,9 +6,9 @@ class Sidebar extends Component {
 
     render() {
         return (
-            <p className="sidebar_styling">
-                    <AnchorLink href={this.props.linkid} className="sidebar_links">{this.props.link}</AnchorLink>
-            </p>
+                <li className="sidebar_styling">
+                        <AnchorLink href={this.props.linkid} className="sidebar_links">{this.props.link}</AnchorLink>
+                </li>
         )
     }
 }

@@ -40,13 +40,13 @@ class Menu extends Component {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/sobre" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
-              Sobre
+            <NavLink to="/docs" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
+              Docs
               </NavLink>
           </li>
           <li>
-            <NavLink to="/docs" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
-              Docs
+            <NavLink to="/sobre" activeClassName="navbar-menu__opcoes--ativo" onClick={this.abreOuFechaMenu}>
+              Sobre
               </NavLink>
           </li>
         </ul>

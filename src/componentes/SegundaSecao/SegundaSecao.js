@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import Pergunta from '../Pergunta/Pergunta'
-import './SegundaSecao.css'
 
 class SegundaSecao extends Component {
 
   render() {
     return (
-      <div className="segunda-secao__container">
+      <div>
         <h1 id="segundaSecao" className="header_secoes">Contas Online</h1>
         <Pergunta
           title="Você utiliza autenticação de dois passos em suas redes sociais e/ou e-mail?"

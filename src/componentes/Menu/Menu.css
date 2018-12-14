@@ -13,13 +13,12 @@
     margin: 0;
     background-color: rgba(33, 28, 90, 0.7);
     background-image: linear-gradient(119deg, rgba(33, 28, 90, 0.7), rgba(66, 28, 80, 0.7));
-    transform: translateX(-100%);
-    transition: transform 1s ease-in-out;
     font-family: 'Exo', sans-serif;
-
+    transform: translateX(-100%);
   }
   
   .navbar-menu__opcoes--aberto {
+    transition: transform 1s ease-in-out;
     transform: translateX(0);
   }
   
