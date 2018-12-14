@@ -1,49 +1,23 @@
-/* MEDIA QUERIES */
-@media (min-width: 768px) {
-    .teste-display_sidebar {
-      flex: 0 0 20em;
-    }
-
-    .sidebar_styling{
-        padding: 2em;
-    }
+/**STYLING**/
+@media (min-width: 768px){
+  .sidebar_styling{
+    text-align: right;
+  }
 }
 
-/* DISPLAY */
-.teste-display_sidebar {
-    order: -1;
-    flex: 0 0 15em;
-  }
-
-
-/* STYLING */
-
 .sidebar_styling {
-    text-align: left;
-    padding: 2em 0;
     font-family: 'Exo', sans-serif;
+    padding-bottom: 1em;
   }
-
-.sidebar_links {
+  
+  .sidebar_links {
   text-decoration: none; 
   color: #B2A7B8;
   font-size: 1.2em;
   padding-left: 1em;
-}
-
-.sidebar_links:hover{
+  }
+  
+  .sidebar_links:hover{
   text-decoration: none;
   color: #fff;
-}
-
-.links_spacing{
-    padding-bottom: 1.5em;
-}
-
-.sidebar-title {
-    color: #fff;
-    font-size: 1.25em;
-    padding-bottom: 1em;
-}
-
-
+  }

@@ -24,7 +24,7 @@ class CounterTS extends Component {
         if (localStorage.getItem("terceiraSecaoTerceiraPergunta") === "nao") {
             soma += 25;
         } 
-        if (localStorage.getItem("terceiraSecaoQuartaPergunta") === "sim") {
+        if (localStorage.getItem("terceiraSecaoQuartaPergunta") === "nao") {
             soma += 25;
         } 
         soma = Math.floor(soma)

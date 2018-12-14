@@ -1,46 +1,18 @@
-.teste-display {
-  min-height: 100vh;
+.form-display {
+    padding-top: 1em;
 }
 
-.teste-display_body {
-  flex: 1;
-  margin: 2em;
-  
-}
+.sidebar-title {
+    font-family: 'Exo', sans-serif;
+    color: #fff;
+    font-size: 1.25em;
+    padding-bottom: 1em;
+    padding-top: 2.5em;
+  }  
 
-.teste-display,
-.teste-display_body {
-  display: flex;
-  flex-direction: column;
-}
-
-.teste-display_content {
-  flex: 1;
-}
-
-
-@media (min-width: 770px) {
-  .teste-display_body {
-    flex-direction: row;
-    flex: 1;
+/**STYLING**/
+@media (min-width: 768px){
+    .sidebar-title {
+      text-align: right;
+    }
   }
-
-  .teste-container{
-    width: 50%;
-    height:100%;
-    margin: 0 auto;
-    overflow: hidden;
-    display: flex;
-  }
-
-  .teste-display_content {
-    flex: 1;
-    max-width: 100%;
-  }
-  }
-
-
-
-
-
-        

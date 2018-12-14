@@ -23,18 +23,37 @@ class Teste extends Component {
 
   render() {
     return (
-      <main className="teste-display">
+      <main>
         <Navbar />
-        <div className="teste-container">
-          <div className="teste-display_body">
-            <Sidebar />
-            <form onSubmit={this.routeChange} className="teste-display_content">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-md-4">
+              <h1 className="sidebar-title">Tabela de Conteúdo</h1>
+                <Sidebar 
+                linkid="#primeiraSecao"
+                link="Conectada na Web"
+                />
+                <Sidebar
+                linkid="#segundaSecao"
+                link="Contas Online"
+                />
+                <Sidebar
+                linkid="#terceiraSecao"
+                link="Mobile"
+                />
+                <Sidebar
+                linkid="#quartaSecao" 
+                link="Desktop"
+                />
+            </div>
+            <form onSubmit={this.routeChange} className="col-md-6 form-display">
               <PrimeiraSecao />
               <SegundaSecao />
               <TerceiraSecao />
               <QuartaSecao />
               <Botao>Enviar</Botao>
             </form>
+            <div className="col-md-2"></div>
           </div>
         </div>
         <Footer />

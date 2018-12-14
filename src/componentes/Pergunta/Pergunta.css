@@ -1,7 +1,8 @@
-section > p{
+section > p {
     font-size: 1.25em;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
 }
 
 .spacing{
