@@ -39,7 +39,7 @@ class Teste extends Component {
 
   render() {
     let sidebar = 
-      <div>
+      <div className="tabela-display">
         <h1 className="sidebar-title">Tabela de Conteúdo</h1>
           <ul>
             <Sidebar 
