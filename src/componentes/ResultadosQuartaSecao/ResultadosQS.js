@@ -14,32 +14,36 @@ class ResultadosQS extends Component {
                                     e para uso exclusivo de programadores ou técnicos em informática. 
                                 </p>
                                 <ul>
-                                    <li>Mas o que é o Linux?</li>
-                                        <p>
+                                    <li className="docs-pointers">Mas o que é o Linux?</li>
+                                    <ul>
+                                        <li>
                                             "Linux é o núcleo do sistema operacional, programa responsável pelo funcionamento do computador, que faz a comunicação entre hardware 
                                             (impressora, monitor, mouse, teclado) e software (aplicativos em geral). O conjunto do kernel e demais programas responsáveis por 
                                             interagir com este é o que denominamos sistema operacional. O kernel é o coração do sistema.
 
                                             Os principais programas responsáveis por interagir com o kernel foram criados pela fundação GNU. Por este motivo é mais correto nos 
                                             referenciarmos ao sistema operacional como GNU/Linux ao invés de apenas Linux." Texto retirado do site <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.vivaolinux.com.br/linux/">Viva O Linux</a>.
-                                        </p>
-                                    <li>Qual a diferença entre Windows e Linux?</li>
-                                        <p>
-                                            "A diferença mais marcante entre Linux e Windows é o fato do primeiro ser um sistema de código aberto, desenvolvido por programadores 
-                                            voluntários espalhados por toda internet e distribuído sob a licença pública GPL. Enquanto o Windows é software proprietário, não possui 
-                                            código-fonte disponível e você ainda precisa comprar uma licença pra ter o direito de usá-lo.
-                                        </p>
-                                        <p>Você não precisa pagar nada para usar o Linux! Não é crime fazer cópias para instalá-lo em outros computadores. A vantagem de um sistema 
-                                            de código aberto é que ele se torna flexível às necessidades do usuário, tornando assim suas adaptações e "correções" muito mais rápidas. 
-                                            Lembre-se que ao nosso favor temos milhares de programadores espalhados pelo mundo pensando apenas em fazer do Linux um sistema cada vez 
-                                            melhor.
-                                        </p>
-                                        <p>
-                                            O código-fonte aberto do sistema permite que qualquer pessoa veja como ele funciona, corrija algum problema ou faça alguma sugestão sobre 
-                                            sua melhoria, esse é um dos motivos de seu rápido crescimento, assim como da compatibilidade com novos hardwares, sem falar de sua alta 
-                                            performance e de sua estabilidade." Texto retirado do site <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.vivaolinux.com.br/linux/">Viva O Linux</a>.
-                                        </p>
-                                    <li>Porque trocar de Sistema Operacional?</li>
+                                        </li>
+                                    </ul>
+                                    <li className="docs-pointers">Qual a diferença entre Windows e Linux?</li>
+                                        <ul>
+                                            <li>
+                                                "A diferença mais marcante entre Linux e Windows é o fato do primeiro ser um sistema de código aberto, desenvolvido por programadores 
+                                                voluntários espalhados por toda internet e distribuído sob a licença pública GPL. Enquanto o Windows é software proprietário, não possui 
+                                                código-fonte disponível e você ainda precisa comprar uma licença pra ter o direito de usá-lo.
+                                            </li>
+                                            <li>Você não precisa pagar nada para usar o Linux! Não é crime fazer cópias para instalá-lo em outros computadores. A vantagem de um sistema 
+                                                de código aberto é que ele se torna flexível às necessidades do usuário, tornando assim suas adaptações e "correções" muito mais rápidas. 
+                                                Lembre-se que ao nosso favor temos milhares de programadores espalhados pelo mundo pensando apenas em fazer do Linux um sistema cada vez 
+                                                melhor.
+                                            </li>
+                                            <li>
+                                                O código-fonte aberto do sistema permite que qualquer pessoa veja como ele funciona, corrija algum problema ou faça alguma sugestão sobre 
+                                                sua melhoria, esse é um dos motivos de seu rápido crescimento, assim como da compatibilidade com novos hardwares, sem falar de sua alta 
+                                                performance e de sua estabilidade." Texto retirado do site <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.vivaolinux.com.br/linux/">Viva O Linux</a>.
+                                            </li>
+                                        </ul>
+                                    <li className="docs-pointers">Porque trocar de Sistema Operacional?</li>
                                     <ul>
                                         <li>1. É totalmente grátis</li>
                                         <li>2. É mais seguro</li>
@@ -91,7 +95,7 @@ class ResultadosQS extends Component {
                                 espionando a presidente Dilma Rousseff e mais 29 telefones do governo — incluindo embaixadas, assessores, residências e até o Banco Central."
                             </p>
                             <p>
-                                Se você já está ressabiado, saiba como <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.oficinadanet.com.br/post/12608-desativando-webcam-microfone-do-notebook">desabilitar seu microfone</a> e <a className="link" target="_blank" rel="noreferrer noopener" href="/docs">ocultar sua câmera.</a> 
+                                Se você quer se proteger, saiba como <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.oficinadanet.com.br/post/12608-desativando-webcam-microfone-do-notebook">desabilitar seu microfone</a> e <a className="link" target="_blank" rel="noreferrer noopener" href="/docs">ocultar sua câmera.</a> 
                             </p>
                         </div>
                     </div>
