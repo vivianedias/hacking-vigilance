@@ -21,7 +21,7 @@ class ResultadosQS extends Component {
                                             interagir com este é o que denominamos sistema operacional. O kernel é o coração do sistema.
 
                                             Os principais programas responsáveis por interagir com o kernel foram criados pela fundação GNU. Por este motivo é mais correto nos 
-                                            referenciarmos ao sistema operacional como GNU/Linux ao invés de apenas Linux." Texto retirado do site <a className="link" href="https://www.vivaolinux.com.br/linux/">Viva O Linux</a>.
+                                            referenciarmos ao sistema operacional como GNU/Linux ao invés de apenas Linux." Texto retirado do site <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.vivaolinux.com.br/linux/">Viva O Linux</a>.
                                         </p>
                                     <li>Qual a diferença entre Windows e Linux?</li>
                                         <p>
@@ -37,7 +37,7 @@ class ResultadosQS extends Component {
                                         <p>
                                             O código-fonte aberto do sistema permite que qualquer pessoa veja como ele funciona, corrija algum problema ou faça alguma sugestão sobre 
                                             sua melhoria, esse é um dos motivos de seu rápido crescimento, assim como da compatibilidade com novos hardwares, sem falar de sua alta 
-                                            performance e de sua estabilidade." Texto retirado do site <a className="link" href="https://www.vivaolinux.com.br/linux/">Viva O Linux</a>.
+                                            performance e de sua estabilidade." Texto retirado do site <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.vivaolinux.com.br/linux/">Viva O Linux</a>.
                                         </p>
                                     <li>Porque trocar de Sistema Operacional?</li>
                                     <ul>
@@ -91,7 +91,7 @@ class ResultadosQS extends Component {
                                 espionando a presidente Dilma Rousseff e mais 29 telefones do governo — incluindo embaixadas, assessores, residências e até o Banco Central."
                             </p>
                             <p>
-                                Se você já está ressabiado, saiba como <a className="link" href="https://www.oficinadanet.com.br/post/12608-desativando-webcam-microfone-do-notebook">desabilitar seu microfone</a> e <a className="link" href="/docs">ocultar sua câmera.</a> 
+                                Se você já está ressabiado, saiba como <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.oficinadanet.com.br/post/12608-desativando-webcam-microfone-do-notebook">desabilitar seu microfone</a> e <a className="link" target="_blank" rel="noreferrer noopener" href="/docs">ocultar sua câmera.</a> 
                             </p>
                         </div>
                     </div>

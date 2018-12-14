@@ -24,7 +24,7 @@ class ResultadosSS extends Component {
                                     A autenticação por SMS sofre do problema de estar vulnerável a clonagem de chips, o que é extremamente comum. Para explicar de maneira
                                     sucinta, os atacantes fazem um tipo de "engenharia social" (enganam atendentes da operadora), realocando os números para seus respectivos aparelhos. 
                                     Com isso, conseguem os códigos de confirmação necessários para fazer login em múltiplas redes sociais que dependem desse tipo de autenticação. 
-                                    Essa técnica foi usada para <a className="link" href="https://canaltech.com.br/legislacao/hackear-perfis-paginas-ou-grupo-no-facebook-e-crime-e-pode-acabar-em-prisao-123142/">derrubar o grupo de Facebook</a> “Mulheres contra Bolsonaro”, por exemplo.
+                                    Essa técnica foi usada para <a className="link" target="_blank" rel="noreferrer noopener" href="https://canaltech.com.br/legislacao/hackear-perfis-paginas-ou-grupo-no-facebook-e-crime-e-pode-acabar-em-prisao-123142/">derrubar o grupo de Facebook</a> “Mulheres contra Bolsonaro”, por exemplo.
                                 </p>
                             </div>
                     </div>
@@ -67,8 +67,8 @@ class ResultadosSS extends Component {
                             </p>
                             <p>
                                 Em vista disso, a grande preocupação da empresa tende a não ser a segurança, mas sim manter a usuária utilizando a plataforma que é ágil, fácil de
-                                ser utilizada, mas não possui uma preocupação tão forte com segurança digital como o <a className="link" href="https://protonmail.com/">Protonmail</a>,
-                                o <a className="link" href="https://mail.riseup.net/rc/">Riseup</a> e a <a className="link" href="https://tutanota.com/">Tutanota</a>, que são provedores quase 100% criptografados
+                                ser utilizada, mas não possui uma preocupação tão forte com segurança digital como o <a className="link" target="_blank" rel="noreferrer noopener" href="https://protonmail.com/">Protonmail</a>,
+                                o <a className="link" target="_blank" rel="noreferrer noopener" href="https://mail.riseup.net/rc/">Riseup</a> e a <a className="link" target="_blank" rel="noreferrer noopener" href="https://tutanota.com/">Tutanota</a>, que são provedores quase 100% criptografados
                                 e levam a sério o <em>pishing</em>, prática que ocorre com frequência nesses provedores de e-mail mais conhecidos.
                             </p>
                             <p>Obs.: O Riseup é um provedor de e-mail mantido pela comunidade e totalmente gratuito, por isso é o único que precisa de convite para criar uma conta,
@@ -112,10 +112,10 @@ class ResultadosSS extends Component {
                             online é recorrer a uma senha específica para cada conta online que você possui.
                         </p>
                         <p>
-                            Ok, sabemos que isso não é fácil nem super divertido, mas existem aplicativos que facilitam esse processo para nós, como o <a className="link" href="https://clipperz.is/">Clipperz</a> ou o <a className="link" href="https://www.lastpass.com/pt">Lastpass</a>, que salvam as credenciais em um sistema encriptografado online. Para
+                            Ok, sabemos que isso não é fácil nem super divertido, mas existem aplicativos que facilitam esse processo para nós, como o <a className="link" target="_blank" rel="noreferrer noreferrer noopener" href="https://clipperz.is/">Clipperz</a> ou o <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.lastpass.com/pt">Lastpass</a>, que salvam as credenciais em um sistema encriptografado online. Para
                             extra segurança, caso você queira memorizar suas senhas no navegador, é recomendado ativar a requisição de uma chave-mestra ao entrar nele.
                             Mas não basta apenas guardar suas senhas em algum lugar, também é necessário verificar se elas são fortes o suficiente para resistir à algum possível ataque,
-                            para isso, basta acessar esse <a className="link" href="https://www.lastpass.com/pt/password-generator">verificador</a> criado pelo próprio Lastpass.
+                            para isso, basta acessar esse <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.lastpass.com/pt/password-generator">verificador</a> criado pelo próprio Lastpass.
                         </p>
                     </div>
                 </div>

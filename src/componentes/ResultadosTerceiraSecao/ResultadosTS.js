@@ -35,10 +35,10 @@ class ResultadosTS extends Component {
                                 Queremos evitar duas coisas no caso de mensagens instantâneas, armazenamento das mensagens nos servidores do aplicativo, porque podem ser 
                                 recuperadas através de falhas de segurança ou de funcionários mal intencionados, criptografia ponto-a-ponto, para evitar que alguém possa 
                                 ler as mensagens sem permissão e uma política de privacidade que de fato proteja o usuário e não use-o. Para isso, utilize 
-                                <a className="link" href="https://app.wire.com/">Wire</a> ou <a className="link" href="https://signal.org/">Signal</a>. 
+                                <a className="link" target="_blank" rel="noreferrer noopener" href="https://app.wire.com/">Wire</a> ou <a className="link" target="_blank" rel="noreferrer noopener" href="https://signal.org/">Signal</a>. 
                             </p>
                             <p>
-                                Para uma avaliação mais detalhada acesse esse <a className="link" href="https://www.securemessagingapps.com/">link</a> que contém uma uma tabela comparando as opções disponíveis. 
+                                Para uma avaliação mais detalhada acesse esse <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.securemessagingapps.com/">link</a> que contém uma uma tabela comparando as opções disponíveis. 
                             </p>
                         </div>
                 </div>
@@ -62,7 +62,7 @@ class ResultadosTS extends Component {
                         <p>
                             Mas o que é a criptografia? Essencialmente, a criptografia mistura seus dados de modo que quando alguém tenta lê-los, eles não são legíveis
                             a não ser que você possua a chave para ler essa criptografia. Para saber mais sobre o que é criptografia e como efetuá-la em seu dispositivo, 
-                            visite os <a className="link" href="/docs">Docs</a>.  
+                            visite os <a className="link" target="_blank" rel="noreferrer noopener" href="/docs">Docs</a>.  
                         </p>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ class ResultadosTS extends Component {
                 <h3 className="answerTitle">14. Precisamos prestar mais atenção as permissões que damos aos aplicativos</h3>
                     <div className="answerContent">
                         <p>
-                            Quais dados os aplicativos podem ou não acessar? Em abril de 2018, foi descoberto que o Facebook teria <a className="link" href="https://arstechnica.com/information-technology/2018/03/facebook-scraped-call-text-message-data-for-years-from-android-phones/">guardado os registros de chamadas</a> dos usuários 
+                            Quais dados os aplicativos podem ou não acessar? Em abril de 2018, foi descoberto que o Facebook teria <a className="link" target="_blank" rel="noreferrer noopener" href="https://arstechnica.com/information-technology/2018/03/facebook-scraped-call-text-message-data-for-years-from-android-phones/">guardado os registros de chamadas</a> dos usuários 
                             que optaram por compartilhar a lista de contatos com a plataforma, na época anterior ao Android 4.1 Jelly Bean. Depois dessa descoberta, fica a dúvida sobre o que cada aplicativo que utilizamos no dia a dia guardam
                             captam de dados dos nossos celulares. 
                         </p>
@@ -85,7 +85,7 @@ class ResultadosTS extends Component {
                         </p>
                         <p>
                             Muitos apps vão dizer que os dados fornecidos pelos usuários são utilizados simplesmente para melhoria do produto final, como um feedback sobre 
-                            o produto que a empresa coloca no mercado. No entanto, ficou evidente depois dos recentes escandalos envolvendo o <a className="link" href="https://www.tecmundo.com.br/video-game-e-jogos/107132-privacidade-acesso-completo-conta-google-pokemon-go-erro.htm">Pokemon Go</a>, 
+                            o produto que a empresa coloca no mercado. No entanto, ficou evidente depois dos recentes escandalos envolvendo o <a className="link" target="_blank" rel="noreferrer noopener" href="https://www.tecmundo.com.br/video-game-e-jogos/107132-privacidade-acesso-completo-conta-google-pokemon-go-erro.htm">Pokemon Go</a>, 
                             em que em uma de suas atualizações, o app conseguiria mudar as configurações e editar o perfil do Google de seus usuários. 
                         </p>
                         <p>

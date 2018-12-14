@@ -19,7 +19,7 @@ class ResultadosPS extends Component {
                                     <li>- No Firefox é possível bloquear <em>trackers</em> com bastante facilidade. Ou seja, a plataforma não tenta
                                     ganhar dinheiro as suas custas.
                                     </li>
-                                    <li>- A empresa se importa <a className="link" href="https://www.mozilla.org/pt-BR/internet-health/privacy-security/">de verdade </a>
+                                    <li>- A empresa se importa <a className="link" target="_blank" rel="noopener noreferrer" href="https://www.mozilla.org/pt-BR/internet-health/privacy-security/">de verdade </a>
                                          com segurança digital.
                                     </li>
                                 </ul>
@@ -73,7 +73,7 @@ class ResultadosPS extends Component {
 
                             Deixar de usar produtos Google, dando preferência a outras plataformas que verdadeiramente se importam com seus 
                             usuários não é impossível. Você pode começar agora, por exemplo, dando o primeiro passo ao trocar
-                            seu mecanismo de pesquisa padrão para o <a className="link" href="https://duckduckgo.com/">DuckDuckGo</a>. A plataforma ainda não é tão precisa como o Google,
+                            seu mecanismo de pesquisa padrão para o <a className="link" target="_blank" rel="noreferrer noopener" href="https://duckduckgo.com/">DuckDuckGo</a>. A plataforma ainda não é tão precisa como o Google,
                             mas lembrando que para que a plataforma melhore precisamos USÁ-LA! Então não se acanhe e tente começar a usar, ajude
                             o pessoal a melhorar para que a internet comece a descentralizar desses grandes monopólios.
                         </p>
@@ -107,7 +107,7 @@ class ResultadosPS extends Component {
                     </p>        
                     
                     <p>
-                    Se interessou? Vá até a página <a className="link" href="/docs">Docs</a> e procure por "VPN" para encontrar mais dicas sobre
+                    Se interessou? Vá até a página <a className="link" target="_blank" rel="noreferrer noopener" href="/docs">Docs</a> e procure por "VPN" para encontrar mais dicas sobre
                     como você pode utiliza-lo em seu aparelho. 
                     </p>
                 </div>
@@ -123,7 +123,7 @@ class ResultadosPS extends Component {
                     <p>
                         Serviços como Google ou Dropbox são atrativos pela sua facilidade, design atrativo e gratuidade, no entanto ambos já estiveram 
                         envolvidos em diversos casos de vazamento de dados.Há dois anos atrás foi descoberto que um vazamento de dados no qual o Dropbox anunciou em 
-                        2012 que seria apenas de e-mails foi na verdade de e-mails e senhas de <a className="link" href="https://oglobo.globo.com/economia/ataque-ao-dropbox-expoe-senhas-de-68-milhoes-de-usuarios-20023920!">
+                        2012 que seria apenas de e-mails foi na verdade de e-mails e senhas de <a className="link" target="_blank" rel="noreferrer noopener" href="https://oglobo.globo.com/economia/ataque-ao-dropbox-expoe-senhas-de-68-milhoes-de-usuarios-20023920!">
                         mais de 68 milhões de usuários</a>. Nesse mesmo ano o Google sofreu um vazamento de dados de mais de 52.5 milhões de usuários do Google +,
                         então se você era um usuário do Google+ suas credenciais provavelmente foram vazadas e outros serviços como Google Drive podem também
                         estar vulneráveis à ataques de hackers. 
@@ -132,7 +132,7 @@ class ResultadosPS extends Component {
                         Devido a essa explícita levianidade em que essas grandes corporações tratam nossos dados que sugiro utilizarem serviços como o MEGA ou
                         o Nextcloud para armazenamento de dados - todo o conteúdo ali é encriptografado e no caso do MEGA há possibilidade e sincronização entre
                         diferentes dispositivos, além dele oferecer mais espaço gratuito de armazenamento que grande parte dos provedores. Para mais informações,
-                        cheque os <a className="link" href="/docs">Docs</a>.
+                        cheque os <a className="link" target="_blank" rel="noreferrer noopener" href="/docs">Docs</a>.
                     </p>
                 </div>
             </div>
