@@ -2,6 +2,7 @@
 @media (min-width: 768px){
     .sidebar {
       padding-right: 3em;
+      overflow: auto;
     }
 
     .docs-content{
@@ -67,15 +68,16 @@
 
 .sidebar-table_titles, .sidebar-table_title {
     font-family: 'Exo', sans-serif;
-    font-size: 1.25em;
     padding-bottom: 1em;
 }
-.sidebar-table_title{
-    font-size: 2em;
-    padding-top: 1.5em;
+.sidebar-table_title {
+    font-size: 1.5em;
+    margin-top: 1.5em;
 }
 
 .sidebar-table_titles {
+    font-size: 1.2em;
+    padding-top: 0.5em;
     font-weight: 700;
     color: #fff;
 }

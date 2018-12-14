@@ -30,7 +30,7 @@ class Docs extends Component {
 
         let sidebar = 
         <div>
-            <h1 className="sidebar-table_title">Tabela de Conteúdos</h1>
+            <h1 className="sidebar-table_title">Tabela de Conteúdo</h1>
             <ul>
                 <li className="sidebar-table_titles">Conectada na Web</li>
                 <ul>

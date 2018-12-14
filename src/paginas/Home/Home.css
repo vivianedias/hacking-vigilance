@@ -5,11 +5,12 @@
 
 .home-container__second-part{
     min-height: 100vh;
+    padding-bottom: 2em;
 }
 
 .img-styling {
     width: 100%;
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 @media (min-width: 768px){
