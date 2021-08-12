@@ -18,6 +18,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "babel-jest": "^27.0.6",
     "eslint": "^7.32.0",
     "eslint-plugin-jest-dom": "^3.9.0",
     "eslint-plugin-testing-library": "^4.10.1",
@@ -36,9 +37,6 @@
       "testing-library",
       "jest-dom"
     ]
-  },
-  "jest": {
-    "resetMocks": false
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
