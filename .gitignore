@@ -32,3 +32,4 @@ yarn-error.log*
 /old-client
 .vercel
 .env
+test-report.xml
