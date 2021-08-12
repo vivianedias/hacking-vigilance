@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "test:watch": "jest --watch --detectOpenHandles",
-    "test": "jest --coverage --watchAll=false",
+    "test": "jest --watchAll=false",
     "test:ci": "jest --coverage --watchAll=false --testResultsProcessor ./node_modules/jest-sonar-reporter"
   },
   "dependencies": {
