@@ -24,9 +24,11 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 // import logo from "../../public/logo.png";
+import { useTranslations } from "next-intl";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const t = useTranslations("Navbar");
 
   return (
     <Box>
@@ -84,7 +86,7 @@ export default function WithSubnavigation() {
             href={"#"}
           >
             <Link as={NextLink} href="/login">
-              Login
+              {t("login")}
             </Link>
           </Button>
           <Button
@@ -99,7 +101,7 @@ export default function WithSubnavigation() {
             }}
           >
             <Link as={NextLink} href="/signup">
-              Sign Up
+              {t("signup")}
             </Link>
           </Button>
         </Stack>

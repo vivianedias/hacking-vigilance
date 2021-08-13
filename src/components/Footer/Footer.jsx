@@ -9,6 +9,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { useTranslations } from "next-intl";
 
 const Logo = (props) => {
   return (
@@ -55,8 +56,12 @@ const SocialButton = ({ children, label, href }) => {
 };
 
 export default function SmallCentered() {
+  const t = useTranslations("Footer");
+  const currentYear = new Date().getFullYear();
+
   return (
     <Box
+      as="footer"
       bg={useColorModeValue("gray.50", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
@@ -70,10 +75,10 @@ export default function SmallCentered() {
       >
         <Logo />
         <Stack direction={"row"} spacing={6}>
-          <Link href={"#"}>Home</Link>
-          <Link href={"#"}>About</Link>
-          <Link href={"#"}>Blog</Link>
-          <Link href={"#"}>Contact</Link>
+          <Link href={"#"}>{t("home")}</Link>
+          <Link href={"#"}>{t("about")}</Link>
+          <Link href={"#"}>{t("blog")}</Link>
+          <Link href={"#"}>{t("contact")}</Link>
         </Stack>
       </Container>
 
@@ -91,7 +96,7 @@ export default function SmallCentered() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Text>© 2020 Chakra Templates. All rights reserved</Text>
+          <Text>{`© ${currentYear} ${t("website")}. ${t("rights")}`}</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />
