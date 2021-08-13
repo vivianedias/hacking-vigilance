@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Navbar } from "../components";
+import { Navbar, Footer } from "../components";
 
 export default function Home() {
   return (
@@ -14,7 +14,9 @@ export default function Home() {
         Main
       </main>
 
-      <footer>Footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

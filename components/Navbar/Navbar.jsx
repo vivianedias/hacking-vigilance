@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import {
   Box,
   Flex,
@@ -22,7 +22,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import logo from "../../public/logo.png";
+// import logo from "../../public/logo.png";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -60,7 +60,8 @@ export default function WithSubnavigation() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            <Image src={logo} alt="Logo" height="24" width="24" />
+            {/* <Image src={logo} alt="Logo" height="24" width="24" /> */}
+            Logo
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
