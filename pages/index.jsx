@@ -1,22 +1,14 @@
 import Head from "next/head";
-import { Navbar, Footer } from "../components";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Hackeando a Vigilância</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Navbar />
-        Main
-      </main>
-
-      <footer>
-        <Footer />
-      </footer>
+      <main style={{ height: "100vh" }}>Main</main>
     </div>
   );
 }
