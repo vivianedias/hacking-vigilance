@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import NextLink from "next/link";
 import {
   Box,
   Flex,
@@ -82,7 +83,9 @@ export default function WithSubnavigation() {
             variant={"link"}
             href={"#"}
           >
-            Sign In
+            <Link as={NextLink} href="/login">
+              Login
+            </Link>
           </Button>
           <Button
             display={{ base: "none", md: "inline-flex" }}
@@ -95,7 +98,9 @@ export default function WithSubnavigation() {
               bg: "pink.300",
             }}
           >
-            Sign Up
+            <Link as={NextLink} href="/signup">
+              Sign Up
+            </Link>
           </Button>
         </Stack>
       </Flex>
