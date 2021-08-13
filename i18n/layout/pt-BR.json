@@ -1,0 +1,14 @@
+{
+  "Navbar": {
+    "login": "Entrar",
+    "signup": "Cadastro"
+  },
+  "Footer": {
+    "home": "Início",
+    "about": "Sobre",
+    "blog": "Blog",
+    "contact": "Contato",
+    "website": "Hackeando a Vigilância",
+    "rights": "Todos os direitos reservados."
+  }
+}

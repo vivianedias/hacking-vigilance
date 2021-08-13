@@ -1,0 +1,14 @@
+{
+  "Navbar": {
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "Footer": {
+    "home": "Home",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "website": "Hacking Vigillance",
+    "rights": "All rights reserved."
+  }
+}
