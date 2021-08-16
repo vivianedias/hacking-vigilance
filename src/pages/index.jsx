@@ -1,9 +1,11 @@
 import Head from "next/head";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PageLayout } from "../components";
 
 export default function Home() {
-  const t = useTranslations("Index");
+  const { t } = useTranslation("index");
+
   return (
     <div className="container">
       <Head>
@@ -16,13 +18,10 @@ export default function Home() {
   );
 }
 
-export function getStaticProps({ locale }) {
+export async function getStaticProps({ locale }) {
   return {
     props: {
-      messages: {
-        ...require(`../../i18n/index/${locale}.json`),
-        ...require(`../../i18n/layout/${locale}.json`),
-      },
+      ...(await serverSideTranslations(locale, ["index", "navbar", "footer"])),
     },
   };
 }

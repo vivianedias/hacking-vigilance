@@ -24,14 +24,14 @@ import {
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 // import logo from "../../public/logo.png";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "next-i18next";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-  const t = useTranslations("Navbar");
+  const { t } = useTranslation("navbar");
 
   return (
-    <Box>
+    <Box as="nav">
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -78,13 +78,7 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"#"}
-          >
+          <Button fontSize={"sm"} fontWeight={400} variant={"link"} href={"#"}>
             <Link as={NextLink} href="/login">
               {t("login")}
             </Link>

@@ -9,7 +9,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "next-i18next";
 
 const Logo = (props) => {
   return (
@@ -56,7 +56,7 @@ const SocialButton = ({ children, label, href }) => {
 };
 
 export default function SmallCentered() {
-  const t = useTranslations("Footer");
+  const { t } = useTranslation("footer");
   const currentYear = new Date().getFullYear();
 
   return (
