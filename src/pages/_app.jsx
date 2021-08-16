@@ -1,17 +1,12 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { NextIntlProvider } from "next-intl";
+import { appWithTranslation } from "next-i18next";
 
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider>
-      <NextIntlProvider
-        timeZone="America/Sao_Paulo"
-        messages={pageProps.messages}
-      >
-        <Component {...pageProps} />
-      </NextIntlProvider>
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
