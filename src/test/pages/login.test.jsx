@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen } from "../test-utils";
-import Home from "../../pages";
+import Login from "../../pages/login";
 
-const setup = () => render(<Home />);
+const setup = () => render(<Login />);
 
-describe("<Home />", () => {
+describe("<Login />", () => {
   beforeEach(setup);
   it("should render the main title", () => {
     expect(screen.getByText(/title/i)).toBeInTheDocument();
