@@ -25,10 +25,12 @@ import {
 } from "@chakra-ui/icons";
 // import logo from "../../public/logo.png";
 import { useTranslation } from "next-i18next";
+import { useUser } from "@auth0/nextjs-auth0";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
   const { t } = useTranslation("navbar");
+  const { user } = useUser();
 
   return (
     <Box as="nav">
@@ -78,26 +80,32 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
-          <Button fontSize={"sm"} fontWeight={400} variant={"link"} href={"#"}>
-            <Link as={NextLink} href="/login">
-              {t("login")}
-            </Link>
-          </Button>
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"pink.400"}
-            href={"#"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            <Link as={NextLink} href="/signup">
-              {t("signup")}
-            </Link>
-          </Button>
+          {user ? (
+            <Button
+              fontSize={"sm"}
+              fontWeight={400}
+              variant={"link"}
+              href={"#"}
+            >
+              <Link href="/api/auth/logout">{t("logout")}</Link>
+            </Button>
+          ) : (
+            <Button
+              display={{ base: "none", md: "inline-flex" }}
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"white"}
+              bg={"pink.400"}
+              href={"#"}
+              _hover={{
+                bg: "pink.300",
+              }}
+            >
+              <Link as={NextLink} href="/signup">
+                <Link href="/api/auth/login">{t("signin")}</Link>
+              </Link>
+            </Button>
+          )}
         </Stack>
       </Flex>
 
