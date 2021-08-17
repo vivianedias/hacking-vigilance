@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { useTranslation } from "next-i18next";
+import NextLink from "next/link";
 
 const Logo = (props) => {
   return (
@@ -75,10 +76,16 @@ export default function SmallCentered() {
       >
         <Logo />
         <Stack direction={"row"} spacing={6}>
-          <Link href={"#"}>{t("home")}</Link>
-          <Link href={"#"}>{t("about")}</Link>
-          <Link href={"#"}>{t("blog")}</Link>
-          <Link href={"#"}>{t("contact")}</Link>
+          <Link as={NextLink} href="/">
+            {t("home")}
+          </Link>
+          <Link as={NextLink} href={"/about"}>
+            {t("about")}
+          </Link>
+          <Link as={NextLink} href={"/contact"}>
+            {t("contact")}
+          </Link>
+          <Link href="#">{t("support")}</Link>
         </Stack>
       </Container>
 
