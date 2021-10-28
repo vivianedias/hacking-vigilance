@@ -26,6 +26,7 @@ import {
 // import logo from "../../public/logo.png";
 import { useTranslation } from "next-i18next";
 import { useUser } from "@auth0/nextjs-auth0";
+import { HiOutlineSearch } from "react-icons/hi";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -48,18 +49,8 @@ export default function WithSubnavigation() {
         <Flex
           flex={{ base: 1, md: "auto" }}
           ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
+          display={{ base: "flex" }}
         >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <Text
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
@@ -78,8 +69,27 @@ export default function WithSubnavigation() {
           flex={{ base: 1, md: 0 }}
           justify={"flex-end"}
           direction={"row"}
-          spacing={6}
+          align="center"
         >
+          <IconButton
+            aria-label={t("ariaLabel.search")}
+            icon={<HiOutlineSearch size="1.5em" />}
+            variant="unstyled"
+          />
+          <Box display={{ base: "flex", md: "none" }}>
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? (
+                  <CloseIcon w={3} h={3} />
+                ) : (
+                  <HamburgerIcon w={5} h={5} />
+                )
+              }
+              variant={"ghost"}
+              aria-label={"Toggle Navigation"}
+            />
+          </Box>
           {user ? (
             <Button
               fontSize={"sm"}

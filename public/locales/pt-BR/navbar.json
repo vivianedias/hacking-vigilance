@@ -1,4 +1,7 @@
 {
   "signin": "Acessar",
-  "logout": "Sair"
+  "logout": "Sair",
+  "ariaLabel": {
+    "search": "Busca por conteúdo"
+  }
 }

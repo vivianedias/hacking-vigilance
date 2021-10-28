@@ -1,4 +1,7 @@
 {
   "logout": "Logout",
-  "signin": "Sign In"
+  "signin": "Sign In",
+  "ariaLabel": {
+    "search": "Search for content"
+  }
 }
