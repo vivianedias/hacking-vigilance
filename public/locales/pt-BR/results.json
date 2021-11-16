@@ -1,0 +1,17 @@
+{
+  "title": "O que você pode fazer para melhorar:",
+  "subtitle": "Listamos algumas dicas que podem te ajudar a começar",
+  "ariaLabel": {
+    "chevron": "Ver mais"
+  },
+  "plugins": {
+    "options": "Quer ver mais opções de plugins?",
+    "access": "Acesse a nossa",
+    "link": "biblioteca de plugins"
+  },
+  "blog": {
+    "subject": "Quer saber mais sobre o assunto",
+    "access": "Acesse o nosso",
+    "link": "blog"
+  }
+}

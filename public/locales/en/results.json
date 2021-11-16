@@ -1,0 +1,17 @@
+{
+  "title": "What you can do to improve:",
+  "subtitle": "Here's a list of a couple of tips that can help you get started",
+  "ariaLabel": {
+    "chevron": "See more"
+  },
+  "plugins": {
+    "options": "Check out more plugin options",
+    "access": "Access our",
+    "link": "plugins library"
+  },
+  "blog": {
+    "subject": "Learn more",
+    "access": "Access our",
+    "link": "blog"
+  }
+}
