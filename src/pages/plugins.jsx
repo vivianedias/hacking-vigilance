@@ -3,8 +3,6 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { PageLayout } from "../components";
 
-import { CollapseContent } from "../components";
-
 const Plugins = () => {
   return (
     <main>
@@ -13,9 +11,7 @@ const Plugins = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <PageLayout>
-        <CollapseContent items={[{ title: "Mobile" }]} />
-      </PageLayout>
+      <PageLayout>plugins</PageLayout>
     </main>
   );
 };
