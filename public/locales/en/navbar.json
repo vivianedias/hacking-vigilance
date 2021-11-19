@@ -1,7 +1,19 @@
 {
-  "logout": "Logout",
-  "signin": "Sign In",
+  "logo": "Hacking vigillance",
   "ariaLabel": {
-    "search": "Search for content"
+    "hamburguer": "Open menu drawer",
+    "goBack": "Close menu drawer"
+  },
+  "quiz": {
+    "label": "Quiz",
+    "description": "Complete the test and check out your level of online safety"
+  },
+  "plugins": {
+    "label": "Plugins",
+    "description": "Tools to enhance your day-to-day online security"
+  },
+  "blog": {
+    "label": "Blog",
+    "description": "Quick tips and articles to help improve your online security"
   }
 }

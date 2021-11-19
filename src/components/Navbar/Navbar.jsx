@@ -1,4 +1,5 @@
 // import Image from "next/image";
+import { useRef, useEffect } from "react";
 import NextLink from "next/link";
 import {
   Box,
@@ -7,38 +8,48 @@ import {
   IconButton,
   Button,
   Stack,
-  Collapse,
   Icon,
   Link,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
   CloseIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
+  QuestionOutlineIcon,
+  SearchIcon,
+  ArrowBackIcon,
 } from "@chakra-ui/icons";
-// import logo from "../../public/logo.png";
+import { IoExtensionPuzzleOutline, IoEyeOffSharp } from "react-icons/io5";
+import { CgFileDocument } from "react-icons/cg";
 import { useTranslation } from "next-i18next";
 import { useUser } from "@auth0/nextjs-auth0";
-import { HiOutlineSearch } from "react-icons/hi";
 
 export default function WithSubnavigation() {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle, onClose } = useDisclosure();
   const { t } = useTranslation("navbar");
   const { user } = useUser();
+  const btnRef = useRef();
+  const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
+
+  useEffect(() => {
+    onClose();
+  }, [isLargerThanMd]);
 
   return (
     <Box as="nav">
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
-        minH={"60px"}
+        minH={16}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
@@ -48,16 +59,19 @@ export default function WithSubnavigation() {
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
           display={{ base: "flex" }}
+          alignItems="center"
+          gridGap={5}
         >
+          <Icon as={IoEyeOffSharp} color="purple.600" boxSize={8} />
           <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
+            textAlign="left"
+            fontFamily={"logo"}
             color={useColorModeValue("gray.800", "white")}
+            fontSize="sm"
+            width="110px"
           >
-            {/* <Image src={logo} alt="Logo" height="24" width="24" /> */}
-            Logo
+            {t("logo")}
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -71,251 +85,134 @@ export default function WithSubnavigation() {
           direction={"row"}
           align="center"
         >
-          <IconButton
-            aria-label={t("ariaLabel.search")}
-            icon={<HiOutlineSearch size="1.5em" />}
-            variant="unstyled"
-          />
           <Box display={{ base: "flex", md: "none" }}>
             <IconButton
+              ref={btnRef}
               onClick={onToggle}
-              icon={
-                isOpen ? (
-                  <CloseIcon w={3} h={3} />
-                ) : (
-                  <HamburgerIcon w={5} h={5} />
-                )
-              }
+              icon={<HamburgerIcon boxSize={8} color="purple.600" />}
               variant={"ghost"}
-              aria-label={"Toggle Navigation"}
+              aria-label={t("ariaLabel.hamburguer")}
             />
           </Box>
-          {user ? (
-            <Button
-              fontSize={"sm"}
-              fontWeight={400}
-              variant={"link"}
-              href={"#"}
-            >
-              <Link href="/api/auth/logout">{t("logout")}</Link>
-            </Button>
-          ) : (
-            <Button
-              display={{ base: "none", md: "inline-flex" }}
-              fontSize={"sm"}
-              fontWeight={600}
-              color={"white"}
-              bg={"pink.400"}
-              href={"#"}
-              _hover={{
-                bg: "pink.300",
-              }}
-            >
-              <Link as={NextLink} href="/signup">
-                <Link href="/api/auth/login">{t("signin")}</Link>
-              </Link>
-            </Button>
-          )}
         </Stack>
       </Flex>
 
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
+      <Drawer
+        isOpen={isOpen}
+        placement="left"
+        onClose={onClose}
+        finalFocusRef={btnRef}
+        size="full"
+      >
+        <MobileNav onToggle={onToggle} />
+      </Drawer>
     </Box>
   );
 }
 
 const DesktopNav = () => {
+  const { t } = useTranslation("navbar");
   const linkColor = useColorModeValue("gray.600", "gray.200");
   const linkHoverColor = useColorModeValue("gray.800", "white");
-  const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
     <Stack direction={"row"} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS(t).map((navItem) => (
         <Box key={navItem.label}>
-          <Popover trigger={"hover"} placement={"bottom-start"}>
-            <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-              </Link>
-            </PopoverTrigger>
-
-            {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={"xl"}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={"xl"}
-                minW={"sm"}
-              >
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )}
-          </Popover>
-        </Box>
-      ))}
-    </Stack>
-  );
-};
-
-const DesktopSubNav = ({ label, href, subLabel }) => {
-  return (
-    <Link
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
-    >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text
-            transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
+          <Link
+            as="span"
+            p={2}
+            href={navItem.href ?? "#"}
+            fontSize={"sm"}
             fontWeight={500}
+            color={linkColor}
+            _hover={{
+              textDecoration: "none",
+              color: linkHoverColor,
+            }}
           >
-            {label}
-          </Text>
-          <Text fontSize={"sm"}>{subLabel}</Text>
+            <NextLink href={navItem.href}>{navItem.label}</NextLink>
+          </Link>
         </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
-  );
-};
-
-const MobileNav = () => {
-  return (
-    <Stack
-      bg={useColorModeValue("white", "gray.800")}
-      p={4}
-      display={{ md: "none" }}
-    >
-      {NAV_ITEMS.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
-  const { isOpen, onToggle } = useDisclosure();
+const MobileNav = ({ onToggle }) => {
+  const { t } = useTranslation("navbar");
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? "#"}
-        justify={"space-between"}
-        align={"center"}
+    <>
+      <DrawerOverlay />
+      <DrawerContent bg="gray.100">
+        <DrawerHeader>
+          <IconButton
+            onClick={onToggle}
+            icon={<ArrowBackIcon boxSize={7} />}
+            variant="unstyled"
+            aria-label={t("ariaLabel.goBack")}
+            color="purple.600"
+          />
+        </DrawerHeader>
+        <DrawerBody>
+          <Stack spacing={5}>
+            {NAV_ITEMS(t).map((navItem) => (
+              <MobileNavItem key={navItem.label} {...navItem} />
+            ))}
+          </Stack>
+        </DrawerBody>
+      </DrawerContent>
+    </>
+  );
+};
+
+const MobileNavItem = ({ label, description, IconRef, href }) => {
+  return (
+    <NextLink href={href}>
+      <Link
+        as={Flex}
+        direction="column"
+        shadow="md"
+        borderRadius="md"
+        height={90}
+        justifyContent="center"
+        px={5}
+        py={2.5}
+        bg="white"
         _hover={{
           textDecoration: "none",
         }}
       >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
-        >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={"solid"}
-          borderColor={useColorModeValue("gray.200", "gray.700")}
-          align={"start"}
-        >
-          {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
+        <Flex gridGap="2" alignItems="center" justifyContent="flex-start">
+          <Text color="purple.600" fontSize="2xl">
+            {label}
+          </Text>
+          <Icon color="purple.600" as={IconRef} w={5} h={5} />
+        </Flex>
+        <Text color="gray.400">{description}</Text>
+      </Link>
+    </NextLink>
   );
 };
 
-const NAV_ITEMS = [
+const NAV_ITEMS = (t) => [
   {
-    label: "Inspiration",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
+    label: t("quiz.label"),
+    href: "/quiz",
+    description: t("quiz.description"),
+    IconRef: QuestionOutlineIcon,
   },
   {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
+    label: t("plugins.label"),
+    href: "/plugins",
+    description: t("plugins.description"),
+    IconRef: IoExtensionPuzzleOutline,
   },
   {
-    label: "Learn Design",
-    href: "#",
-  },
-  {
-    label: "Hire Designers",
-    href: "#",
+    label: t("blog.label"),
+    href: "/blog",
+    description: t("blog.description"),
+    IconRef: CgFileDocument,
   },
 ];

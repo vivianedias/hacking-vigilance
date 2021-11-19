@@ -1,7 +1,19 @@
 {
-  "signin": "Acessar",
-  "logout": "Sair",
+  "logo": "Hackeando a vigilância",
   "ariaLabel": {
-    "search": "Busca por conteúdo"
+    "hamburguer": "Abrir menu",
+    "goBack": "Fechar menu"
+  },
+  "quiz": {
+    "label": "Quiz",
+    "description": "Faça o teste e descubra o quanto você está seguro."
+  },
+  "plugins": {
+    "label": "Plugins",
+    "description": "Ferramentas para aumentar a sua segurança no dia-a-dia."
+  },
+  "blog": {
+    "label": "Blog",
+    "description": "Dicas rápidas e artigos completos para você aprender a se defender."
   }
 }
