@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Image from "next/image";
 import {
   Heading,
@@ -15,17 +16,10 @@ const ImageWrapper = styled(Image)`
   border-radius: 10px;
 `;
 
-const QuestionCard = ({
-  id,
-  title,
-  img,
-  answers,
-  setAnswer,
-  selectedAnswer,
-  subject,
-  t,
-}) => {
+const QuestionCard = ({ id, title, img, answers, subject, t }) => {
+  const [selectedAnswer, setAnswer] = useState({});
   const [imgSrc] = img;
+
   return (
     <VStack
       width={{

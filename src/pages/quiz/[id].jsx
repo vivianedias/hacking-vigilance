@@ -1,16 +1,24 @@
 import { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { VStack, Box, HStack, IconButton, Text } from "@chakra-ui/react";
+import {
+  VStack,
+  Box,
+  HStack,
+  IconButton,
+  Text,
+  Button,
+} from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 
 import { PageLayout, QuestionCard } from "../../components";
 import api from "../../utils/api";
+import { TOTAL_QUESTIONS } from "../../utils/constants";
 
-const QuestionFromQuiz = ({ question }) => {
+const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
   const { t } = useTranslation("quiz");
-  const [selectedAnswer, setAnswer] = useState({});
 
   return (
     <div className="container">
@@ -25,28 +33,27 @@ const QuestionFromQuiz = ({ question }) => {
           height="calc(100vh - 100px)"
           justifyContent="space-between"
         >
-          <QuestionCard
-            selectedAnswer={selectedAnswer}
-            setAnswer={setAnswer}
-            t={t}
-            {...question}
-          />
+          <QuestionCard t={t} {...question} />
           <HStack>
-            {/* <IconButton
-            aria-label={t("ariaLabel.nextQuestion")}
-            icon={<ArrowBackIcon />}
-            disabled={questionIndex < 1}
-            onClick={() => setQuestionIndex((prevState) => prevState - 1)}
-          />
-          <Text color="purple.600">
-            {questionIndex + 1} / {questions.length}
-          </Text>
-          <IconButton
-            disabled={questionIndex >= questions.length - 1}
-            aria-label={t("ariaLabel.previousQuestion")}
-            icon={<ArrowForwardIcon />}
-            onClick={() => setQuestionIndex((prevState) => prevState + 1)}
-          /> */}
+            <Button
+              disabled={currentQuestion <= 1}
+              aria-label={t("ariaLabel.nextQuestion")}
+            >
+              <Link href={`/quiz/${currentQuestion - 1}`}>
+                <ArrowBackIcon />
+              </Link>
+            </Button>
+            <Text color="purple.600">
+              {currentQuestion} / {totalQuestions}
+            </Text>
+            <Button
+              aria-label={t("ariaLabel.previousQuestion")}
+              disabled={currentQuestion >= totalQuestions}
+            >
+              <Link href={`/quiz/${currentQuestion + 1}`}>
+                <ArrowForwardIcon />
+              </Link>
+            </Button>
           </HStack>
         </VStack>
       </PageLayout>
@@ -70,6 +77,8 @@ export async function getServerSideProps({ params, locale }) {
         "footer",
       ])),
       question,
+      totalQuestions: TOTAL_QUESTIONS,
+      currentQuestion: Number(id),
     },
   };
 }
