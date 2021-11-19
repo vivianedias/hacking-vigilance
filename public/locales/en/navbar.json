@@ -6,14 +6,14 @@
   },
   "quiz": {
     "label": "Quiz",
-    "description": "Complete the test and check out your level of online safety"
+    "description": "Complete the test and check out your level of online safety."
   },
   "plugins": {
     "label": "Plugins",
-    "description": "Tools to enhance your day-to-day online security"
+    "description": "Tools to enhance your day-to-day online security."
   },
   "blog": {
     "label": "Blog",
-    "description": "Quick tips and articles to help improve your online security"
+    "description": "Quick tips and articles to help improve your online security."
   }
 }

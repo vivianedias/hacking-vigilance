@@ -21,10 +21,11 @@ const QuestionCard = ({
   img,
   answers,
   setAnswer,
-  selectedAnswers,
+  selectedAnswer,
   subject,
   t,
 }) => {
+  const [imgSrc] = img;
   return (
     <VStack
       width={{
@@ -41,7 +42,7 @@ const QuestionCard = ({
           {title}
         </Heading>
       </Box>
-      <ImageWrapper src={img} width="300" height="190" />
+      <ImageWrapper src={imgSrc.url} width="300" height="190" />
       <Grid
         gap={3}
         templateRows="repeat(2, 64px)"
@@ -49,7 +50,6 @@ const QuestionCard = ({
         justifyContent="center"
       >
         {answers.map(({ text, ...rest }, i) => {
-          const selectedAnswer = selectedAnswers.find((a) => a.id === rest.id);
           return (
             <GridItem key={`question-card-btn-${i}`}>
               <Button
@@ -60,17 +60,8 @@ const QuestionCard = ({
                 variant="solid"
                 whiteSpace="normal"
                 wordWrap="break-word"
-                isActive={Boolean(selectedAnswer)}
-                onClick={() => {
-                  const removeOldSelection = selectedAnswers.filter(
-                    (a) => a.questionId !== id
-                  );
-                  const newAnswer = {
-                    ...rest,
-                    questionId: id,
-                  };
-                  setAnswer([...removeOldSelection, newAnswer]);
-                }}
+                isActive={selectedAnswer.id === rest.id}
+                onClick={() => setAnswer(rest)}
               >
                 {text}
               </Button>
