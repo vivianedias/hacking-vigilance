@@ -7,7 +7,7 @@
     "start": "next start",
     "test:watch": "jest --watch --detectOpenHandles",
     "test": "jest --watchAll=false",
-    "test:ci": "jest --coverage --watchAll=false --testResultsProcessor ./node_modules/jest-sonar-reporter"
+    "test:ci": "jest --coverage --watchAll=false --testResultsProcessor ./node_modules/jest-sonar-reporter --passWithNoTests"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.15",
