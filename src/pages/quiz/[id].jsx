@@ -16,6 +16,7 @@ import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { PageLayout, QuestionCard } from "../../components";
 import getQuestion from "../api/quiz/[id]";
 import { TOTAL_QUESTIONS } from "../../utils/constants";
+import api from "../../utils/api";
 
 const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
   const { t } = useTranslation("quiz");
@@ -65,7 +66,8 @@ export default QuestionFromQuiz;
 
 export async function getServerSideProps({ params, locale, req, res }) {
   const { id } = params;
-  const question = await getQuestion(id);
+  const { HOST } = process.env;
+  const question = await api(`${HOST}/api/quiz/${id}`);
 
   return {
     props: {
