@@ -53,7 +53,7 @@ const QuestionCard = ({ id, title, img, answers, subject, t }) => {
                 color="white"
                 variant="solid"
                 whiteSpace="normal"
-                wordWrap="break-word"
+                wordwrap="break-word"
                 isActive={selectedAnswer.id === rest.id}
                 onClick={() => setAnswer(rest)}
               >

@@ -31,12 +31,10 @@ import {
 import { IoExtensionPuzzleOutline, IoEyeOffSharp } from "react-icons/io5";
 import { CgFileDocument } from "react-icons/cg";
 import { useTranslation } from "next-i18next";
-import { useUser } from "@auth0/nextjs-auth0";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle, onClose } = useDisclosure();
   const { t } = useTranslation("navbar");
-  const { user } = useUser();
   const btnRef = useRef();
   const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
 
