@@ -3,13 +3,13 @@ import { Box } from "@chakra-ui/react";
 
 const PageLayout = ({ children }) => {
   return (
-    <main>
+    <Box as="main">
       <Navbar />
-      <Box as="section" bgColor="gray.100" p="20px">
+      <Box as="section" bgColor="gray.100" p={9} minH="calc(100vh - 260px)">
         {children}
       </Box>
       <Footer />
-    </main>
+    </Box>
   );
 };
 

@@ -24,7 +24,7 @@ const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
   return (
     <div className="container">
       <Head>
-        <title>Quiz</title>
+        <title>{t("title")}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
