@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { PageLayout, SuggestionCard } from "../components";
+import { PageLayout, SuggestionCard } from "../../components";
 import { Heading, Text, VStack } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
