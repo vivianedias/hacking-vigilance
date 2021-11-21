@@ -19,7 +19,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerHeader,
-  useMediaQuery,
+  Heading,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -31,16 +31,36 @@ import {
 import { IoExtensionPuzzleOutline, IoEyeOffSharp } from "react-icons/io5";
 import { CgFileDocument } from "react-icons/cg";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+
+const pagesTitleAndIcon = {
+  "/quiz": {
+    pageTitle: "quiz",
+    IconRef: QuestionOutlineIcon,
+  },
+  "/quiz/resultados": {
+    pageTitle: "results",
+  },
+  "/quiz/pergunta/[id]": {
+    pageTitle: "quiz",
+    IconRef: QuestionOutlineIcon,
+  },
+  "/plugins": {
+    pageTitle: "plugins",
+    IconRef: IoExtensionPuzzleOutline,
+  },
+  "/blog": {
+    pageTitle: "blog",
+    IconRef: CgFileDocument,
+  },
+};
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle, onClose } = useDisclosure();
   const { t } = useTranslation("navbar");
   const btnRef = useRef();
-  const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
-
-  useEffect(() => {
-    onClose();
-  }, [isLargerThanMd]);
+  const { pathname } = useRouter();
+  const { pageTitle, IconRef } = pagesTitleAndIcon[pathname];
 
   return (
     <Box as="nav">
@@ -56,10 +76,10 @@ export default function WithSubnavigation() {
         align={"center"}
       >
         <Flex
-          flex={{ base: 1, md: "auto" }}
+          flex="1"
           display={{ base: "flex" }}
           alignItems="center"
-          gridGap={5}
+          gridGap={3}
         >
           <Icon as={IoEyeOffSharp} color="purple.600" boxSize={8} />
           <Text
@@ -72,18 +92,20 @@ export default function WithSubnavigation() {
             {t("logo")}
           </Text>
 
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
-          </Flex>
+          <Flex display={{ base: "none", md: "flex" }} ml={10}></Flex>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          align="center"
-        >
-          <Box display={{ base: "flex", md: "none" }}>
+        {pageTitle ? (
+          <Flex alignItems="center">
+            {IconRef ? <Icon as={IconRef} mr={2} color="purple.600" /> : null}
+            <Heading size="lg" color="gray.600">
+              {t(`pageName.${pageTitle}`)}
+            </Heading>
+          </Flex>
+        ) : null}
+
+        <Stack flex="1" justify={"flex-end"} direction={"row"} align="center">
+          <Flex>
             <IconButton
               ref={btnRef}
               onClick={onToggle}
@@ -91,7 +113,7 @@ export default function WithSubnavigation() {
               variant={"ghost"}
               aria-label={t("ariaLabel.hamburguer")}
             />
-          </Box>
+          </Flex>
         </Stack>
       </Flex>
 

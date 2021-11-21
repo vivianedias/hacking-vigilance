@@ -15,5 +15,12 @@
   "blog": {
     "label": "Blog",
     "description": "Quick tips and articles to help improve your online security."
+  },
+  "pageName": {
+    "quiz": "Quiz",
+    "results": "Result",
+    "plugins": "Plugins",
+    "blog": "Blog",
+    "question": "Questions"
   }
 }

@@ -23,7 +23,7 @@ export default function Quiz() {
             <Image src={"/password.png"} width="260px" height="260px" />
           </Box>
           <Flex my={4} gridGap={2} direction="column">
-            <Heading align="center" color="purple.600" width="400px">
+            <Heading align="center" color="purple.600" maxWidth="400px">
               {t("title")}
             </Heading>
             <Text align="center" color="gray.600">

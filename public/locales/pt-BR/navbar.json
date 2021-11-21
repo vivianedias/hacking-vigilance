@@ -15,5 +15,12 @@
   "blog": {
     "label": "Blog",
     "description": "Dicas rápidas e artigos completos para você aprender a se defender."
+  },
+  "pageName": {
+    "quiz": "Quiz",
+    "results": "Resultado",
+    "plugins": "Plugins",
+    "blog": "Blog",
+    "questions": "Perguntas"
   }
 }
