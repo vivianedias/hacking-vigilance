@@ -64,7 +64,7 @@ const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
 
 export default QuestionFromQuiz;
 
-export async function getServerSideProps({ params, locale, req, res }) {
+export async function getServerSideProps({ params, req, res, locale }) {
   const { id } = params;
   const { HOST } = process.env;
   const question = await api(`${HOST}/api/quiz/${id}`);
