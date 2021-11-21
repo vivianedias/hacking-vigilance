@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+// import { useTranslation } from "next-i18next";
+// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
   VStack,
   Box,
@@ -13,14 +13,14 @@ import {
 } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 
-import { PageLayout, QuestionCard } from "../../components";
-import getQuestion from "../api/quiz/[id]";
-import { TOTAL_QUESTIONS } from "../../utils/constants";
-import api from "../../utils/api";
+import { PageLayout, QuestionCard } from "../../../components";
+import getQuestion from "../../api/quiz/[id]";
+import { TOTAL_QUESTIONS } from "../../../utils/constants";
+import api from "../../../utils/api";
 
 const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
-  const { t } = useTranslation("quiz");
-
+  // const { t } = useTranslation("question");
+  const t = (param) => param;
   return (
     <div className="container">
       <Head>
@@ -71,12 +71,11 @@ export async function getServerSideProps({ params, req, res, locale }) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
-        "index",
-        "quiz",
-        "navbar",
-        "footer",
-      ])),
+      // ...(await serverSideTranslations(locale, [
+      //   "question",
+      //   "navbar",
+      //   "footer",
+      // ])),
       question,
       totalQuestions: TOTAL_QUESTIONS,
       currentQuestion: Number(id),
