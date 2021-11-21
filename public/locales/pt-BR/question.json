@@ -1,0 +1,10 @@
+{
+  "title": "Perguntas",
+  "ariaLabel": {
+    "nextQuestion": "Próxima pergunta",
+    "previousQuestion": "Voltar para pergunta anterior"
+  },
+  "subjects": {
+    "browser": "Conectado na web"
+  }
+}

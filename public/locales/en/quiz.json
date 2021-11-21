@@ -1,10 +1,3 @@
 {
-  "title": "Quiz",
-  "ariaLabel": {
-    "nextQuestion": "Next question",
-    "previousQuestion": "Previous question"
-  },
-  "subjects": {
-    "browser": "Connected to the web"
-  }
+  "title": "Quiz"
 }
