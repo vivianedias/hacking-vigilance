@@ -40,7 +40,7 @@ const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
               disabled={currentQuestion <= 1}
               aria-label={t("ariaLabel.nextQuestion")}
             >
-              <Link href={`/quiz/${currentQuestion - 1}`}>
+              <Link href={`/quiz/pergunta/${currentQuestion - 1}`}>
                 <ArrowBackIcon />
               </Link>
             </Button>
@@ -51,7 +51,7 @@ const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
               aria-label={t("ariaLabel.previousQuestion")}
               disabled={currentQuestion >= totalQuestions}
             >
-              <Link href={`/quiz/${currentQuestion + 1}`}>
+              <Link href={`/quiz/pergunta/${currentQuestion + 1}`}>
                 <ArrowForwardIcon />
               </Link>
             </Button>
