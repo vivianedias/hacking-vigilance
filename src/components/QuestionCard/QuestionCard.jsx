@@ -16,8 +16,16 @@ const ImageWrapper = styled(Image)`
   border-radius: 10px;
 `;
 
-const QuestionCard = ({ id, title, img, answers, subject, t }) => {
-  const [selectedAnswer, setAnswer] = useState({});
+const QuestionCard = ({
+  id,
+  title,
+  img,
+  answers,
+  subject,
+  t,
+  selectedAnswer,
+  setAnswer,
+}) => {
   const [imgSrc] = img;
 
   return (

@@ -30,7 +30,7 @@ const Results = () => {
               as="h1"
               color="purple.600"
               align="center"
-              maxW="300px"
+              maxW="350px"
             >
               {t("title")}
             </Heading>

@@ -10,7 +10,14 @@ const initialState = {
 function quizReducer(state, action) {
   switch (action.type) {
     case "setAnswer": {
-      return {};
+      const newAnswer = action.payload;
+      const removeOldAnswer = state.answers.filter(
+        (a) => a.questionId !== newAnswer.questionId
+      );
+      return {
+        ...state,
+        answers: [...removeOldAnswer, newAnswer],
+      };
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);

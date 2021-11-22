@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 // import { useTranslation } from "next-i18next";
@@ -17,10 +17,24 @@ import { PageLayout, QuestionCard } from "../../../components";
 import getQuestion from "../../api/quiz/[id]";
 import { TOTAL_QUESTIONS } from "../../../utils/constants";
 import api from "../../../utils/api";
+import { useQuiz } from "../../../context/Quiz";
 
 const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
   // const { t } = useTranslation("question");
+  const [selectedAnswer, setAnswer] = useState({});
+  const { state, dispatch } = useQuiz();
   const t = (param) => param;
+
+  useEffect(() => {
+    const answerFromContext = state.answers.find(
+      (a) => a.questionId === question.id
+    );
+    setAnswer(answerFromContext || {});
+  }, [currentQuestion]);
+
+  const handlePageChange = () =>
+    dispatch({ type: "setAnswer", payload: selectedAnswer });
+
   return (
     <div className="container">
       <Head>
@@ -34,11 +48,17 @@ const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
           height="calc(100vh - 100px)"
           justifyContent="space-between"
         >
-          <QuestionCard t={t} {...question} />
+          <QuestionCard
+            t={t}
+            {...question}
+            selectedAnswer={selectedAnswer}
+            setAnswer={setAnswer}
+          />
           <HStack>
             <Button
               disabled={currentQuestion <= 1}
               aria-label={t("ariaLabel.nextQuestion")}
+              onClick={handlePageChange}
             >
               <Link href={`/quiz/pergunta/${currentQuestion - 1}`}>
                 <ArrowBackIcon />
@@ -49,7 +69,10 @@ const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
             </Text>
             <Button
               aria-label={t("ariaLabel.previousQuestion")}
-              disabled={currentQuestion >= totalQuestions}
+              disabled={
+                currentQuestion >= totalQuestions || !Boolean(selectedAnswer.id)
+              }
+              onClick={handlePageChange}
             >
               <Link href={`/quiz/pergunta/${currentQuestion + 1}`}>
                 <ArrowForwardIcon />
