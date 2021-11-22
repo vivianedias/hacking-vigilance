@@ -2,7 +2,6 @@ import {
   Flex,
   Box,
   VStack,
-  HStack,
   Tag,
   Text,
   IconButton,
@@ -10,6 +9,7 @@ import {
   Collapse,
   Divider,
   Link,
+  Wrap,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import Image from "next/image";
@@ -19,19 +19,33 @@ const SuggestionCard = ({ img, title, tags, children, t, content }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box width="300px" rounded="md" shadow="md">
-      <VStack>
+    <Box
+      minWidth="300px"
+      rounded="md"
+      shadow="md"
+      bg="gray.100"
+      pt={3}
+      pb={1}
+      px={isOpen ? 0 : 3}
+    >
+      <VStack spacing={2}>
         <Image src={img} width="94px" height="94px" />
-        <Text fontSize="sm" fontWeight={700}>
+        <Text fontSize="sm" fontWeight={700} color="gray.600">
           {title}
         </Text>
-        <HStack>
+        <Wrap>
           {tags.map((tag, i) => (
-            <Tag size="sm" key={`suggestion-card-tag-$i{}`} variant="solid">
+            <Tag
+              size="sm"
+              key={`suggestion-card-tag-${i}`}
+              variant="ghost"
+              bg="white"
+              color="purple.600"
+            >
               {tag}
             </Tag>
           ))}
-        </HStack>
+        </Wrap>
         <Collapse in={isOpen} animateOpacity>
           <Flex
             gridGap="5px"
@@ -84,6 +98,8 @@ const SuggestionCard = ({ img, title, tags, children, t, content }) => {
           aria-label={t("ariaLabel.chevron")}
           icon={isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
           onClick={onToggle}
+          color="purple.600"
+          fontSize="3xl"
         />
       </VStack>
     </Box>

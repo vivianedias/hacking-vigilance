@@ -1,6 +1,6 @@
 {
   "title": "What you can do to improve:",
-  "subtitle": "Here's a list of a couple of tips that can help you get started",
+  "subtitle": "Here's a list of a couple of tips that can help you get started. Click on the cards to learn more!",
   "ariaLabel": {
     "chevron": "See more"
   },
@@ -13,5 +13,10 @@
     "subject": "Learn more",
     "access": "Access our",
     "link": "blog"
-  }
+  },
+  "score": "You scored",
+  "moreDetails": "Want to know more details about how much you're protected?",
+  "reportTextBold": "We don't store your data,",
+  "reportText": "that's why we offer your results through a report so you can download and maybe compare to another one in the future!",
+  "btnReport": "Download report"
 }

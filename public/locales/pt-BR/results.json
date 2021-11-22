@@ -1,6 +1,6 @@
 {
   "title": "O que você pode fazer para melhorar:",
-  "subtitle": "Listamos algumas dicas que podem te ajudar a começar",
+  "subtitle": "Listamos algumas dicas que podem te ajudar a começar. Clique nos cards para saber mais!",
   "ariaLabel": {
     "chevron": "Ver mais"
   },
@@ -13,5 +13,10 @@
     "subject": "Quer saber mais sobre o assunto",
     "access": "Acesse o nosso",
     "link": "blog"
-  }
+  },
+  "score": "Você marcou",
+  "moreDetails": "Quer saber com mais detalhes o quanto você está protegido?",
+  "reportTextBold": "Nós não armazenamos os seus dados em uma conta,",
+  "reportText": "por isso oferecemos os resultados em formato de relatório para que você possa baixar e comparar com algum teste futuro!",
+  "btnReport": "Baixar relatório"
 }

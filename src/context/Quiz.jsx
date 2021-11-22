@@ -4,6 +4,7 @@ const QuizContext = React.createContext();
 
 const initialState = {
   answers: [],
+  score: 0,
 };
 
 function quizReducer(state, action) {
