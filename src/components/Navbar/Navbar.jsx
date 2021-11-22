@@ -59,8 +59,9 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle, onClose } = useDisclosure();
   const { t } = useTranslation("navbar");
   const btnRef = useRef();
-  const { pathname } = useRouter();
-  const { pageTitle, IconRef } = pagesTitleAndIcon[pathname];
+  const { pathname, back: goBack } = useRouter();
+  const { pageTitle, IconRef } = pagesTitleAndIcon[pathname] || {};
+  const isHome = pathname === "/";
 
   return (
     <Box as="nav">
@@ -81,18 +82,28 @@ export default function WithSubnavigation() {
           alignItems="center"
           gridGap={3}
         >
-          <Icon as={IoEyeOffSharp} color="purple.600" boxSize={8} />
-          <Text
-            textAlign="left"
-            fontFamily={"logo"}
-            color={useColorModeValue("gray.800", "white")}
-            fontSize="sm"
-            width="110px"
-          >
-            {t("logo")}
-          </Text>
-
-          <Flex display={{ base: "none", md: "flex" }} ml={10}></Flex>
+          {isHome ? (
+            <>
+              <Icon as={IoEyeOffSharp} color="purple.600" boxSize={8} />
+              <Text
+                textAlign="left"
+                fontFamily={"logo"}
+                color={useColorModeValue("gray.800", "white")}
+                fontSize="sm"
+                width="110px"
+              >
+                {t("logo")}
+              </Text>
+            </>
+          ) : (
+            <IconButton
+              variant="unstyled"
+              onClick={goBack}
+              as={ArrowBackIcon}
+              color="purple.600"
+              size="sm"
+            />
+          )}
         </Flex>
 
         {pageTitle ? (
