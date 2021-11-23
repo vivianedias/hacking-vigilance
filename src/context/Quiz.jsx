@@ -4,7 +4,14 @@ const QuizContext = React.createContext();
 
 const initialState = {
   answers: [],
-  score: 0,
+  score: {
+    overallScore: 0,
+    browser: 0,
+    accounts: 0,
+    cookies: 0,
+    scam: 0,
+    mobile: 0,
+  },
 };
 
 function quizReducer(state, action) {
@@ -20,12 +27,28 @@ function quizReducer(state, action) {
       };
     }
     case "addScore": {
-      const scoreSum = state.answers.reduce((score, answer) => {
-        return answer.score + score;
-      }, 0);
+      const scoreBySubjectSum = state.answers.reduce(
+        (scoreBySubject, answer) => {
+          const initialScore = scoreBySubject[answer.questionSubject] || 0;
+          return {
+            ...score,
+            [answer.questionSubject]: initialScore + answer.score,
+          };
+        },
+        {}
+      );
+      const overallScore = Object.keys(scoreBySubjectSum).reduce(
+        (previousValue, currentValue) => {
+          return previousValue + scoreBySubjectSum[currentValue];
+        },
+        0
+      );
       return {
         ...state,
-        score: scoreSum,
+        score: {
+          ...scoreBySubjectSum,
+          overallScore,
+        },
       };
     }
     default: {

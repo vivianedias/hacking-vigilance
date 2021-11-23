@@ -30,7 +30,7 @@ const Results = () => {
         <VStack spacing={7}>
           <Flex p={2} bg="purple.100" borderRadius="lg" width="fit-content">
             <Heading color="purple.600" as="h1" size="md">
-              {t("score")} {state.score}pts
+              {t("score")} {state.score.overallScore}pts
             </Heading>
           </Flex>
           <VStack bg="white" borderRadius="lg" p={5}>
