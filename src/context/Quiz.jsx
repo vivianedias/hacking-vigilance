@@ -19,6 +19,15 @@ function quizReducer(state, action) {
         answers: [...removeOldAnswer, newAnswer],
       };
     }
+    case "addScore": {
+      const scoreSum = state.answers.reduce((score, answer) => {
+        return answer.score + score;
+      }, 0);
+      return {
+        ...state,
+        score: scoreSum,
+      };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }

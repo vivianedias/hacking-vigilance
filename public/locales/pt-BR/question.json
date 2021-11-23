@@ -5,7 +5,11 @@
     "previousQuestion": "Voltar para pergunta anterior"
   },
   "subjects": {
-    "browser": "Conectado na web"
+    "browser": "Conectado na web",
+    "accounts": "Contas online",
+    "cookies": "Cookies",
+    "scam": "Fraudes & Golpes",
+    "mobile": "Mobile"
   },
   "finalQuestion": {
     "title": "Concluído",
