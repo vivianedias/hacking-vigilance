@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -5,10 +6,18 @@ import { Heading, Text, VStack, Flex, Button } from "@chakra-ui/react";
 import { PageLayout, SuggestionCard } from "../../components";
 import styled from "@emotion/styled";
 import { useQuiz } from "../../context/Quiz";
+import { TOTAL_QUESTIONS } from "../../utils/constants";
+import { useRouter } from "next/router";
 
 const Results = () => {
   const { t } = useTranslation("results");
   const { state } = useQuiz();
+  const router = useRouter();
+
+  useEffect(() => {
+    const allAnswersSelected = state.answers.length === TOTAL_QUESTIONS;
+    if (!allAnswersSelected) return router.push("/quiz/pergunta/1");
+  });
 
   return (
     <main>
