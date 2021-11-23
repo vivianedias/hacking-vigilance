@@ -6,5 +6,9 @@
   },
   "subjects": {
     "browser": "Connected to the web"
+  },
+  "finalQuestion": {
+    "title": "Done",
+    "btn": "See my results"
   }
 }

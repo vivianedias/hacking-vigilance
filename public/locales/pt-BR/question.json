@@ -6,5 +6,9 @@
   },
   "subjects": {
     "browser": "Conectado na web"
+  },
+  "finalQuestion": {
+    "title": "Concluído",
+    "btn": "Ver meus resultados"
   }
 }

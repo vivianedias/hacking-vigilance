@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 
-import { PageLayout, QuestionCard } from "../../../components";
+import { PageLayout, QuestionCard, FinishQuizCard } from "../../../components";
 import getQuestion from "../../api/quiz/[id]";
 import { TOTAL_QUESTIONS } from "../../../utils/constants";
 import api from "../../../utils/api";
@@ -48,37 +48,41 @@ const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
           height="calc(100vh - 100px)"
           justifyContent="space-between"
         >
-          <QuestionCard
-            t={t}
-            {...question}
-            selectedAnswer={selectedAnswer}
-            setAnswer={setAnswer}
-          />
-          <HStack>
-            <Button
-              disabled={currentQuestion <= 1}
-              aria-label={t("ariaLabel.nextQuestion")}
-              onClick={handlePageChange}
-            >
-              <Link href={`/quiz/pergunta/${currentQuestion - 1}`}>
-                <ArrowBackIcon />
-              </Link>
-            </Button>
-            <Text color="purple.600">
-              {currentQuestion} / {totalQuestions}
-            </Text>
-            <Button
-              aria-label={t("ariaLabel.previousQuestion")}
-              disabled={
-                currentQuestion >= totalQuestions || !Boolean(selectedAnswer.id)
-              }
-              onClick={handlePageChange}
-            >
-              <Link href={`/quiz/pergunta/${currentQuestion + 1}`}>
-                <ArrowForwardIcon />
-              </Link>
-            </Button>
-          </HStack>
+          {currentQuestion > totalQuestions ? (
+            <FinishQuizCard t={t} />
+          ) : (
+            <>
+              <QuestionCard
+                t={t}
+                {...question}
+                selectedAnswer={selectedAnswer}
+                setAnswer={setAnswer}
+              />
+              <HStack>
+                <Button
+                  disabled={currentQuestion <= 1}
+                  aria-label={t("ariaLabel.nextQuestion")}
+                  onClick={handlePageChange}
+                >
+                  <Link href={`/quiz/pergunta/${currentQuestion - 1}`}>
+                    <ArrowBackIcon />
+                  </Link>
+                </Button>
+                <Text color="purple.600">
+                  {currentQuestion} / {totalQuestions}
+                </Text>
+                <Button
+                  aria-label={t("ariaLabel.previousQuestion")}
+                  disabled={!Boolean(selectedAnswer.id)}
+                  onClick={handlePageChange}
+                >
+                  <Link href={`/quiz/pergunta/${currentQuestion + 1}`}>
+                    <ArrowForwardIcon />
+                  </Link>
+                </Button>
+              </HStack>
+            </>
+          )}
         </VStack>
       </PageLayout>
     </div>
