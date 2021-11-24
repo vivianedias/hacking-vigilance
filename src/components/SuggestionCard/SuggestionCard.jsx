@@ -14,8 +14,9 @@ import {
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import Image from "next/image";
 import NextLink from "next/link";
+import { ToolsCard } from "../";
 
-const SuggestionCard = ({ img, title, tags, children, t, content }) => {
+const SuggestionCard = ({ img, title, tags, children, t, content, tools }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -29,12 +30,12 @@ const SuggestionCard = ({ img, title, tags, children, t, content }) => {
       px={isOpen ? 0 : 3}
     >
       <VStack spacing={2}>
-        <Image src={img} width="94px" height="94px" />
+        <Image src={img.url} width={img.width} height={img.height} />
         <Text fontSize="sm" fontWeight={700} color="gray.600">
           {title}
         </Text>
         <Wrap>
-          {tags.map((tag, i) => (
+          {tags.map((tagName, i) => (
             <Tag
               size="sm"
               key={`suggestion-card-tag-${i}`}
@@ -42,7 +43,7 @@ const SuggestionCard = ({ img, title, tags, children, t, content }) => {
               bg="white"
               color="purple.600"
             >
-              {tag}
+              {t(`tags.${tagName}`)}
             </Tag>
           ))}
         </Wrap>
@@ -61,7 +62,16 @@ const SuggestionCard = ({ img, title, tags, children, t, content }) => {
               {content.description}
             </Text>
           </Flex>
-          <Box>{children}</Box>
+          <VStack>
+            <Text color="purple.600" fontWeight={700}>
+              {t("recommendedTools")}:
+            </Text>
+            {tools.length > 0
+              ? tools.map(({ img: [imgSrc], ...rest }) => (
+                  <ToolsCard img={imgSrc.url} {...rest} key={rest.id} t={t} />
+                ))
+              : null}
+          </VStack>
           <Flex
             direction="column"
             gridGap="18px"

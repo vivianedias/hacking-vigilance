@@ -31,7 +31,7 @@ function quizReducer(state, action) {
         (scoreBySubject, answer) => {
           const initialScore = scoreBySubject[answer.questionSubject] || 0;
           return {
-            ...score,
+            ...scoreBySubject,
             [answer.questionSubject]: initialScore + answer.score,
           };
         },

@@ -53,7 +53,7 @@ const QuestionCard = ({
       >
         {answers.map(({ text, ...rest }, i) => {
           return (
-            <GridItem key={`question-card-btn-${i}`}>
+            <GridItem key={rest.id}>
               <Button
                 height="64px"
                 width="144px"

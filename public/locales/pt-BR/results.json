@@ -18,5 +18,17 @@
   "moreDetails": "Quer saber com mais detalhes o quanto você está protegido?",
   "reportTextBold": "Nós não armazenamos os seus dados em uma conta,",
   "reportText": "por isso oferecemos os resultados em formato de relatório para que você possa baixar e comparar com algum teste futuro!",
-  "btnReport": "Baixar relatório"
+  "btnReport": "Baixar relatório",
+  "tags": {
+    "security": "Segurança",
+    "password": "Senhas + fortes",
+    "hacking": "Hackeamento",
+    "vpn": "VPN",
+    "vigillance": "Vigilância"
+  },
+  "tools": {
+    "knowMoreBtn": "Saber mais",
+    "installBtn": "Instalar"
+  },
+  "recommendedTools": "Ferramentas recomendadas"
 }

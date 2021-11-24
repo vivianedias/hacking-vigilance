@@ -18,5 +18,17 @@
   "moreDetails": "Want to know more details about how much you're protected?",
   "reportTextBold": "We don't store your data,",
   "reportText": "that's why we offer your results through a report so you can download and maybe compare to another one in the future!",
-  "btnReport": "Download report"
+  "btnReport": "Download report",
+  "tags": {
+    "security": "Security",
+    "password": "Stronger passwords",
+    "hacking": "Hacking",
+    "vpn": "VPN",
+    "vigillance": "Vigillance"
+  },
+  "tools": {
+    "knowMoreBtn": "Install",
+    "installBtn": "Know more"
+  },
+  "recommendedTools": "Recommended tools"
 }
