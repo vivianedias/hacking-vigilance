@@ -34,7 +34,7 @@ const Results = ({ results, translation }) => {
               {t("score")} {state.score.overallScore}pts
             </Heading>
           </Flex>
-          <VStack bg="white" borderRadius="lg" p={5}>
+          <VStack bg="white" borderRadius="lg" p={5} pb={10}>
             <Heading
               size="xl"
               as="h1"
@@ -47,7 +47,7 @@ const Results = ({ results, translation }) => {
             <Text align="center" maxW="300px">
               {t("subtitle")}
             </Text>
-            <VStack>
+            <VStack width="300px" spacing={10}>
               {results.map(
                 ({
                   img: [imgSrc],

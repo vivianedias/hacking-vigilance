@@ -10,6 +10,7 @@ import {
   Divider,
   Link,
   Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 import Image from "next/image";
@@ -20,31 +21,25 @@ const SuggestionCard = ({ img, title, tags, children, t, content, tools }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box
-      minWidth="300px"
-      rounded="md"
-      shadow="md"
-      bg="gray.100"
-      pt={3}
-      pb={1}
-      px={isOpen ? 0 : 3}
-    >
+    <Box rounded="md" shadow="md" bg="gray.100" width="100%" pt={3} pb={1}>
       <VStack spacing={2}>
         <Image src={img.url} width={img.width} height={img.height} />
         <Text fontSize="sm" fontWeight={700} color="gray.600">
           {title}
         </Text>
-        <Wrap>
+        <Wrap spacing={1}>
           {tags.map((tagName, i) => (
-            <Tag
-              size="sm"
-              key={`suggestion-card-tag-${i}`}
-              variant="ghost"
-              bg="white"
-              color="purple.600"
-            >
-              {t(`tags.${tagName}`)}
-            </Tag>
+            <WrapItem>
+              <Tag
+                size="sm"
+                key={`suggestion-card-tag-${i}`}
+                variant="ghost"
+                bg="white"
+                color="purple.600"
+              >
+                {t(`tags.${tagName}`)}
+              </Tag>
+            </WrapItem>
           ))}
         </Wrap>
         <Collapse in={isOpen} animateOpacity>
