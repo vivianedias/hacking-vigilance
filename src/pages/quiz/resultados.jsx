@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-// import { useTranslation } from "next-i18next";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Heading, Text, VStack, Flex, Button } from "@chakra-ui/react";
 
 import { PageLayout, SuggestionCard } from "../../components";
@@ -10,11 +10,10 @@ import { useQuiz } from "../../context/Quiz";
 import { TOTAL_QUESTIONS } from "../../utils/constants";
 import api from "../../utils/api";
 
-const Results = ({ results }) => {
-  // const { t } = useTranslation("results");
+const Results = ({ results, translation }) => {
+  const { t } = useTranslation("results");
   const { state } = useQuiz();
   const router = useRouter();
-  const t = (param) => param;
 
   // useEffect(() => {
   //   const allAnswersSelected = state.answers.length === TOTAL_QUESTIONS;
@@ -105,11 +104,11 @@ export async function getServerSideProps({ locale }) {
 
   return {
     props: {
-      // ...(await serverSideTranslations(locale, [
-      //   "navbar",
-      //   "footer",
-      //   "results",
-      // ])),
+      ...(await serverSideTranslations(locale, [
+        "navbar",
+        "footer",
+        "results",
+      ])),
       results,
     },
   };

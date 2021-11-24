@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
-// import { useTranslation } from "next-i18next";
-// import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
   VStack,
   Box,
@@ -20,10 +20,9 @@ import api from "../../../utils/api";
 import { useQuiz } from "../../../context/Quiz";
 
 const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
-  // const { t } = useTranslation("question");
+  const { t } = useTranslation("question");
   const [selectedAnswer, setAnswer] = useState({});
   const { state, dispatch } = useQuiz();
-  const t = (param) => param;
 
   useEffect(() => {
     const answerFromContext = state.answers.find(
@@ -31,6 +30,8 @@ const QuestionFromQuiz = ({ question, currentQuestion, totalQuestions }) => {
     );
     setAnswer(answerFromContext || {});
   }, [currentQuestion]);
+
+  // adds redirect if user tries to access any page larger then TOTAL_QUESTIONS + 1
 
   const handlePageChange = () =>
     dispatch({ type: "setAnswer", payload: selectedAnswer });
@@ -98,11 +99,11 @@ export async function getServerSideProps({ params, req, res, locale }) {
 
   return {
     props: {
-      // ...(await serverSideTranslations(locale, [
-      //   "question",
-      //   "navbar",
-      //   "footer",
-      // ])),
+      ...(await serverSideTranslations(locale, [
+        "question",
+        "navbar",
+        "footer",
+      ])),
       question,
       totalQuestions: TOTAL_QUESTIONS,
       currentQuestion: Number(id),
