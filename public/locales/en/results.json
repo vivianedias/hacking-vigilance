@@ -28,7 +28,8 @@
   },
   "tools": {
     "knowMoreBtn": "Install",
-    "installBtn": "Know more"
+    "installBtn": "Know more",
+    "checkBtn": "Explore"
   },
   "recommendedTools": "Recommended tools"
 }

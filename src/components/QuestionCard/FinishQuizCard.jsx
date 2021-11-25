@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Heading, VStack, Button, Box, Flex, Icon } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,3 +40,7 @@ const FinishQuizCard = ({ t }) => {
 };
 
 export default FinishQuizCard;
+
+FinishQuizCard.propTypes = {
+  t: PropTypes.func.isRequired,
+};

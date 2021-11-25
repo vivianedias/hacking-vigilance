@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Image from "next/image";
 import { Heading, VStack, Box, Text } from "@chakra-ui/react";
 
@@ -26,3 +27,11 @@ const ResultDescription = ({ title, img, subtitle, description, footnote }) => {
 };
 
 export default ResultDescription;
+
+ResultDescription.propTypes = {
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  footnote: PropTypes.string.isRequired,
+};

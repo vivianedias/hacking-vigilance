@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   Flex,
   Box,
@@ -17,7 +18,7 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { ToolsCard } from "../";
 
-const SuggestionCard = ({ img, title, tags, children, t, content, tools }) => {
+const SuggestionCard = ({ img, title, tags, t, content, tools }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -114,3 +115,15 @@ const SuggestionCard = ({ img, title, tags, children, t, content, tools }) => {
 };
 
 export default SuggestionCard;
+
+SuggestionCard.propTypes = {
+  img: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  t: PropTypes.func.isRequired,
+  content: PropTypes.objectOf({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+  tools: PropTypes.array,
+};

@@ -28,7 +28,8 @@
   },
   "tools": {
     "knowMoreBtn": "Saber mais",
-    "installBtn": "Instalar"
+    "installBtn": "Instalar",
+    "checkBtn": "Explorar"
   },
   "recommendedTools": "Ferramentas recomendadas"
 }

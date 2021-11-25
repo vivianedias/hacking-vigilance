@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import Image from "next/image";
 import {
   Heading,
@@ -76,3 +77,14 @@ const QuestionCard = ({
 };
 
 export default QuestionCard;
+
+QuestionCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  img: PropTypes.array.isRequired,
+  answers: PropTypes.array.isRequired,
+  subject: PropTypes.string.isRequired,
+  t: PropTypes.func.isRequired,
+  selectedAnswer: PropTypes.object,
+  setAnswer: PropTypes.func.isRequired,
+};
