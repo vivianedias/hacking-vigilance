@@ -1,15 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import { VStack, Text, Box, Flex, Button } from "@chakra-ui/react";
+import { VStack, Text, Flex, Button } from "@chakra-ui/react";
 
 const ToolsCard = ({ img, name, knowMoreLink, installLink, t }) => {
   return (
-    <VStack>
+    <VStack spacing={3}>
       <Text color="gray.600">{name}</Text>
-      <Box borderRadius="lg" height="115px" overflow="hidden" width="100%">
+      <Flex
+        borderRadius="lg"
+        height="115px"
+        overflow="hidden"
+        width="100%"
+        justify="center"
+      >
         <Image src={img} width="170px" height="120px" />
-      </Box>
-      <Flex>
+      </Flex>
+      <Flex gridGap={3}>
         <a href={installLink}>
           <Button colorScheme="purple">{t("tools.installBtn")}</Button>
         </a>
