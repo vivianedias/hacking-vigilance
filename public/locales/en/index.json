@@ -1,3 +1,15 @@
 {
-  "title": "Welcome!"
+  "title": "You have a right to privacy!",
+  "projectTitle": "Hacking vigillance",
+  "description": {
+    "1": "is a",
+    "2": "it provides tools and information to safely access the internet without your data being stolen or accounts hacked"
+  },
+  "purpose": "best practices guide for online security,",
+  "interestedQuiz": {
+    "title": "Interested but don't know where to start?",
+    "action": "Take our quiz",
+    "description": "and find out how much you're protected"
+  },
+  "btn": "Start"
 }

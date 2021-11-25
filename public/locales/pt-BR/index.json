@@ -1,3 +1,15 @@
 {
-  "title": "Bem-vinda!"
+  "title": "Você tem direito à privacidade!",
+  "projectTitle": "Hackeando a vigilância",
+  "description": {
+    "1": "é um projeto de",
+    "2": "que te fornece ferramentas e conhecimento para acessar a internet tranquilamente, sem que seus dados sejam roubados e suas contas invadidas."
+  },
+  "purpose": "guia de boas práticas em segurança online,",
+  "interestedQuiz": {
+    "title": "Se interessou mas não sabe por onde começar?",
+    "action": "Faço o nosso quiz",
+    "description": "e descubra o quanto você está protegido"
+  },
+  "btn": "Começar"
 }
