@@ -5,3 +5,4 @@ export { default as QuestionCard } from "./QuestionCard/QuestionCard";
 export { default as FinishQuizCard } from "./QuestionCard/FinishQuizCard";
 export { default as SuggestionCard } from "./SuggestionCard/SuggestionCard";
 export { default as ToolsCard } from "./ToolsCard/ToolsCard";
+export { default as ResultDescription } from "./ResultDescription/ResultDescription";
