@@ -4,7 +4,7 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Heading, VStack, Flex, Box, Button, Text } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { PageLayout } from "../components";
+import { Manifest, PageLayout } from "../components";
 
 export default function Home() {
   const { t } = useTranslation("index");
@@ -17,17 +17,17 @@ export default function Home() {
       </Head>
 
       <PageLayout>
-        <VStack maxW="300px">
-          <Heading color="purple.600" align="center">
+        <VStack maxW={{ base: "100%", sm: "300px" }} spacing={5}>
+          <Heading as="h1" color="purple.600" align="center">
             {t("title")}
           </Heading>
           <ChevronDownIcon boxSize="32px" color="purple.600" />
           <Box>
-            <Box bg="white" borderRadius="lg" p={5} height="435px" mt="70px">
+            <Box bg="white" borderRadius="lg" p={5} maxHeight="435px" mt="70px">
               <VStack position="relative" bottom="70px">
-                <Box width="100%" height="100%">
+                <Flex width="100%" height="100%" justify="center">
                   <Image src="/home.png" width="250px" height="250px" />
-                </Box>
+                </Flex>
                 <Text color="gray.600" fontWeight={600} align="center">
                   <Text as="span" color="purple.600">
                     {t("projectTitle")}{" "}
@@ -53,6 +53,7 @@ export default function Home() {
               <Button colorScheme="purple">{t("btn")}</Button>
             </VStack>
           </Box>
+          <Manifest t={t} />
         </VStack>
       </PageLayout>
     </div>

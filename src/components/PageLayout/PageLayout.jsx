@@ -1,13 +1,20 @@
 import { Navbar, Footer } from "../";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 
 const PageLayout = ({ children }) => {
   return (
     <Box as="main">
       <Navbar />
-      <Box as="section" bgColor="gray.100" p={9} minH="calc(100vh - 260px)">
+      <Flex
+        as="section"
+        bgColor="gray.100"
+        py={9}
+        px={6}
+        minH="calc(100vh - 260px)"
+        justify="center"
+      >
         {children}
-      </Box>
+      </Flex>
       <Footer />
     </Box>
   );

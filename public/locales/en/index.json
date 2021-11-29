@@ -11,5 +11,8 @@
     "action": "Take our quiz",
     "description": "and find out how much you're protected"
   },
-  "btn": "Start"
+  "btn": "Start",
+  "manifest": {
+    "title": "Read our manifest"
+  }
 }

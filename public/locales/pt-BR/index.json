@@ -11,5 +11,8 @@
     "action": "Faço o nosso quiz",
     "description": "e descubra o quanto você está protegido"
   },
-  "btn": "Começar"
+  "btn": "Começar",
+  "manifest": {
+    "title": "Leia nosso manifesto"
+  }
 }
