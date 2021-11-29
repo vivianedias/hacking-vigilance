@@ -22,33 +22,37 @@ export default function Home() {
             {t("title")}
           </Heading>
           <ChevronDownIcon boxSize="32px" color="purple.600" />
-          <VStack bg="white" borderRadius="lg" mx={3}>
-            <Box width="100%" height="100%">
-              <Image src="/home.png" width="250px" height="250px" />
+          <Box>
+            <Box bg="white" borderRadius="lg" p={5} height="435px" mt="70px">
+              <VStack position="relative" bottom="70px">
+                <Box width="100%" height="100%">
+                  <Image src="/home.png" width="250px" height="250px" />
+                </Box>
+                <Text color="gray.600" fontWeight={600} align="center">
+                  <Text as="span" color="purple.600">
+                    {t("projectTitle")}{" "}
+                  </Text>
+                  {t("description.1")}{" "}
+                  <Text as="span" color="purple.600">
+                    {t("purpose")}{" "}
+                  </Text>
+                  {t("description.2")}
+                </Text>
+              </VStack>
             </Box>
-            <Text color="gray.600" fontWeight={600}>
-              <Text as="span" color="purple.600">
-                {t("projectTitle")}
+            <VStack bgColor="purple.100" spacing={2} borderRadius="lg" p={5}>
+              <Text color="gray.600" fontWeight={700} align="center">
+                {t("interestedQuiz.title")}
               </Text>
-              {t("description.1")}
-              <Text as="span" color="purple.600">
-                {t("purpose")}
+              <Text color="gray.600" align="center">
+                <Text as="span" color="purple.600" fontWeight={700}>
+                  {t("interestedQuiz.action")}{" "}
+                </Text>
+                {t("interestedQuiz.description")}
               </Text>
-              {t("description.2")}
-            </Text>
-          </VStack>
-          <VStack bgColor="purple.100" mx={3} spacing={2} py={5}>
-            <Text color="gray.600" fontWeight={700}>
-              {t("interestedQuiz.title")}
-            </Text>
-            <Text color="gray.600">
-              <Text as="span" color="purple.600" fontWeight={700}>
-                {t("interestedQuiz.action")}{" "}
-              </Text>
-              {t("interestedQuiz.description")}
-            </Text>
-            <Button colorScheme="purple">{t("btn")}</Button>
-          </VStack>
+              <Button colorScheme="purple">{t("btn")}</Button>
+            </VStack>
+          </Box>
         </VStack>
       </PageLayout>
     </div>
