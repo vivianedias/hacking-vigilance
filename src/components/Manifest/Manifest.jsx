@@ -1,12 +1,19 @@
-import { Heading, Text, Box, VStack, Icon } from "@chakra-ui/react";
+import { Heading, Text, Box, VStack, IconButton, Icon } from "@chakra-ui/react";
 import { IoEyeOffSharp } from "react-icons/io5";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Manifest = ({ t }) => {
   return (
     <VStack as="section">
-      <Heading as="h2">{t("manifest.title")}</Heading>
-      <ChevronDownIcon boxSize="32px" color="purple.600" />
+      <Heading as="h2" size="md" color="purple.600" align="center">
+        {t("manifest.title")}
+      </Heading>
+      <IconButton
+        icon={<ChevronDownIcon color="purple.600" />}
+        variant="unstyled"
+        size="2xl"
+        fontSize="32px"
+      />
       <VStack spacing={4} bg="white" borderRadius="lg" px={4} py={10}>
         <Text color="gray.600" align="center">
           O Brasil foi um dos países pioneiros quando se fala em ações
