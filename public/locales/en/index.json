@@ -14,5 +14,13 @@
   "btn": "Start",
   "manifest": {
     "title": "Read our manifest"
+  },
+  "quickTips": {
+    "title": {
+      "1": "Checkout our",
+      "2": "section and get more protected in just a few steps",
+      "link": "quick tips"
+    },
+    "subtitle": "How to check if a site is reliable in 5 steps"
   }
 }

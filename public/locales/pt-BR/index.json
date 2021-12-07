@@ -14,5 +14,13 @@
   "btn": "Começar",
   "manifest": {
     "title": "Leia nosso manifesto"
+  },
+  "quickTips": {
+    "title": {
+      "1": "Confira a nossa seção de",
+      "2": "e em poucos passos fique mais protegido!",
+      "link": "diquinhas rápidas"
+    },
+    "subtitle": "Como saber se um site é seguro em 5 sinais"
   }
 }

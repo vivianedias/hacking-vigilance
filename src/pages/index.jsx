@@ -12,7 +12,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Manifest, PageLayout } from "../components";
+import { Manifest, PageLayout, QuickTips } from "../components";
 
 function PresentationCard({ t }) {
   return (
@@ -73,6 +73,7 @@ export default function Home() {
           />
           <PresentationCard t={t} />
           <Manifest t={t} />
+          <QuickTips t={t} />
         </VStack>
       </PageLayout>
     </div>

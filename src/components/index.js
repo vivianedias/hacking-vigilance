@@ -7,3 +7,4 @@ export { default as SuggestionCard } from "./SuggestionCard/SuggestionCard";
 export { default as ToolsCard } from "./ToolsCard/ToolsCard";
 export { default as ResultDescription } from "./ResultDescription/ResultDescription";
 export { default as Manifest } from "./Manifest/Manifest";
+export { default as QuickTips } from "./QuickTips/QuickTips";
