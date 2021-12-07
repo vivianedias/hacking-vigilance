@@ -22,5 +22,18 @@
       "link": "diquinhas rápidas"
     },
     "subtitle": "Como saber se um site é seguro em 5 sinais"
+  },
+  "popup": {
+    "0": {
+      "title": {
+        "1": "Este site utiliza cookies,",
+        "2": "antes de prosseguir gostaria de fazer um lanchinho?"
+      },
+      "subtitle": "É por nossa conta! ",
+      "buttons": {
+        "primary": "Tô com fome",
+        "secondary": "Não, obrigado!"
+      }
+    }
   }
 }

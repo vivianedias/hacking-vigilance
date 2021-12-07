@@ -22,5 +22,18 @@
       "link": "quick tips"
     },
     "subtitle": "How to check if a site is reliable in 5 steps"
+  },
+  "popup": {
+    "0": {
+      "title": {
+        "1": "This website uses cookies,",
+        "2": "before going forward, would you like a snack?"
+      },
+      "subtitle": "It's on us!",
+      "buttons": {
+        "primary": "I'm hungry",
+        "secondary": "No, thank you!"
+      }
+    }
   }
 }

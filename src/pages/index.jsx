@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import {
@@ -10,9 +11,10 @@ import {
   Button,
   Text,
   IconButton,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Manifest, PageLayout, QuickTips } from "../components";
+import { Manifest, PageLayout, QuickTips, Modals } from "../components";
 
 function PresentationCard({ t }) {
   return (
@@ -52,6 +54,11 @@ function PresentationCard({ t }) {
 
 export default function Home() {
   const { t } = useTranslation("index");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    onOpen();
+  }, []);
 
   return (
     <div className="container">
@@ -61,6 +68,7 @@ export default function Home() {
       </Head>
 
       <PageLayout>
+        <Modals isOpen={isOpen} onClose={onClose} t={t} />
         <VStack maxW={{ base: "100%", sm: "300px" }} spacing={5}>
           <Heading as="h1" color="purple.600" align="center">
             {t("title")}
