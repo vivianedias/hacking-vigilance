@@ -46,6 +46,24 @@
       "buttons": {
         "primary": "Aceitar todos!"
       }
+    },
+    "2": {
+      "title": "Parabéns!",
+      "subtitle": "Você acaba de permitir que suas informações pessoais sejam vendidas.",
+      "buttons": {
+        "primary": "Reagir!"
+      }
+    },
+    "3": {
+      "title": "Exerça seu direito!",
+      "subtitle": {
+        "0": "Evite que seus",
+        "1": "dados sejam roubados,",
+        "2": "aprenda a se defender de agentes silenciosos e fique mais seguro enquanto está online."
+      },
+      "buttons": {
+        "primary": "Vem com a gente!"
+      }
     }
   }
 }

@@ -41,7 +41,7 @@ function AnnoyingModals({ isOpen, onClose, t }) {
     const onClick =
       index + 1 === CONTENT_MAX_LENGTH
         ? onClose
-        : setIndex((prevState) => prevState + 1);
+        : () => setIndex((prevState) => prevState + 1);
     const setupNewContent = newContent({
       onClick,
       t,

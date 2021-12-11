@@ -46,6 +46,24 @@
       "buttons": {
         "primary": "Accept all"
       }
+    },
+    "2": {
+      "title": "Congratulations!",
+      "subtitle": "You just allowed your personal information to be sold",
+      "buttons": {
+        "primary": "React!"
+      }
+    },
+    "3": {
+      "title": "Exercise your rights!",
+      "subtitle": {
+        "0": "Prevent your",
+        "1": "data from being stole,",
+        "2": "learn to defend against silent agents and stay safer while online."
+      },
+      "buttons": {
+        "primary": "Come with us!"
+      }
     }
   }
 }

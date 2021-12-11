@@ -42,7 +42,7 @@ const firstStep = ({ onClick, t, onClose }) => ({
 
 const secondStep = ({ onClick, t, onClose }) => ({
   title: (
-    <Text color="gray.600" align="center">
+    <Text color="gray.600" align="center" color="purple.600" fontSize="2xl">
       {t("popup.1.title")}
     </Text>
   ),
@@ -81,6 +81,60 @@ const secondStep = ({ onClick, t, onClose }) => ({
   ),
 });
 
-const modalContent = [firstStep, secondStep];
+const thirdStep = ({ onClick, t, onClose }) => ({
+  title: (
+    <Text color="purple.600" align="center" fontSize="3xl">
+      {t("popup.2.title")}
+    </Text>
+  ),
+  content: (
+    <VStack>
+      <Box borderRadius="lg" width="145px" height="145px" overflow="hidden">
+        <Image src="/okay.png" width="150" height="150" />
+      </Box>
+      <Text color="gray.600" fontWeight={600} align="center" fontSize="2xl">
+        {t(`popup.2.subtitle`)}
+      </Text>
+    </VStack>
+  ),
+  buttons: (
+    <>
+      <Button onClick={onClick} colorScheme="purple">
+        {t("popup.2.buttons.primary")}
+      </Button>
+    </>
+  ),
+});
+
+const fourthStep = ({ onClick, t, onClose }) => ({
+  title: (
+    <Text color="purple.600" align="center" fontSize="3xl">
+      {t("popup.3.title")}
+    </Text>
+  ),
+  content: (
+    <VStack>
+      <Box borderRadius="lg" width="245px" height="165px" overflow="hidden">
+        <Image src="/split_cookie.png" width="250" height="170" />
+      </Box>
+      <Text color="gray.600" fontWeight={600} align="center" fontSize="lg">
+        {t(`popup.3.subtitle.0`)}{" "}
+        <Text as="span" color="purple.600">
+          {t(`popup.3.subtitle.1`)}{" "}
+        </Text>
+        {t(`popup.3.subtitle.2`)}
+      </Text>
+    </VStack>
+  ),
+  buttons: (
+    <>
+      <Button onClick={onClose} colorScheme="purple">
+        {t("popup.3.buttons.primary")}
+      </Button>
+    </>
+  ),
+});
+
+const modalContent = [firstStep, secondStep, thirdStep, fourthStep];
 
 export default modalContent;
