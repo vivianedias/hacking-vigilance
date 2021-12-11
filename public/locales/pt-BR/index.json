@@ -34,6 +34,18 @@
         "primary": "Tô com fome",
         "secondary": "Não, obrigado!"
       }
+    },
+    "1": {
+      "title": "Escolha um, ou quantos quiser",
+      "subtitle": {
+        "0": "Baunilha",
+        "1": "Chocolate",
+        "2": "Chocolate branco",
+        "3": "Red velvet"
+      },
+      "buttons": {
+        "primary": "Aceitar todos!"
+      }
     }
   }
 }

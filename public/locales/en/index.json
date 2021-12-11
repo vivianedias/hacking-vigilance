@@ -34,6 +34,18 @@
         "primary": "I'm hungry",
         "secondary": "No, thank you!"
       }
+    },
+    "1": {
+      "title": "Choose one, or as many as you'd like",
+      "subtitle": {
+        "0": "Vanilla",
+        "1": "Chocolate",
+        "2": "White chocolate",
+        "3": "Red velvet"
+      },
+      "buttons": {
+        "primary": "Accept all"
+      }
     }
   }
 }
